@@ -25,7 +25,16 @@
     </ul>
 </nav>
     </header>
+    
+<script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
 
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+</script>
+    
     <main>
         <section id="accueil">
             <h2>Bienvenue sur FlackoInsight</h2>
