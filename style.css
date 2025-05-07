@@ -51,6 +51,37 @@ nav {
     color: #ffffff;
 }
 
+/* Menu Burger */
+.burger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        display: none;
+        border-top: 1px solid #ddd;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+
 /* Sections */
 section {
     padding: 60px 40px;
