@@ -15,63 +15,78 @@ body {
 }
 
 /* Navigation */
-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
+.main-header {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-nav {
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
 }
 
 .logo h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000000;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fcd535;
+    letter-spacing: 1px;
+}
+
+.logo h1 span {
+    color: #fff; /* contraste Flacko vs Insight */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 .nav-links li a {
-    text-decoration: none;
+    color: #fff;
     padding: 10px 15px;
-    background-color: #e1b12c; /* jaune moutarde */
-    color: #000000;
+    background-color: transparent;
+    border: 2px solid transparent;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-links li a:hover {
-    background-color: #2c3e50; /* bleu nuit */
-    color: #ffffff;
+    background-color: #fcd535;
+    color: #000;
+    border-color: #fcd535;
 }
 
-/* Menu Burger */
+/* Burger Menu */
 .burger {
     display: none;
-    font-size: 28px;
+    font-size: 30px;
     cursor: pointer;
-    color: #000;
+    color: #fcd535;
 }
 
-/* Responsive */
+/* Responsive header */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 75px;
         right: 0;
-        background-color: #ffffff;
         width: 100%;
+        background-color: #000;
+        border-top: 1px solid #333;
         display: none;
-        border-top: 1px solid #ddd;
     }
 
     .nav-links.show {
