@@ -42,9 +42,6 @@ body {
     align-items: center;
 }
 
-.logo a {
-    text-decoration: none;
-}
 
 .logo a h1 {
     color: inherit;
