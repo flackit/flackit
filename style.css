@@ -42,6 +42,14 @@ body {
     align-items: center;
 }
 
+.logo a {
+    text-decoration: none;
+}
+
+.logo a h1 {
+    color: inherit;
+}
+
 .logo h1 {
     font-size: 28px;
     font-weight: 700;
