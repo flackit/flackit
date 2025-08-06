@@ -375,6 +375,22 @@ body {
   }
 }
 
+.footer-col p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.footer-col a.linkedin-link {
+  color: #fcd535;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer-col a.linkedin-link:hover {
+  color: #fff200;
+}
+
 /* Responsive content block */
 @media (max-width: 768px) {
     .content-block {
