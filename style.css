@@ -309,13 +309,6 @@ body {
 }
 
 /* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000;
-    color: #fcd535;
-    border-top: 1px solid #333;
-}
 
 .site-footer {
   background-color: #000;
