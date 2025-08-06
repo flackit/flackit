@@ -81,6 +81,12 @@ body {
     border-color: #fcd535;
 }
 
+.logo-img {
+  height: 40px;
+  max-width: 150px;
+  object-fit: contain;
+}
+
 /* Menu burger */
 .burger {
     display: none;
