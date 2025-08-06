@@ -313,6 +313,188 @@ body {
   background-color: #fff200;
 }
 
+.hero {
+  background: linear-gradient(to right, #111, #1a1a1a);
+  padding: 80px 20px;
+  text-align: center;
+  color: #f5f5f5;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #fcd535;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.hero .button {
+  background-color: #fcd535;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero .button:hover {
+  background-color: #fff200;
+}
+
+/* About */
+.about {
+  padding: 60px 40px;
+  background-color: #1e1e1e;
+  text-align: center;
+}
+
+.about h2 {
+  color: #fcd535;
+  margin-bottom: 20px;
+}
+
+.about p {
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* Home Services Cards */
+.home-services {
+  padding: 60px 40px;
+  background-color: #151515;
+  text-align: center;
+}
+
+.home-services h2 {
+  color: #fcd535;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.service-cards .card {
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.service-cards .card:hover {
+  transform: translateY(-5px);
+}
+
+.service-cards h3 {
+  color: #fcd535;
+  margin-bottom: 10px;
+}
+
+.service-cards p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Projects Preview */
+.projects-preview {
+  padding: 60px 40px;
+  background-color: #1e1e1e;
+  text-align: center;
+}
+
+.projects-preview h2 {
+  color: #fcd535;
+  margin-bottom: 30px;
+}
+
+.project-card {
+  background-color: #2a2a2a;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  color: #fcd535;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.button-small {
+  padding: 10px 20px;
+  background-color: #fcd535;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button-small:hover {
+  background-color: #fff200;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #151515;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #fcd535;
+  margin-bottom: 20px;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto 10px;
+}
+
+.testimonials cite {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* CTA Contact */
+.cta-contact {
+  padding: 60px 40px;
+  background-color: #1e1e1e;
+  text-align: center;
+}
+
+.cta-contact h2 {
+  color: #fcd535;
+  margin-bottom: 20px;
+}
+
+.cta-contact .button {
+  padding: 14px 30px;
+  background-color: #fcd535;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.cta-contact .button:hover {
+  background-color: #fff200;
+}
+
 /* Footer */
 
 .site-footer {
