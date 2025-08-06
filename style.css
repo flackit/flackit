@@ -82,9 +82,9 @@ body {
 }
 
 .logo-img {
-  height: 40px;
-  max-width: 60px;
-  object-fit: contain;
+  max-height: 50px;
+  width: auto;
+  vertical-align: middle;
 }
 
 /* Menu burger */
