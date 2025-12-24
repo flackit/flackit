@@ -1,185 +1,374 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta name="google-site-verification" content="fpYstZFRouCEOyAhJjhgALX2hrXzejvTIUCvzy64i6M" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Accueil – FlackoInsight</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta name="google-site-verification" content="fpYstZFRouCEOyAhJjhgALX2hrXzejvTIUCvzy64i6M" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlackoInsight | Stratégie Digitale & Marketing</title>
+    <meta name="description" content="Expert en marketing digital : SEO, SEA, Content Marketing et création de site web. Boostez votre croissance avec FlackoInsight.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. VARIABLES & RESET --- */
+        :root {
+            --primary: #2563EB;       /* Bleu roi dynamique */
+            --dark: #0F172A;          /* Bleu nuit très foncé (texte et fonds) */
+            --light: #F8FAFC;         /* Gris très clair pour les fonds alternés */
+            --white: #FFFFFF;
+            --gray: #64748B;          /* Gris pour les textes secondaires */
+            --accent: #F59E0B;        /* Orange pour les détails */
+            --spacing: 80px;          /* Espacement standard entre sections */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* --- 2. LAYOUT & UTILITIES --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover { background-color: #1d4ed8; }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover { background-color: var(--primary); color: var(--white); }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- 3. HEADER --- */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-weight: 500; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* --- 4. HERO SECTION --- */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(180deg, var(--light) 0%, var(--white) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* --- 5. SERVICES (GRID) --- */
+        .services { padding: var(--spacing) 0; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-color: var(--primary);
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-card h3 { margin-bottom: 15px; font-size: 1.25rem; }
+        .service-card p { color: var(--gray); font-size: 0.95rem; }
+
+        /* --- 6. STATS / PREUVE SOCIALE --- */
+        .stats {
+            background: var(--dark);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .stat-item p { font-size: 1.1rem; opacity: 0.9; }
+
+        /* --- 7. ABOUT & CONTACT --- */
+        .about-contact {
+            padding: var(--spacing) 0;
+            background: var(--light);
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 { margin-bottom: 20px; }
+        .about-text p { margin-bottom: 20px; color: var(--gray); }
+
+        /* --- 8. FOOTER --- */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 50px 0 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 { margin-bottom: 20px; color: var(--white); }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col a { color: #94a3b8; }
+        .footer-col a:hover { color: var(--white); }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            color: #64748B;
+        }
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Pour simplifier, menu caché sur mobile pour l'instant */
+            .about-grid { grid-template-columns: 1fr; }
+            .btn { width: 100%; margin: 10px 0 0 0; }
+        }
+    </style>
 </head>
 <body>
-  <header class="main-header">
-    <nav class="navbar">
-      <div class="logo">
-  <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
-    <img src="images/logo-flacko.jpg" alt="Logo Flacko" class="logo-img" />
-    <h1>Flacko<span>Insight</span></h1>
-  </a>
-</div>
-      <div class="burger" id="burger">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
-  <li><a href="index.html">Accueil</a></li>
-  <li class="dropdown">
-    <a href="services.html">Services</a>
-    <div class="dropdown-content">
-      <a href="seo.html">SEO</a>
-      <a href="sea.html">SEA</a>
-      <a href="content-marketing.html">Content Marketing</a>
-      <a href="creation-de-site-web.html">Création de site web</a>
-      <a href="web-analytics-et-datas.html">Web Analytics & Datas</a>
-      <a href="social-media.html">Social Media</a>
-      <a href="webdesign.html">Webdesign</a>
-      <a href="marketing-digital.html">Marketing digital</a>
-    </div>
-  </li>
-  <li><a href="projets.html">Projets</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="faq.html">Blog</a></li>
-</ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="content-block">
-      <div class="text">
-        <h2>Bienvenue</h2>
-        <p>Bienvenue chez FlackoInsight, votre levier de croissance digitale et d’analyse marketing stratégique.</p>
-      </div>
-      <div class="image">
-        <img src="images/accueil.jpeg" alt="Illustration Accueil">
-      </div>
-    </section>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FlackoInsight.</div>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
- <!-- HERO -->
     <section class="hero">
-      <h1>Stratégie digitale, contenus et performance</h1>
-      <p>FlackoInsight vous accompagne dans votre croissance en ligne avec des solutions sur mesure.</p>
-      <a href="services.html" class="button">Découvrir mes services</a>
-    </section>
-
-    <!-- À PROPOS -->
-    <section class="about">
-      <h2>À propos</h2>
-       <p>
-    Je m'appelle <strong>Olivier Kabongo</strong> et je suis passionné par le digital, le marketing et l'image. Fort d'une double expertise en <strong>marketing digital</strong> et en <strong>communication audiovisuelle</strong>, j’accompagne les entreprises, les indépendants et les créateurs dans le développement de leur visibilité en ligne.
-  </p>
-  <p>
-    De la stratégie à l’exécution, j’interviens sur l’ensemble des leviers du web marketing : <strong>SEO</strong> (référencement naturel), <strong>SEA</strong> (publicité Google Ads), <strong>content marketing</strong> (création de contenu), <strong>gestion des réseaux sociaux</strong>, <strong>analyse de données</strong> (Web analytics), <strong>création de site web</strong> et <strong>webdesign</strong>.
-  </p>
-  <p>
-    Mon objectif ? Proposer des solutions sur mesure, accessibles et performantes pour faire grandir votre présence numérique et transformer votre audience en clients fidèles. Que vous lanciez votre activité ou que vous cherchiez à accélérer votre croissance, je mets mes compétences à votre service.
-  </p>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="home-services">
-      <h2>Expertises</h2>
-      <div class="service-cards">
-        <div class="card"><h3>SEO</h3><p>
-    Améliorez votre présence sur Google de manière pérenne grâce au <strong>référencement naturel</strong>. J’optimise vos contenus, votre structure technique et votre stratégie de mots-clés pour que votre site gagne en visibilité sur les moteurs de recherche, attire un trafic qualifié et convertisse efficacement.  
-  </p>
-  <p>
-    Objectif : vous positionner durablement sur les requêtes stratégiques de votre marché, sans dépendre exclusivement de la publicité payante.
-  </p>
-        <a href="seo.html" class="button-small">Boostez votre référencement</a>
+        <div class="container">
+            <h1>Boostez votre croissance digitale<br>et convertissez votre audience.</h1>
+            <p>Expertise en SEO, SEA et Content Marketing pour transformer vos visiteurs en clients fidèles.</p>
+            <div>
+                <a href="#contact" class="btn btn-primary">Lancer mon projet</a>
+                <a href="#services" class="btn btn-outline">Découvrir les expertises</a>
+            </div>
         </div>
-        <div class="card"><h3>SEA</h3><p>
-    Le SEA, ou publicité sur les moteurs de recherche, est un levier essentiel pour générer rapidement du trafic qualifié et accroître la visibilité de votre entreprise. Je vous accompagne dans la création, la gestion et l’optimisation de campagnes payantes sur Google Ads, Bing Ads, ainsi que sur les réseaux sociaux comme Facebook Ads et LinkedIn Ads.
-  </p>
-  <p>
-    Mon objectif est de maximiser votre retour sur investissement en ciblant précisément vos audiences, en choisissant les bons mots-clés, et en optimisant les enchères au fil du temps. Grâce à un suivi rigoureux des performances (taux de clics, conversions, coût par acquisition), je vous aide à ajuster vos campagnes pour atteindre vos objectifs commerciaux, que ce soit la génération de leads, la vente en ligne ou le développement de la notoriété.
-  </p>
-  <p>
-    En maîtrisant les subtilités des plateformes publicitaires et leurs algorithmes, je vous permets de bénéficier d’un ciblage précis (géographique, démographique, comportemental) et de formats publicitaires adaptés (search, display, vidéo, remarketing). Ainsi, vos campagnes deviennent un moteur puissant et mesurable de croissance.
-  </p>
-<a href="sea.html" class="button-small">Commencez votre projet</a>
-</div>
-        <div class="card"><h3>Content Marketing</h3><p>
-    Le content marketing est bien plus que la simple création de contenus : c’est une stratégie pensée pour attirer, convertir et fidéliser votre audience sur le long terme. Je vous accompagne dans la définition d’une ligne éditoriale cohérente, alignée avec votre positionnement et vos objectifs business.
-  </p>
-  <p>
-    Je conçois des contenus variés et optimisés SEO (articles de blog, guides, études de cas, infographies, newsletters) qui répondent aux attentes spécifiques de vos clients potentiels et renforcent votre expertise dans votre secteur. En combinant storytelling et bonnes pratiques SEO, chaque contenu améliore votre visibilité naturelle sur les moteurs de recherche tout en apportant une réelle valeur ajoutée à vos lecteurs.
-  </p>
-  <p>
-    Par ailleurs, je mets en place des calendriers éditoriaux pour assurer une régularité de publication et maximiser l’impact de votre communication. Enfin, j’analyse les performances de vos contenus grâce à des outils de tracking pour ajuster la stratégie et favoriser la conversion.
-  </p>
-<a href="content-marketing.html" class="button-small">Améliorer vos contenus marketing</a>
-</div>
-        <div class="card"><h3>Social Media</h3><p>
-    Les réseaux sociaux sont devenus un canal incontournable pour construire et animer une communauté engagée autour de votre marque. Je vous aide à élaborer une stratégie social media complète, adaptée à votre secteur et à votre cible, pour développer votre présence sur Facebook, Instagram, LinkedIn, Twitter, TikTok, et autres plateformes pertinentes.
-  </p>
-  <p>
-    De la création de contenus visuels et textuels attractifs à la planification et à la publication régulière, je veille à ce que chaque publication réponde aux codes spécifiques de chaque réseau social et suscite l’interaction. Je vous accompagne également dans la gestion de la communauté, en animant les échanges, modérant les commentaires et répondant aux messages.
-  </p>
-  <p>
-    L’analyse des indicateurs clés de performance (engagement, portée, taux de clics, croissance de la communauté) permet d’ajuster la stratégie et d’optimiser les campagnes publicitaires sponsorisées sur les réseaux sociaux. L’objectif est de renforcer votre image de marque, générer du trafic qualifié vers votre site, et créer une relation durable avec vos clients.
-  </p><a href="social-media.html" class="button-small">Booster vos réseaux</a>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mes Expertises</h2>
+                <p>Des solutions sur mesure pour couvrir l'ensemble de vos besoins digitaux.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="icon">🔍</span>
+                    <h3>SEO (Référencement)</h3>
+                    <p>Positionnez votre site durablement sur Google. Audit technique, optimisation de contenu et stratégie de mots-clés pour un trafic organique qualifié.</p>
+                </div>
+                <div class="service-card">
+                    <span class="icon">🚀</span>
+                    <h3>SEA (Publicité)</h3>
+                    <p>Générez du trafic immédiat. Gestion optimisée de vos campagnes Google Ads et Social Ads pour maximiser votre retour sur investissement (ROI).</p>
+                </div>
+                <div class="service-card">
+                    <span class="icon">✍️</span>
+                    <h3>Content Marketing</h3>
+                    <p>Fidélisez votre audience. Création de contenus à forte valeur ajoutée (articles, guides, newsletters) alignés avec votre image de marque.</p>
+                </div>
+                <div class="service-card">
+                    <span class="icon">📊</span>
+                    <h3>Web Analytics</h3>
+                    <p>Comprenez vos données. Mise en place de tracking et rapports détaillés pour ajuster vos stratégies basées sur des chiffres réels.</p>
+                </div>
+                <div class="service-card">
+                    <span class="icon">📱</span>
+                    <h3>Social Media</h3>
+                    <p>Engagez votre communauté. Stratégie éditoriale et animation de vos réseaux sociaux pour accroître votre notoriété.</p>
+                </div>
+                <div class="service-card">
+                    <span class="icon">💻</span>
+                    <h3>Création Web</h3>
+                    <p>Un site performant et esthétique. Conception de sites vitrines modernes, rapides et pensés pour la conversion.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- PROJETS -->
-    <section class="projects-preview">
-      <h2>Projets récents</h2>
-      <div class="project-card">
-        <h3>SEO pour une startup tech</h3>
-        <p>+230% de trafic organique en 3 mois grâce à une stratégie de contenu ciblée.</p>
-        <a href="projets.html" class="button-small">Voir les projets</a>
-      </div>
+    <section class="stats">
+        <div class="container stats-container">
+            <div class="stat-item">
+                <h3>+230%</h3>
+                <p>Trafic Organique (Projet Tech)</p>
+            </div>
+            <div class="stat-item">
+                <h3>x3</h3>
+                <p>Retour sur Investissement (SEA)</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Sur Mesure</p>
+            </div>
+        </div>
     </section>
 
-    <!-- TÉMOIGNAGE -->
-    <section class="testimonials">
-      <h2>Ce qu'ils disent</h2>
-      <blockquote>“Très professionnel, Olivier a boosté notre visibilité digitale en quelques semaines.”</blockquote>
-      <cite>— Julie, Responsable Marketing</cite>
+    <section id="about" class="about-contact">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>À propos de FlackoInsight</h2>
+                    <p>Je m'appelle <strong>Olivier Kabongo</strong>. Passionné par le digital, j'accompagne les entreprises et indépendants dans le développement de leur visibilité en ligne.</p>
+                    <p>Mon approche combine technique et créativité. Que ce soit pour structurer votre SEO ou lancer une campagne publicitaire percutante, je m'engage à fournir des résultats mesurables.</p>
+                    <a href="mailto:contact@flackoinsight.com" id="contact" class="btn btn-primary">Me contacter par email</a>
+                </div>
+                <div class="about-image">
+                    <div style="background-color: #cbd5e1; height: 300px; width: 100%; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #64748B;">
+                        [Insérez votre photo ici]
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-contact">
-      <h2>Prêt à lancer votre stratégie digitale ?</h2>
-      <a href="contact.html" class="button">Contactez-moi</a>
-    </section>
-  </main>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>FlackoInsight</h4>
+                    <p style="color: #94a3b8;">Votre partenaire de croissance digitale.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">SEO & SEA</a></li>
+                        <li><a href="#">Content Marketing</a></li>
+                        <li><a href="#">Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="mailto:contact@example.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 FlackoInsight. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
 
- <footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-col">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Nos Services</h4>
-      <ul>
-        <li><a href="seo.html">SEO</a></li>
-        <li><a href="sea.html">SEA</a></li>
-        <li><a href="content-marketing.html">Content Marketing</a></li>
-        <li><a href="creation-de-site-web.html">Création de site web</a></li>
-        <li><a href="web-analytics-et-datas.html">Web Analytics & Datas</a></li>
-        <li><a href="social-media.html">Social Media</a></li>
-        <li><a href="webdesign.html">Webdesign</a></li>
-        <li><a href="marketing-digital.html">Marketing digital</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>À propos</h4>
-      <p>FlackoInsight est une initiative portée par Olivier Kabongo, expert en marketing digital et communication audiovisuelle.</p>
-      <p>📎 <a href="https://www.linkedin.com/in/olivier-kabongo-39097a219/" target="_blank" class="linkedin-link">Mon LinkedIn</a></p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 FlackoInsight. Tous droits réservés.</p>
-  </div>
-</footer>
-  <script src="script.js"></script>
 </body>
 </html>
