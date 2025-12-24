@@ -1,93 +1,139 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mes Projets – FlackoInsight</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets & Études de Cas | FlackoInsight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Note : Réutilisez votre CSS de base pour la cohérence */
+
+        .project-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 60px;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .project-content {
+            padding: 40px;
+        }
+
+        .project-image {
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #64748B;
+        }
+
+        .result-badge {
+            display: inline-block;
+            background: #DCFCE7;
+            color: #166534;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .project-card { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
-<body>
-  <header class="main-header">
-    <nav class="navbar">
-     <div class="logo">
-  <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
-    <img src="images/logo-flacko.jpg" alt="Logo Flacko" class="logo-img" />
-    <h1>Flacko<span>Insight</span></h1>
-  </a>
-</div>
-      <div class="burger" id="burger">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
-  <li><a href="index.html">Accueil</a></li>
-  <li class="dropdown">
-    <a href="services.html">Services</a>
-    <div class="dropdown-content">
-      <a href="seo.html">SEO</a>
-      <a href="sea.html">SEA</a>
-      <a href="content-marketing.html">Content Marketing</a>
-      <a href="creation-de-site-web.html">Création de site web</a>
-      <a href="web-analytics-et-datas.html">Web Analytics & Datas</a>
-      <a href="social-media.html">Social Media</a>
-      <a href="webdesign.html">Webdesign</a>
-      <a href="marketing-digital.html">Marketing digital</a>
-    </div>
-  </li>
-  <li><a href="projets.html">Projets</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="faq.html">Blog</a></li>
-</ul>
-    </nav>
-  </header>
+<body style="background-color: #F8FAFC;">
 
-  <main>
-    <section class="content-block">
-      <div class="text">
-        <h2>Mes Projets</h2>
-        <p>Voici quelques projets où nous avons transformé les données en performance concrète pour nos clients.</p>
-      </div>
-      <div class="image">
-        <img src="images/projets.jpeg" alt="Illustration Projets">
-      </div>
+    <section style="padding: 80px 0; text-align: center; background: white; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+            <h1 style="font-size: 3rem; color: #0F172A;">Études de cas & Résultats</h1>
+            <p style="color: #64748B; max-width: 700px; margin: 20px auto;">Découvrez comment j'accompagne mes clients dans l'atteinte de leurs objectifs de croissance digitale.</p>
+        </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-col">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </div>
+    <section style="padding: 60px 0;">
+        <div class="container">
+            
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="result-badge">+230% de trafic organique</span>
+                    <h2>Stratégie SEO pour une Startup Tech</h2>
+                    <p style="margin: 20px 0; color: #475569;">
+                        <strong>Défi :</strong> Une présence inexistante sur les mots-clés stratégiques et une structure technique limitant l'indexation.
+                    </p>
+                    <p style="margin-bottom: 20px; color: #475569;">
+                        <strong>Solution :</strong> Audit technique complet, refonte de l'architecture de l'information et création d'un cocon sémantique de 20 articles piliers.
+                    </p>
+                    <ul style="color: #2563EB; font-weight: 600;">
+                        <li>Top 3 sur 15 mots-clés prioritaires</li>
+                        <li>Audit technique 100% optimisé</li>
+                    </ul>
+                </div>
+                <div class="project-image">
+                    [Capture d'écran Google Search Console]
+                </div>
+            </div>
 
-    <div class="footer-col">
-      <h4>Nos Services</h4>
-      <ul>
-        <li><a href="seo.html">SEO</a></li>
-        <li><a href="sea.html">SEA</a></li>
-        <li><a href="content-marketing.html">Content Marketing</a></li>
-        <li><a href="creation-de-site-web.html">Création de site web</a></li>
-        <li><a href="web-analytics-et-datas.html">Web Analytics & Datas</a></li>
-        <li><a href="social-media.html">Social Media</a></li>
-        <li><a href="webdesign.html">Webdesign</a></li>
-        <li><a href="marketing-digital.html">Marketing digital</a></li>
-      </ul>
-    </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="result-badge">ROI x4 maintenu</span>
+                    <h2>Campagnes Google Ads - E-commerce</h2>
+                    <p style="margin: 20px 0; color: #475569;">
+                        <strong>Défi :</strong> Un coût par acquisition trop élevé qui rendait les publicités non rentables.
+                    </p>
+                    <p style="margin-bottom: 20px; color: #475569;">
+                        <strong>Solution :</strong> Nettoyage des mots-clés négatifs, mise en place de Performance Max et optimisation des landing pages pour la conversion.
+                    </p>
+                    <ul style="color: #2563EB; font-weight: 600;">
+                        <li>Baisse du CPA de 35%</li>
+                        <li>Augmentation du taux de conversion de 2%</li>
+                    </ul>
+                </div>
+                <div class="project-image">
+                    [Graphique de conversion Ads]
+                </div>
+            </div>
 
-    <div class="footer-col">
-      <h4>À propos</h4>
-      <p>FlackoInsight est une initiative portée par Olivier Kabongo, expert en marketing digital et communication audiovisuelle.</p>
-      <p>📎 <a href="https://www.linkedin.com/in/olivier-kabongo-39097a219/" target="_blank" class="linkedin-link">Mon LinkedIn</a></p>
-    </div>
-  </div>
+            <div class="project-card" style="margin-bottom: 0;">
+                <div class="project-content">
+                    <span class="result-badge">Site ultra-rapide</span>
+                    <h2>Refonte UX/UI - Cabinet de Conseil</h2>
+                    <p style="margin: 20px 0; color: #475569;">
+                        <strong>Défi :</strong> Un site vieillissant, non adapté au mobile et avec un taux de rebond de 80%.
+                    </p>
+                    <p style="margin-bottom: 20px; color: #475569;">
+                        <strong>Solution :</strong> Design moderne sous Figma, développement orienté performance et optimisation du parcours utilisateur (UX).
+                    </p>
+                    <ul style="color: #2563EB; font-weight: 600;">
+                        <li>Score 95/100 sur Google PageSpeed</li>
+                        <li>Taux de rebond réduit à 45%</li>
+                    </ul>
+                </div>
+                <div class="project-image">
+                    [Aperçu Maquette Mobile]
+                </div>
+            </div>
 
-  <div class="footer-bottom">
-    <p>&copy; 2025 FlackoInsight. Tous droits réservés.</p>
-  </div>
-</footer>
-  <script src="script.js"></script>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background: #2563EB; color: white; text-align: center;">
+        <div class="container">
+            <h2>Votre projet pourrait être le prochain.</h2>
+            <p style="margin: 20px 0; opacity: 0.9;">Analysons ensemble vos opportunités de croissance.</p>
+            <a href="index.html#contact" class="btn" style="background: white; color: #2563EB; padding: 15px 40px; border-radius: 50px; font-weight: 700;">Démarrer maintenant</a>
+        </div>
+    </section>
+
 </body>
 </html>
