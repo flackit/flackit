@@ -3,378 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets & Études de Cas | FlackoInsight</title>
+    <title>Blog & Ressources Digitales | FlackoInsight Lille</title>
+    <meta name="description" content="Conseils experts en SEO, SEA et Data Analytics. Découvrez nos derniers articles pour booster votre visibilité et vos performances en ligne.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* --- 1. VARIABLES & RESET --- */
         :root {
-            --primary: #2563EB;       /* Bleu roi dynamique */
-            --dark: #0F172A;          /* Bleu nuit très foncé (texte et fonds) */
-            --light: #F8FAFC;         /* Gris très clair pour les fonds alternés */
+            --primary: #2563EB;
+            --dark: #0F172A;
+            --light: #F8FAFC;
             --white: #FFFFFF;
-            --gray: #64748B;          /* Gris pour les textes secondaires */
-            --accent: #F59E0B;        /* Orange pour les détails */
-            --spacing: 80px;          /* Espacement standard entre sections */
+            --gray: #64748B;
+            --spacing: 60px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--light); }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
 
-        /* --- 2. LAYOUT & UTILITIES --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .btn-primary:hover { background-color: #1d4ed8; }
-
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            margin-left: 10px;
-        }
-
-        .btn-outline:hover { background-color: var(--primary); color: var(--white); }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* --- 3. HEADER --- */
-        header {
-            background: var(--white);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .nav-links { display: flex; gap: 30px; }
-        .nav-links a { font-weight: 500; font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--primary); }
-
-        /* --- 4. HERO SECTION --- */
-        .hero {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(180deg, var(--light) 0%, var(--white) 100%);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-        }
-
-        /* --- 5. SERVICES (GRID) --- */
-        .services { padding: var(--spacing) 0; }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-color: var(--primary);
-        }
-
-        .icon {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .service-card h3 { margin-bottom: 15px; font-size: 1.25rem; }
-        .service-card p { color: var(--gray); font-size: 0.95rem; }
-
-        /* --- 6. STATS / PREUVE SOCIALE --- */
-        .stats {
-            background: var(--dark);
-            color: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .stats-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .stat-item h3 {
-            font-size: 3rem;
-            color: var(--accent);
-            font-weight: 800;
-        }
-
-        .stat-item p { font-size: 1.1rem; opacity: 0.9; }
-
-        /* --- 7. ABOUT & CONTACT --- */
-        .about-contact {
-            padding: var(--spacing) 0;
-            background: var(--light);
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+        header { background: var(--white); padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+        .nav-links { display: flex; gap: 30px; }
+
+        /* --- FILTRES --- */
+        .blog-header { padding: 80px 0 40px; text-align: center; background: var(--white); }
+        .blog-header h1 { font-size: 3rem; margin-bottom: 20px; }
+        .categories { display: flex; justify-content: center; gap: 15px; margin-top: 30px; flex-wrap: wrap; }
+        .cat-btn { padding: 8px 20px; border-radius: 30px; border: 1px solid #E2E8F0; background: white; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: 0.3s; }
+        .cat-btn:hover, .cat-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+        /* --- GRILLE D'ARTICLES --- */
+        .blog-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            gap: 40px; 
+            padding: var(--spacing) 0;
         }
 
-        .about-text h2 { margin-bottom: 20px; }
-        .about-text p { margin-bottom: 20px; color: var(--gray); }
-
-        /* --- 8. FOOTER --- */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 50px 0 20px 0;
-            font-size: 0.9rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h4 { margin-bottom: 20px; color: var(--white); }
-        .footer-col ul li { margin-bottom: 10px; }
-        .footer-col a { color: #94a3b8; }
-        .footer-col a:hover { color: var(--white); }
-
-        .copyright {
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            color: #64748B;
-        }
-
-        /* --- MOBILE --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Pour simplifier, menu caché sur mobile pour l'instant */
-            .about-grid { grid-template-columns: 1fr; }
-            .btn { width: 100%; margin: 10px 0 0 0; }
-
-        .project-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 60px;
-            border: 1px solid #e2e8f0;
+        .article-card { 
+            background: var(--white); 
+            border-radius: 16px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: 0.3s;
-        }
-
-        .project-card:hover {
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .project-content {
-            padding: 40px;
-        }
-
-        .project-image {
-            background: #f1f5f9;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            color: #64748B;
+            flex-direction: column;
         }
 
-        .result-badge {
-            display: inline-block;
-            background: #DCFCE7;
-            color: #166534;
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
+        .article-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+        .article-img { width: 100%; height: 220px; background: #DDD; object-fit: cover; }
+        
+        .article-content { padding: 30px; flex-grow: 1; }
+        .article-meta { font-size: 0.85rem; color: var(--primary); font-weight: 800; text-transform: uppercase; margin-bottom: 12px; display: block; }
+        .article-title { font-size: 1.4rem; margin-bottom: 15px; line-height: 1.3; }
+        .article-excerpt { color: var(--gray); font-size: 0.95rem; margin-bottom: 20px; }
+        
+        .read-more { font-weight: 700; color: var(--dark); border-bottom: 2px solid var(--primary); padding-bottom: 2px; }
 
         @media (max-width: 768px) {
-            .project-card { grid-template-columns: 1fr; }
+            .blog-header h1 { font-size: 2.2rem; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
+<body>
 
     <header>
         <div class="container">
             <nav>
-                <div class="logo">
-                    <a href="index.html" style="color: inherit; text-decoration: none;">FlackoInsight.</a>
-                </div>
+                <div class="logo"><a href="index.html">FlackoInsight</a></div>
                 <ul class="nav-links">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="seo.html">SEO</a></li>
                     <li><a href="sea.html">SEA</a></li>
-                    <li><a href="projets.html">Projets</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="projets.html" style="color: var(--primary);">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
-        
-<body style="background-color: #F8FAFC;">
+    </header>
 
-    <section style="padding: 80px 0; text-align: center; background: white; border-bottom: 1px solid #e2e8f0;">
+    <section class="blog-header">
         <div class="container">
-            <h1 style="font-size: 3rem; color: #0F172A;">Études de cas & Résultats</h1>
-            <p style="color: #64748B; max-width: 700px; margin: 20px auto;">Découvrez comment j'accompagne mes clients dans l'atteinte de leurs objectifs de croissance digitale.</p>
-        </div>
-    </section>
-
-    <section style="padding: 60px 0;">
-        <div class="container">
+            <h1>Le blog performance & Data</h1>
+            <p style="color: var(--gray); max-width: 600px; margin: 0 auto;">Décryptages, tutoriels et stratégies pour dominer votre marché grâce au web marketing moderne.</p>
             
-            <div class="project-card">
-                <div class="project-content">
-                    <span class="result-badge">+230% de trafic organique</span>
-                    <h2>Stratégie SEO pour une Startup Tech</h2>
-                    <p style="margin: 20px 0; color: #475569;">
-                        <strong>Défi :</strong> Une présence inexistante sur les mots-clés stratégiques et une structure technique limitant l'indexation.
-                    </p>
-                    <p style="margin-bottom: 20px; color: #475569;">
-                        <strong>Solution :</strong> Audit technique complet, refonte de l'architecture de l'information et création d'un cocon sémantique de 20 articles piliers.
-                    </p>
-                    <ul style="color: #2563EB; font-weight: 600;">
-                        <li>Top 3 sur 15 mots-clés prioritaires</li>
-                        <li>Audit technique 100% optimisé</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    [Capture d'écran Google Search Console]
-                </div>
+            <div class="categories">
+                <button class="cat-btn active">Tous</button>
+                <button class="cat-btn">SEO</button>
+                <button class="cat-btn">Google Ads</button>
+                <button class="cat-btn">Data Analytics</button>
+                <button class="cat-btn">Contenu</button>
             </div>
-
-            <div class="project-card">
-                <div class="project-content">
-                    <span class="result-badge">ROI x4 maintenu</span>
-                    <h2>Campagnes Google Ads - E-commerce</h2>
-                    <p style="margin: 20px 0; color: #475569;">
-                        <strong>Défi :</strong> Un coût par acquisition trop élevé qui rendait les publicités non rentables.
-                    </p>
-                    <p style="margin-bottom: 20px; color: #475569;">
-                        <strong>Solution :</strong> Nettoyage des mots-clés négatifs, mise en place de Performance Max et optimisation des landing pages pour la conversion.
-                    </p>
-                    <ul style="color: #2563EB; font-weight: 600;">
-                        <li>Baisse du CPA de 35%</li>
-                        <li>Augmentation du taux de conversion de 2%</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    [Graphique de conversion Ads]
-                </div>
-            </div>
-
-            <div class="project-card" style="margin-bottom: 0;">
-                <div class="project-content">
-                    <span class="result-badge">Site ultra-rapide</span>
-                    <h2>Refonte UX/UI - Cabinet de Conseil</h2>
-                    <p style="margin: 20px 0; color: #475569;">
-                        <strong>Défi :</strong> Un site vieillissant, non adapté au mobile et avec un taux de rebond de 80%.
-                    </p>
-                    <p style="margin-bottom: 20px; color: #475569;">
-                        <strong>Solution :</strong> Design moderne sous Figma, développement orienté performance et optimisation du parcours utilisateur (UX).
-                    </p>
-                    <ul style="color: #2563EB; font-weight: 600;">
-                        <li>Score 95/100 sur Google PageSpeed</li>
-                        <li>Taux de rebond réduit à 45%</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    [Aperçu Maquette Mobile]
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <section style="padding: 80px 0; background: #2563EB; color: white; text-align: center;">
-        <div class="container">
-            <h2>Votre projet pourrait être le prochain.</h2>
-            <p style="margin: 20px 0; opacity: 0.9;">Analysons ensemble vos opportunités de croissance.</p>
-            <a href="index.html#contact" class="btn" style="background: white; color: #2563EB; padding: 15px 40px; border-radius: 50px; font-weight: 700;">Démarrer maintenant</a>
-        </div>
-    </section>
-
-</body>
-</html>
+    <main class="container">
+        <div class="blog-grid">
+            
+            <article class="article-card">
+                <img src="images/
