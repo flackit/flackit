@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expertise SEO | FlackoInsight</title>
+    <title>Expertise SEO & Référencement Naturel | FlackoInsight</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         /* --- 1. VARIABLES & RESET --- */
         :root {
-            --primary: #2563EB;       /* Bleu roi dynamique */
-            --dark: #0F172A;          /* Bleu nuit très foncé (texte et fonds) */
-            --light: #F8FAFC;         /* Gris très clair pour les fonds alternés */
+            --primary: #2563EB;
+            --dark: #0F172A;
+            --light: #F8FAFC;
             --white: #FFFFFF;
-            --gray: #64748B;          /* Gris pour les textes secondaires */
-            --accent: #F59E0B;        /* Orange pour les détails */
-            --spacing: 80px;          /* Espacement standard entre sections */
+            --gray: #64748B;
+            --accent: #F59E0B;
+            --spacing: 80px;
         }
 
         * {
@@ -32,7 +32,7 @@
 
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
-        img { max-width: 100%; display: block; }
+        img { max-width: 100%; display: block; border-radius: 12px; }
 
         /* --- 2. LAYOUT & UTILITIES --- */
         .container {
@@ -47,6 +47,7 @@
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         .btn-primary {
@@ -54,31 +55,7 @@
             color: var(--white);
         }
 
-        .btn-primary:hover { background-color: #1d4ed8; }
-
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            margin-left: 10px;
-        }
-
-        .btn-outline:hover { background-color: var(--primary); color: var(--white); }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        .btn-primary:hover { background-color: #1d4ed8; transform: translateY(-2px); }
 
         /* --- 3. HEADER --- */
         header {
@@ -106,133 +83,7 @@
         .nav-links a { font-weight: 500; font-size: 0.95rem; }
         .nav-links a:hover { color: var(--primary); }
 
-        /* --- 4. HERO SECTION --- */
-        .hero {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(180deg, var(--light) 0%, var(--white) 100%);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-        }
-
-        /* --- 5. SERVICES (GRID) --- */
-        .services { padding: var(--spacing) 0; }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-color: var(--primary);
-        }
-
-        .icon {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .service-card h3 { margin-bottom: 15px; font-size: 1.25rem; }
-        .service-card p { color: var(--gray); font-size: 0.95rem; }
-
-        /* --- 6. STATS / PREUVE SOCIALE --- */
-        .stats {
-            background: var(--dark);
-            color: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .stats-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .stat-item h3 {
-            font-size: 3rem;
-            color: var(--accent);
-            font-weight: 800;
-        }
-
-        .stat-item p { font-size: 1.1rem; opacity: 0.9; }
-
-        /* --- 7. ABOUT & CONTACT --- */
-        .about-contact {
-            padding: var(--spacing) 0;
-            background: var(--light);
-        }
-        
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text h2 { margin-bottom: 20px; }
-        .about-text p { margin-bottom: 20px; color: var(--gray); }
-
-        /* --- 8. FOOTER --- */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 50px 0 20px 0;
-            font-size: 0.9rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h4 { margin-bottom: 20px; color: var(--white); }
-        .footer-col ul li { margin-bottom: 10px; }
-        .footer-col a { color: #94a3b8; }
-        .footer-col a:hover { color: var(--white); }
-
-        .copyright {
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            color: #64748B;
-        }
-
-        /* --- MOBILE --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Pour simplifier, menu caché sur mobile pour l'instant */
-            .about-grid { grid-template-columns: 1fr; }
-            .btn { width: 100%; margin: 10px 0 0 0; }/
-        
-        /* Styles spécifiques à cette page */
+        /* --- 4. SEO SPECIFIC STYLES --- */
         .process-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -240,19 +91,27 @@
             margin-top: 40px;
         }
         .step {
-            padding: 20px;
-            border-left: 4px solid #2563EB;
-            background: #f8fafc;
+            padding: 30px;
+            border-left: 4px solid var(--primary);
+            background: var(--white);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 0 12px 12px 0;
         }
-        .step span { font-weight: 800; color: #2563EB; display: block; margin-bottom: 10px; }
+        .step span { font-weight: 800; color: var(--primary); display: block; margin-bottom: 10px; font-size: 1.2rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-grid { grid-template-columns: 1fr !important; text-align: center; }
+        }
     </style>
 </head>
+<body>
 
-       <header>
+    <header>
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="index.html" style="color: inherit; text-decoration: none;">FlackoInsight.</a>
+                    <a href="index.html">FlackoInsight.</a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Accueil</a></li>
@@ -263,66 +122,84 @@
                 </ul>
             </nav>
         </div>
-           
-<body>
+    </header>
 
-    <section style="padding: 80px 0; background: #0F172A; color: white; text-align: center;">
+    <section style="padding: 80px 0; background: var(--dark); color: white;">
         <div class="container">
-            <h1>Expertise SEO : Dominez les résultats Google</h1>
-            <p style="opacity: 0.8; max-width: 600px; margin: 20px auto;">Une stratégie de référencement naturel pérenne pour attirer un trafic qualifié sans dépendre de la publicité.</p>
-        </div>
-    </section>
-
-    <section style="padding: 60px 0;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <div class="hero-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
                 <div>
-                    <h2>Pourquoi le SEO est vital pour votre business ?</h2>
-                    <p>Le SEO (Search Engine Optimization) n'est pas seulement une question de mots-clés. C'est l'art de rendre votre site indispensable aux yeux des algorithmes et utile pour vos futurs clients.</p>
-                    <ul style="margin-top: 20px;">
-                        <li><strong>Visibilité :</strong> Apparaissez là où vos clients cherchent.</li>
-                        <li><strong>Crédibilité :</strong> Être en première page renforce la confiance.</li>
-                        <li><strong>Rentabilité :</strong> Un trafic gratuit sur le long terme.</li>
-                    </ul>
+                    <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 20px;">Expertise SEO : Dominez les résultats Google</h1>
+                    <p style="opacity: 0.8; font-size: 1.2rem; margin-bottom: 30px;">Transformez votre site en un aimant à prospects grâce à une stratégie de référencement naturel durable et performante.</p>
+                    <a href="index.html#contact" class="btn btn-primary">Obtenir mon audit SEO offert</a>
                 </div>
-                <div style="background: #e2e8f0; height: 300px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                    [Illustration Graphique de Croissance]
+                <div style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; text-align: center; border: 1px dashed rgba(255,255,255,0.2);">
+                    <span style="font-size: 4rem;">📈</span>
+                    <p style="margin-top: 10px; font-weight: 600;">Croissance organique garantie</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="padding: 60px 0; background: #f1f5f9;">
+    <section style="padding: var(--spacing) 0;">
         <div class="container">
-            <h2 style="text-align: center;">Ma Méthodologie en 4 étapes</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                <div>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Pourquoi le SEO est vital pour votre business ?</h2>
+                    <p style="color: var(--gray); margin-bottom: 20px;">Le SEO (Search Engine Optimization) n'est pas seulement une question de mots-clés. C'est l'art de rendre votre site indispensable aux yeux des algorithmes et utile pour vos futurs clients.</p>
+                    <ul style="display: flex; flex-direction: column; gap: 15px;">
+                        <li><strong>🚀 Visibilité :</strong> Apparaissez là où vos clients cherchent des solutions.</li>
+                        <li><strong>💎 Crédibilité :</strong> Être en première page renforce instantanément la confiance.</li>
+                        <li><strong>💰 Rentabilité :</strong> Contrairement au SEA, le trafic organique est gratuit sur le long terme.</li>
+                    </ul>
+                </div>
+                <div style="background: var(--light); padding: 40px; border-radius: 12px;">
+                    <h4 style="margin-bottom: 20px;">Le saviez-vous ?</h4>
+                    <p style="font-style: italic; color: var(--gray);">"75% des utilisateurs ne cliquent jamais sur la deuxième page des résultats de recherche. Si vous n'êtes pas sur la première, vous n'existez pas."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: var(--spacing) 0; background: var(--light);">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
+                <h2>Ma Méthodologie en 4 étapes</h2>
+                <p style="color: var(--gray); margin-top: 15px;">Une approche structurée pour des résultats mesurables et pérennes.</p>
+            </div>
             <div class="process-grid">
                 <div class="step">
                     <span>01. Audit Technique</span>
-                    <p>Analyse de la santé de votre site (vitesse, indexation, structure mobile).</p>
+                    <p>Analyse complète de la santé de votre site : vitesse de chargement, indexation et structure mobile.</p>
                 </div>
                 <div class="step">
-                    <span>02. Recherche Sémantique</span>
-                    <p>Identification des mots-clés stratégiques avec le plus fort potentiel de conversion.</p>
+                    <span>02. Sémantique</span>
+                    <p>Identification des mots-clés stratégiques avec le plus fort potentiel de conversion pour votre activité.</p>
                 </div>
                 <div class="step">
                     <span>03. Optimisation On-Page</span>
-                    <p>Rédaction de contenus optimisés et structuration des balises HTML.</p>
+                    <p>Rédaction de contenus optimisés, balisage HTML et amélioration de l'expérience utilisateur (UX).</p>
                 </div>
                 <div class="step">
                     <span>04. Netlinking</span>
-                    <p>Développement de la popularité de votre site via des liens de qualité.</p>
+                    <p>Développement de l'autorité de votre domaine via l'acquisition de liens (backlinks) de haute qualité.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="padding: 80px 0; text-align: center;">
+    <section style="padding: 100px 0; text-align: center;">
         <div class="container">
-            <h3>Prêt à grimper dans les résultats ?</h3>
-            <p style="margin: 20px 0;">Discutons de votre projet lors d'un appel stratégique offert.</p>
-            <a href="index.html#contact" class="btn btn-primary">Demander un devis SEO</a>
+            <h3 style="font-size: 2.5rem; margin-bottom: 20px;">Prêt à grimper dans les résultats ?</h3>
+            <p style="color: var(--gray); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Ne laissez plus vos concurrents prendre toute la place. Discutons de votre stratégie lors d'un appel offert.</p>
+            <a href="index.html#contact" class="btn btn-primary">Demander mon devis personnalisé</a>
         </div>
     </section>
 
-    </body>
+    <footer style="background: var(--dark); color: white; padding: 40px 0; text-align: center; font-size: 0.9rem;">
+        <div class="container">
+            <p>&copy; 2026 FlackoInsight. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
