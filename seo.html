@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert SEO Lille | Consultant référencement naturel & audit</title>
-    <meta name="description" content="Boostez votre visibilité sur Google avec un expert SEO. Audit technique, stratégie de mots-clés et netlinking pour générer un trafic qualifié durable.">
+    <title>Expert SEO Lille | Consultant Référencement Naturel & Audit | FlackoInsight</title>
+    <meta name="description" content="Boostez votre visibilité sur Google avec un expert SEO. Audit technique, stratégie de mots-clés et netlinking pour générer un trafic qualifié durable à Lille.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,28 +13,185 @@
             --light: #F8FAFC;
             --white: #FFFFFF;
             --gray: #64748B;
+            --accent: #F59E0B;
             --spacing: 80px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; background-color: var(--white); }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
         img { max-width: 100%; display: block; border-radius: 12px; }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 14px 35px;
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
             transition: 0.3s;
         }
         .btn-primary { background-color: var(--primary); color: var(--white); }
-        .btn-primary:hover { background-color: #1d4ed8; transform: translateY(-2px); }
+        .btn-primary:hover { background-color: #1d4ed8; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2); }
 
+        header { background: var(--white); padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+        .nav-links { display: flex; gap: 30px; }
+
+        .hero { padding: 120px 0; background: var(--dark); color: white; }
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+
+        .section-padding { padding: var(--spacing) 0; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        
+        .card { padding: 40px; border-radius: 16px; background: var(--white); border: 1px solid #e2e8f0; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .card h3 { margin-bottom: 20px; color: var(--primary); font-size: 1.4rem; }
+
+        .expert-box { background: var(--light); padding: 40px; border-radius: 20px; border-left: 6px solid var(--primary); margin: 40px 0; }
+        .expert-box h4 { margin-bottom: 15px; font-size: 1.2rem; }
+
+        .faq-item { border-bottom: 1px solid #e2e8f0; padding: 25px 0; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 12px; font-size: 1.15rem; }
+
+        @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="index.html">FlackoInsight</a></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="seo.html">SEO</a></li>
+                    <li><a href="sea.html">SEA</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px;">Expert SEO Lille : Dominez durablement les résultats Google</h1>
+                    <p style="opacity: 0.8; font-size: 1.2rem; margin-bottom: 40px;">Ne vous contentez pas d'un beau site. Obtenez un site qui travaille pour vous. J'accompagne les entreprises lilloises dans la conquête de leur visibilité organique grâce à une approche orientée Data et Conversion.</p>
+                    <a href="index.html#contact" class="btn btn-primary">Obtenir mon audit SEO offert</a>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 50px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                    <div style="font-size: 3rem; font-weight: 800; color: var(--accent);">+250%</div>
+                    <p style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; opacity: 0.7;">De trafic organique moyen</p>
+                    <hr style="margin: 20px auto; width: 50px; opacity: 0.2;">
+                    <p style="font-style: italic;">"La première page de Google n'est pas une option, c'est votre futur canal d'acquisition n°1."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Les 3 piliers d'une stratégie SEO imbattable</h2>
+                <p style="color: var(--gray);">Le référencement naturel n'est pas une formule magique, c'est un équilibre entre trois forces complémentaires que je maîtrise pour propulser votre business.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>⚙️ Le Socle Technique</h3>
+                    <p>C'est la fondation de votre site. Si votre plateforme est lente ou mal structurée, Google ne prendra pas la peine de l'indexer correctement. J'optimise vos <strong>Core Web Vitals</strong>, la structure de vos URLs, le fichier robots.txt et la hiérarchie de vos balises pour une exploration fluide par les robots.</p>
+                </div>
+                <div class="card">
+                    <h3>✍️ L'Autorité Sémantique</h3>
+                    <p>Google ne lit plus seulement des mots-clés, il comprend les intentions de recherche. Je crée pour vous des <strong>clusters thématiques</strong> et des contenus à forte valeur ajoutée qui répondent précisément aux problématiques de vos futurs clients tout en respectant les critères E-E-A-T.</p>
+                </div>
+                <div class="card">
+                    <h3>🔗 La Popularité (Netlinking)</h3>
+                    <p>Dans le web, votre réputation se mesure au nombre de sites de qualité qui parlent de vous. Je mets en place des campagnes d'acquisition de liens (backlinks) éthiques, locales et thématiques pour booster l'autorité de votre domaine en toute sécurité auprès des algorithmes.</p>
+                </div>
+            </div>
+
+            <div class="expert-box">
+                <h4>💡 Le conseil de l'expert FlackoInsight</h4>
+                <p>Le SEO est un actif qui prend de la valeur avec le temps. Contrairement à la publicité payante qui s'arrête dès que vous coupez le budget, un travail de référencement bien fait continue de générer des prospects qualifiés des mois, voire des années après l'intervention initiale. À Lille, la concurrence digitale s'intensifie : prendre de l'avance aujourd'hui, c'est sécuriser vos revenus de demain.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--light);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <div>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 25px;">Pourquoi votre site ne remonte-t-il pas ?</h2>
+                    <p style="margin-bottom: 20px;">Plusieurs facteurs peuvent bloquer votre croissance organique :</p>
+                    <ul style="display: flex; flex-direction: column; gap: 15px;">
+                        <li><strong>🔴 Cannibalisation :</strong> Plusieurs de vos pages se battent pour le même mot-clé, ce qui brouille Google.</li>
+                        <li><strong>🔴 Contenu pauvre :</strong> Vos textes n'apportent pas assez de valeur ou sont trop courts pour être jugés pertinents.</li>
+                        <li><strong>🔴 Profil de liens toxique :</strong> Des liens de mauvaise qualité pointent vers vous et freinent votre progression.</li>
+                        <li><strong>🔴 Temps de chargement :</strong> Un site lent fait fuir les utilisateurs et déplaît souverainement à Google.</li>
+                    </ul>
+                </div>
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h4 style="margin-bottom: 20px;">L'approche SXO (SEO + UX)</h4>
+                    <p>Mon rôle de consultant est de fusionner le référencement et l'expérience utilisateur. Un bon SEO attire le visiteur, mais une bonne UX le transforme en client. Je travaille sur vos taux de conversion autant que sur vos positions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Foire Aux Questions SEO</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                
+                <div class="faq-item">
+                    <h4>Combien de temps pour être premier sur Google ?</h4>
+                    <p>Le SEO est un marathon. Selon la concurrence de votre secteur à Lille, comptez entre 3 et 6 mois pour voir des changements majeurs. Cependant, des gains rapides (Quick Wins) sont souvent possibles dès le premier mois après l'audit technique.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Le SEO est-il garanti ?</h4>
+                    <p>Aucun expert sérieux ne peut garantir la 1ère place absolue (car Google est le seul maître). En revanche, je garantis une progression nette de votre visibilité, de votre trafic qualifié et de la santé technique de votre plateforme.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Quelle est la différence entre SEO et SEA ?</h4>
+                    <p>Le SEO (Naturel) est un investissement long terme gratuit au clic. Le SEA (Payant/Google Ads) est une solution immédiate mais coûteuse à chaque clic. Pour une stratégie de croissance saine, je recommande souvent de combiner les deux.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Proposez-vous du SEO local pour les entreprises lilloises ?</h4>
+                    <p>Absolument. Le SEO local est crucial pour les commerces et services de proximité. J'optimise votre fiche Google Business Profile et vos mots-clés géolocalisés pour vous rendre incontournable dans la métropole lilloise.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 100px 0; background: var(--primary); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 25px;">Prêt à dominer votre marché ?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Ne laissez plus vos concurrents capter vos clients. Discutons de votre stratégie lors d'un audit stratégique.</p>
+            <a href="index.html#contact" class="btn" style="background: var(--white); color: var(--primary);">Réserver mon diagnostic SEO gratuit</a>
+        </div>
+    </section>
+
+    <footer style="background: var(--dark); color: white; padding: 50px 0; text-align: center;">
+        <p>&copy; 2026 FlackoInsight - Olivier Kabongo | Expert SEO & Data à Lille</p>
+    </footer>
+
+</body>
+</html>
         header { background: var(--white); padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         nav { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
