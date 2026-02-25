@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA4 : 5 Erreurs de configuration qui ruinent vos données | FlackoInsight</title>
+    <meta name="description" content="Votre tracking Google Analytics 4 est-il fiable ? Découvrez les 5 erreurs critiques de configuration qui faussent vos rapports et comment les corriger.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #10B981; --dark: #020617; --gray: #64748B; --light: #F0FDF4; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #1E293B; background: #FFF; }
+        .container-article { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
+        header { padding: 20px 0; border-bottom: 1px solid #EEE; }
+        .logo { font-weight: 800; color: #2563EB; text-decoration: none; font-size: 1.2rem; }
+        
+        h1 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 25px; color: var(--dark); }
+        h2 { font-size: 1.9rem; margin-top: 50px; margin-bottom: 20px; color: var(--primary); border-bottom: 2px solid var(--light); padding-bottom: 10px; }
+        h3 { font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; color: var(--dark); }
+        p { margin-bottom: 25px; font-size: 1.15rem; }
+        
+        .meta { color: var(--gray); font-size: 0.95rem; margin-bottom: 30px; display: flex; gap: 20px; }
+        .warning-box { background: #FFF7ED; padding: 30px; border-radius: 15px; border-left: 6px solid #F97316; margin: 40px 0; }
+        .solution-box { background: var(--light); padding: 30px; border-radius: 15px; border-left: 6px solid var(--primary); margin: 40px 0; }
+        
+        .cta-article { background: var(--dark); color: white; padding: 40px; border-radius: 20px; margin-top: 60px; text-align: center; }
+        .btn { display: inline-block; background: var(--primary); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 20px; transition: 0.3s; }
+        
+        .toc { background: #F8FAFC; padding: 20px; border-radius: 10px; margin-bottom: 40px; border: 1px solid #E2E8F0; }
+        .toc b { display: block; margin-bottom: 10px; }
+        .toc a { color: #2563EB; text-decoration: none; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+            <a href="../index.html" class="logo">FlackoInsight</a>
+        </div>
+    </header>
+
+    <article class="container-article">
+        <div class="meta">
+            <span>📅 25 Février 2026</span>
+            <span>📂 Catégorie : Web Analytics</span>
+            <span>⏱️ Lecture : 15 min</span>
+        </div>
+        
+        <h1>GA4 : 5 erreurs de configuration qui faussent vos données (et comment les réparer)</h1>
+        
+        <p>
+            Depuis le passage forcé à <strong>Google Analytics 4 (GA4)</strong>, de nombreuses entreprises pensent être "bien configurées" simplement parce qu'elles voient des chiffres monter dans leurs rapports. Pourtant, la réalité technique est souvent bien différente. En tant qu'expert Data, j'audite chaque semaine des comptes où 30% à 50% de la donnée est soit manquante, soit totalement erronée.
+        </p>
+        
+        <p>
+            Une mauvaise donnée est plus dangereuse que pas de donnée du tout : elle vous pousse à prendre des décisions d'investissement basées sur des mirages. Voici les 5 erreurs critiques que je rencontre le plus souvent dans la métropole lilloise et ailleurs.
+        </p>
+
+        <div class="toc">
+            <b>Sommaire de l'article :</b>
+            <ul>
+                <li><a href="#retention">1. La rétention des données limitée à 2 mois</a></li>
+                <li><a href="#referral">2. L'absence d'exclusion des sites référents (Self-Referral)</a></li>
+                <li><a href="#events">3. Confondre Événements et Conversions</a></li>
+                <li><a href="#consent">4. Ignorer le Consent Mode V2 et le RGPD</a></li>
+                <li><a href="#debug">5. Ne pas tester via le DebugView de GTM</a></li>
+            </ul>
+        </div>
+
+        <h2 id="retention">1. La rétention des données limitée à 2 mois</h2>
+        <p>
+            C'est l'erreur "silencieuse" par excellence. Par défaut, lors de la création d'une propriété GA4, Google configure la rétention des données d'exploration sur <strong>2 mois seulement</strong>. 
+        </p>
+        <p>
+            Concrètement, cela signifie que si vous voulez comparer vos performances actuelles avec celles de l'année dernière dans l'onglet "Explorer", vous n'aurez aucun historique. Pour un business saisonnier (comme la Braderie de Lille ou les soldes d'hiver), c'est une catastrophe stratégique.
+        </p>
+        <div class="solution-box">
+            <strong>La solution :</strong> Allez dans Administration > Paramètres des données > Conservation des données. Changez "2 mois" par "14 mois" et enregistrez immédiatement.
+        </div>
+
+        <h2 id="referral">2. L'absence d'exclusion des sites référents</h2>
+        <p>
+            Avez-vous remarqué que votre canal "Referral" (sites référents) contient souvent votre propre nom de domaine ou des plateformes de paiement comme <strong>Stripe, PayPal ou Sogenactif</strong> ?
+        </p>
+        <p>
+            Lorsqu'un client quitte votre site pour payer et revient après la validation, GA4 peut considérer cela comme une nouvelle session. Résultat : la vente est attribuée à "paypal.com" au lieu de votre campagne SEO ou Google Ads. Votre analyse de ROI est alors totalement faussée.
+        </p>
+        <p>
+            À Lille, beaucoup d'e-commerçants font cette erreur, ce qui rend leur pilotage publicitaire impossible. Il est impératif d'exclure ces domaines de la liste des sites référents.
+        </p>
+
+        <h2 id="events">3. Confondre Événements et Conversions</h2>
+        <p>
+            Dans GA4, "tout est un événement". Un clic, un scroll, une vue de page. Mais <strong>tout n'est pas une conversion</strong>. 
+        </p>
+        <p>
+            L'erreur courante consiste à marquer trop d'événements comme conversions (par exemple, le clic sur un bouton social). Si votre taux de conversion affiche 80%, vous ne mesurez plus votre business, vous mesurez le bruit. Une conversion doit être une action qui a une valeur économique directe : un formulaire de contact rempli, un achat ou une demande de devis.
+        </p>
+        <div class="warning-box">
+            <strong>Conséquence :</strong> Si vous liez un compte GA4 mal configuré à Google Ads, l'intelligence artificielle de Google va optimiser vos publicités pour des actions inutiles, gaspillant ainsi votre budget.
+        </div>
+
+        
+
+        <h2 id="consent">4. Ignorer le Consent Mode V2 et le RGPD</h2>
+        <p>
+            Depuis mars 2024, le <strong>Consent Mode V2</strong> est devenu obligatoire pour continuer à utiliser les fonctionnalités de ciblage et de mesure de Google. Si vous n'avez pas correctement lié votre bannière de cookies (CMP) à GA4, vous perdez une quantité massive de données, notamment pour les utilisateurs refusant les cookies.
+        </p>
+        <p>
+            Le Consent Mode V2 permet de faire de la "modélisation de données". Il aide à estimer les conversions perdues via des modèles mathématiques, tout en restant 100% conforme au RGPD. Sans cela, vos rapports Analytics sous-estiment systématiquement votre performance réelle.
+        </p>
+
+        <h2 id="debug">5. Ne pas tester via le DebugView</h2>
+        <p>
+            Beaucoup installent des tags via Google Tag Manager (GTM) et vérifient simplement si les chiffres montent dans le rapport "Temps réel". C'est insuffisant.
+        </p>
+        <p>
+            L'utilisation du <strong>DebugView</strong> dans GA4 est la seule manière de vérifier que les paramètres envoyés sont corrects. Par exemple, si vous envoyez une valeur de transaction, est-elle bien formatée ? La devise est-elle la bonne ? L'ID de transaction est-il unique ? Sans test rigoureux, vous accumulez des données "sales" (Garbage In, Garbage Out).
+        </p>
+
+        <h2 id="conclusion">Conclusion : La data est le carburant de votre stratégie</h2>
+        <p>
+            Le Web Analytics n'est pas un projet "One-Shot" que l'on configure et que l'on oublie. C'est une infrastructure qui doit être maintenue. À Lille, la compétition digitale exige une précision chirurgicale : chaque euro investi en SEO ou SEA doit être justifié par une donnée fiable.
+        </p>
+        <p>
+            Prenez le temps d'ouvrir votre compte GA4 aujourd'hui et vérifiez ces 5 points. Si vous avez un doute, il est souvent préférable de repartir sur une configuration propre via un plan de marquage rigoureux.
+        </p>
+
+        <div class="cta-article">
+            <h2>Un doute sur la fiabilité de vos rapports ?</h2>
+            <p>Ne prenez plus de décisions dans le noir. Je réalise un audit technique complet de votre tracking pour sécuriser votre mesure de performance.</p>
+            <a href="../contact.html" class="btn">Réserver mon audit Analytics</a>
+        </div>
+    </article>
+
+    <footer style="background: #F8FAFC; padding: 60px 0; text-align: center; border-top: 1px solid #EEE;">
+        <div class="container-article">
+            <p><strong>FlackoInsight</strong> - Expert Web Analytics & Data à Lille.</p>
+            <p style="font-size: 0.9rem; color: var(--gray);">Audit GA4, GTM et Dashboarding Looker Studio.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
