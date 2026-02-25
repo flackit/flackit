@@ -1,89 +1,195 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web Analytics et Datas – FlackoInsight</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Web Analytics Lille | Consultant Google Analytics 4 & Data | FlackoInsight</title>
+    <meta name="description" content="Transformez vos données en décisions stratégiques. Expert GA4 et Web Analytics à Lille pour mesurer votre ROI et optimiser vos performances digitales.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --dark: #0F172A;
+            --light: #F8FAFC;
+            --white: #FFFFFF;
+            --gray: #64748B;
+            --accent: #10B981; /* Vert pour la data/croissance */
+            --spacing: 80px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; border-radius: 12px; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-primary { background-color: var(--primary); color: var(--white); }
+        .btn-primary:hover { background-color: #1d4ed8; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2); }
+
+        header { background: var(--white); padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+        .nav-links { display: flex; gap: 30px; }
+
+        .hero { padding: 120px 0; background: #020617; color: white; }
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+
+        .section-padding { padding: var(--spacing) 0; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        
+        .card { padding: 40px; border-radius: 16px; background: var(--white); border: 1px solid #e2e8f0; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .card h3 { margin-bottom: 20px; color: var(--accent); font-size: 1.4rem; }
+
+        .data-box { background: #F0FDF4; padding: 40px; border-radius: 20px; border: 1px dashed var(--accent); margin: 40px 0; }
+        .data-box h4 { color: #166534; margin-bottom: 15px; font-size: 1.3rem; }
+
+        .faq-item { border-bottom: 1px solid #e2e8f0; padding: 25px 0; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 12px; font-size: 1.15rem; }
+
+        @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
 </head>
 <body>
-  <header class="main-header">
-   <nav class="navbar">
-      <div class="logo">
-  <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
-    <img src="images/logo-flacko.jpg" alt="Logo Flacko" class="logo-img" />
-    <h1>Flacko<span>Insight</span></h1>
-  </a>
-</div>
-      <div class="burger" id="burger">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
-  <li><a href="index.html">Accueil</a></li>
-  <li class="dropdown">
-    <a href="services.html">Services</a>
-    <div class="dropdown-content">
-      <a href="seo.html">SEO</a>
-      <a href="sea.html">SEA</a>
-      <a href="content-marketing.html">Content Marketing</a>
-      <a href="creation-de-site-web.html">Création de site web</a>
-      <a href="web-analytics-et-datas.html">Web Analytics & Datas</a>
-      <a href="social-media.html">Social Media</a>
-      <a href="webdesign.html">Webdesign</a>
-      <a href="marketing-digital.html">Marketing digital</a>
-    </div>
-  </li>
-  <li><a href="projets.html">Projets</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="faq.html">Blog</a></li>
-</ul>
-    </nav>
-  </header>
-  <main>
-    <section class="content-block">
-      <div class="text">
-        <h2>Web Analytics et Datas</h2>
-        <p>Analysez les données de vos visiteurs pour piloter votre stratégie digitale avec précision.</p>
-      </div>
-      <div class="image"><img src="images/analytics.jpeg" alt="Analytics"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="index.html">FlackoInsight</a></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="seo.html">SEO</a></li>
+                    <li><a href="sea.html">SEA</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px;">Data & Analytics : Pilotez votre business à la vue, pas au jugé</h1>
+                    <p style="opacity: 0.8; font-size: 1.2rem; margin-bottom: 40px;">Les chiffres ne mentent jamais, à condition de savoir les faire parler. J'installe, configure et analyse vos outils de tracking pour transformer vos données brutes en décisions stratégiques concrètes.</p>
+                    <a href="index.html#contact" class="btn btn-primary">Auditer mon plan de marquage</a>
+                </div>
+                <div style="background: rgba(16, 185, 129, 0.1); padding: 50px; border-radius: 30px; border: 1px solid var(--accent); text-align: center;">
+                    <div style="font-size: 3rem; font-weight: 800; color: var(--accent);">100%</div>
+                    <p style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; opacity: 0.7;">De vos conversions mesurées</p>
+                    <hr style="margin: 20px auto; width: 50px; opacity: 0.2; border-color: var(--accent);">
+                    <p style="font-style: italic;">"Sans données, vous n'êtes qu'une personne de plus avec une opinion."</p>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
-  <footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-col">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </div>
 
-    <div class="footer-col">
-      <h4>Nos Services</h4>
-      <ul>
-        <li><a href="seo.html">SEO</a></li>
-        <li><a href="sea.html">SEA</a></li>
-        <li><a href="content-marketing.html">Content Marketing</a></li>
-        <li><a href="creation-de-site-web.html">Création de site web</a></li>
-        <li><a href="web-analytics-et-datas.html">Web Analytics & Datas</a></li>
-        <li><a href="social-media.html">Social Media</a></li>
-        <li><a href="webdesign.html">Webdesign</a></li>
-        <li><a href="marketing-digital.html">Marketing digital</a></li>
-      </ul>
-    </div>
+    <section class="section-padding">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">L'Analytics, le socle de votre performance digitale</h2>
+                <p style="color: var(--gray);">Vous investissez en SEO, en SEA et en Contenu ? Il est vital de savoir précisément quel levier rapporte de l'argent. Voici comment je sécurise votre lecture de la donnée.</p>
+            </div>
 
-    <div class="footer-col">
-      <h4>À propos</h4>
-      <p>FlackoInsight est une initiative portée par Olivier Kabongo, expert en marketing digital et communication audiovisuelle.</p>
-      <p>📎 <a href="https://www.linkedin.com/in/olivier-kabongo-39097a219/" target="_blank" class="linkedin-link">Mon LinkedIn</a></p>
-    </div>
-  </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>🔍 Implémentation GA4</h3>
+                    <p>Google Analytics 4 est complexe. Je configure votre propriété, vos flux de données et vos événements personnalisés pour capturer chaque action clé (clics, téléchargements, scrolls) sur votre site à Lille.</p>
+                </div>
+                <div class="card">
+                    <h3>🎯 Tracking de Conversion</h3>
+                    <p>Un formulaire rempli ? Un achat validé ? Un appel passé ? Je mets en place un tracking fiable via <strong>Google Tag Manager (GTM)</strong> pour que vos outils publicitaires sachent exactement ce qui fonctionne.</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Tableaux de Bord (Looker Studio)</h3>
+                    <p>Arrêtez de fouiller dans des rapports illisibles. Je crée pour vous des dashboards personnalisés, clairs et automatisés, qui présentent vos indicateurs clés (KPIs) en un coup d'œil.</p>
+                </div>
+            </div>
 
-  <div class="footer-bottom">
-    <p>&copy; 2025 FlackoInsight. Tous droits réservés.</p>
-  </div>
-</footer>
-  <script src="script.js"></script>
+            <div class="data-box">
+                <h4>🛡️ Conformité RGPD & Consent Mode V2</h4>
+                <p>À Lille et dans toute l'Europe, la protection des données est une obligation légale. J'installe des solutions de gestion du consentement (CMP) conformes à la CNIL et j'implémente le <strong>Consent Mode V2</strong> de Google pour continuer à mesurer vos performances tout en respectant la vie privée de vos utilisateurs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--light);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <div>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 25px;">L'analyse pour optimiser vos revenus</h2>
+                    <p style="margin-bottom: 20px;">Collecter la donnée est la première étape. L'analyser pour agir est la seconde.</p>
+                    <p>Mon expertise Data vous permet de répondre à ces questions critiques :</p>
+                    <ul style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                        <li><strong>📈 Attribution :</strong> Quel canal a réellement déclenché la vente ?</li>
+                        <li><strong>📉 Analyse de l'Entonnoir :</strong> Où vos visiteurs quittent-ils votre site ?</li>
+                        <li><strong>👥 Segmentation :</strong> Qui sont vos clients les plus rentables ?</li>
+                        <li><strong>🧪 A/B Testing :</strong> Quelle version de votre page convertit le mieux ?</li>
+                    </ul>
+                </div>
+                <div style="background: var(--dark); color: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <h4 style="margin-bottom: 20px; color: var(--accent);">Le saviez-vous ?</h4>
+                    <p style="opacity: 0.9; font-style: italic;">"Les entreprises qui utilisent l'analyse de données pour leurs décisions stratégiques constatent une augmentation de leur productivité de 15% à 20% par rapport à leurs concurrents."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Foire Aux Questions : Web Analytics</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                
+                <div class="faq-item">
+                    <h4>Pourquoi passer de l'ancien Analytics à GA4 ?</h4>
+                    <p>L'ancienne version (Universal Analytics) est obsolète. GA4 repose sur un modèle d'événements beaucoup plus précis et intègre de l'intelligence artificielle pour combler les pertes de données liées aux cookies.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Qu'est-ce qu'un plan de marquage ?</h4>
+                    <p>C'est la feuille de route technique de votre tracking. Il définit quels comportements sur votre site doivent être mesurés pour répondre à vos objectifs business. C'est l'étape 1 de toute collaboration Data.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Mon site est-il conforme au RGPD ?</h4>
+                    <p>Si vous déposez des cookies Google Analytics ou Pixel Facebook sans consentement clair, la réponse est probablement non. Je vous aide à régulariser votre situation pour éviter les sanctions de la CNIL.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Puis-je suivre les appels téléphoniques ?</h4>
+                    <p>Absolument. Grâce à des outils de call-tracking intégrés à GA4, nous pouvons savoir quel mot-clé ou quelle annonce a déclenché un appel vers votre entreprise.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 100px 0; background: var(--accent); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 25px;">Vos données sont-elles fiables ?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Ne pilotez plus votre entreprise dans le brouillard. Vérifions ensemble la qualité de votre tracking.</p>
+            <a href="index.html#contact" class="btn" style="background: var(--white); color: #166534;">Demander un audit de mon tracking</a>
+        </div>
+    </section>
+
+    <footer style="background: var(--dark); color: white; padding: 50px 0; text-align: center;">
+        <p>&copy; 2026 FlackoInsight - Olivier Kabongo | Expert Analytics & Performance à Lille</p>
+    </footer>
+
 </body>
 </html>
