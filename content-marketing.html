@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Marketing | FlackoInsight</title>
+    <title>Stratégie Content Marketing Lille | Création de contenu & Rédaction web | FlackoInsight</title>
+    <meta name="description" content="Devenez une référence dans votre secteur avec une stratégie de contenu performante. Articles SEO, newsletters et copywriting pour générer des leads à Lille.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* --- 1. VARIABLES & RESET --- */
         :root {
             --primary: #2563EB;
             --dark: #0F172A;
@@ -17,91 +17,50 @@
             --spacing: 80px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
         img { max-width: 100%; display: block; border-radius: 12px; }
 
-        /* --- 2. LAYOUT & UTILITIES --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 14px 35px;
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
             transition: 0.3s;
         }
+        .btn-primary { background-color: var(--primary); color: var(--white); }
+        .btn-primary:hover { background-color: #1d4ed8; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2); }
 
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .btn-primary:hover { background-color: #1d4ed8; transform: translateY(-2px); }
-
-        /* --- 3. HEADER --- */
-        header {
-            background: var(--white);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
+        header { background: var(--white); padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
         .nav-links { display: flex; gap: 30px; }
-        .nav-links a { font-weight: 500; font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--primary); }
 
-        /* --- 4. CONTENT SPECIFIC STYLES --- */
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-        .step {
-            padding: 30px;
-            border-left: 4px solid var(--primary);
-            background: var(--white);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-radius: 0 12px 12px 0;
-        }
-        .step span { font-weight: 800; color: var(--primary); display: block; margin-bottom: 10px; font-size: 1.2rem; }
+        .hero { padding: 120px 0; background: var(--dark); color: white; }
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+
+        .section-padding { padding: var(--spacing) 0; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        
+        .card { padding: 40px; border-radius: 16px; background: var(--white); border: 1px solid #e2e8f0; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .card h3 { margin-bottom: 20px; color: var(--primary); font-size: 1.4rem; }
+
+        .quote-box { background: var(--light); padding: 40px; border-radius: 20px; border-right: 6px solid var(--accent); margin: 40px 0; text-align: right; }
+        .quote-box p { font-size: 1.2rem; font-style: italic; font-weight: 600; }
+
+        .faq-item { border-bottom: 1px solid #e2e8f0; padding: 25px 0; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 12px; font-size: 1.15rem; }
 
         @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
             .nav-links { display: none; }
-            .hero-grid { grid-template-columns: 1fr !important; text-align: center; }
+            .hero h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -110,9 +69,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">
-                    <a href="index.html">FlackoInsight.</a>
-                </div>
+                <div class="logo"><a href="index.html">FlackoInsight</a></div>
                 <ul class="nav-links">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="seo.html">SEO</a></li>
@@ -124,87 +81,115 @@
         </div>
     </header>
 
-    <section style="padding: 80px 0; background: var(--dark); color: white;">
+    <section class="hero">
         <div class="container">
-            <div class="hero-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <div class="hero-grid">
                 <div>
-                    <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 20px;">Content Marketing : Devenez votre propre média</h1>
-                    <p style="opacity: 0.8; font-size: 1.2rem; margin-bottom: 30px;">Créez du contenu qui captive votre audience, renforce votre autorité et génère des opportunités business durables.</p>
+                    <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px;">Content Marketing : Transformez votre audience en clients fidèles</h1>
+                    <p style="opacity: 0.8; font-size: 1.2rem; margin-bottom: 40px;">Ne produisez plus du contenu pour "faire joli". Créez une machine de guerre éditoriale qui assoit votre autorité, éduque vos prospects et booste votre croissance organique.</p>
                     <a href="index.html#contact" class="btn btn-primary">Lancer ma stratégie de contenu</a>
                 </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 50px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                    <div style="font-size: 3rem; font-weight: 800; color: var(--accent);">24h/24</div>
+                    <p style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; opacity: 0.7;">Votre site vend pendant que vous dormez</p>
+                    <hr style="margin: 20px auto; width: 50px; opacity: 0.2;">
+                    <p style="font-style: italic;">"Le contenu est l'actif numérique le plus rentable sur le long terme."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Le contenu au service de votre tunnel de vente</h2>
+                <p style="color: var(--gray);">Une bonne stratégie de contenu accompagne votre prospect à chaque étape de son parcours d'achat. Je vous aide à construire ce pont entre vous et vos clients.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>📢 Attraction (TOFU)</h3>
+                    <p>C'est la phase où l'on capte l'attention. Grâce à des articles de blog optimisés SEO, des guides pratiques et du contenu social media percutant à Lille, nous attirons un trafic qualifié qui ignore encore votre existence.</p>
+                </div>
+                <div class="card">
+                    <h3>🧠 Éducation (MOFU)</h3>
+                    <p>Vos visiteurs ont un problème, prouvez-leur que vous avez la solution. Newsletters approfondies, études de cas et livres blancs permettent de transformer un simple visiteur en prospect convaincu de votre expertise.</p>
+                </div>
+                <div class="card">
+                    <h3>💰 Conversion (BOFU)</h3>
+                    <p>Le moment de vérité. Par le biais d'un copywriting affûté sur vos pages de vente et de témoignages clients stratégiques, nous levons les dernières objections pour transformer l'essai en chiffre d'affaires.</p>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                <p>"Si le SEO est le moteur, le contenu est le carburant. Sans stratégie éditoriale, votre site reste une carcasse vide."</p>
+                <span style="display: block; margin-top: 10px; color: var(--gray);">— FlackoInsight</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--light);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
                 <div>
-                    <img src="images/content.jpeg" alt="Stratégie de contenu digital">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 25px;">Pourquoi déléguer votre stratégie de contenu ?</h2>
+                    <p style="margin-bottom: 20px;">La plupart des entreprises publient de manière erratique, sans fil conducteur. Résultat : beaucoup d'efforts pour peu de résultats.</p>
+                    <p>En travaillant avec un expert en Content Marketing, vous bénéficiez :</p>
+                    <ul style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                        <li><strong>🔥 Régularité :</strong> Un calendrier éditorial respecté mois après mois.</li>
+                        <li><strong>♻️ Recyclage de contenu :</strong> Un seul article de blog devient 5 posts LinkedIn et une newsletter.</li>
+                        <li><strong>📊 Analyse de performance :</strong> On ne publie pas au hasard, on publie ce qui génère du trafic et des leads.</li>
+                        <li><strong>🔍 Optimisation Sémantique :</strong> Chaque texte est pensé pour plaire autant à vos lecteurs qu'à Google.</li>
+                    </ul>
+                </div>
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h4 style="margin-bottom: 20px; color: var(--primary);">L'Art du Storytelling Data-Driven</h4>
+                    <p>Mon approche mélange la créativité du copywriting et la rigueur de la donnée. À Lille, j'aide les marques à raconter leur histoire tout en gardant un œil sur les indicateurs de performance (KPIs) : temps de lecture, taux de clic et génération de leads.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="padding: var(--spacing) 0;">
+    <section class="section-padding">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 60px auto;">
-                <h2>Pourquoi le contenu est votre meilleur actif ?</h2>
-                <p style="color: var(--gray); margin-top: 20px;">Le marketing de contenu ne se contente pas de vendre : il éduque vos prospects et transforme votre marque en une référence incontournable de votre secteur.</p>
-            </div>
-            
-            <div class="process-grid">
-                <div class="step">
-                    <span>01. Acquisition</span>
-                    <p>Attirez un flux régulier de visiteurs qualifiés grâce à des articles optimisés pour leurs problématiques.</p>
+            <h2 style="text-align: center; margin-bottom: 50px;">Foire Aux Questions : Marketing de Contenu</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                
+                <div class="faq-item">
+                    <h4>Le Content Marketing est-il efficace pour le B2B ?</h4>
+                    <p>C'est même vital. En B2B, le cycle de décision est long. Le contenu permet de rester présent dans l'esprit du décideur et de construire la confiance nécessaire avant la prise de contact commerciale.</p>
                 </div>
-                <div class="step">
-                    <span>02. Rétention</span>
-                    <p>Fidélisez votre audience avec des newsletters et des contenus à forte valeur ajoutée.</p>
-                </div>
-                <div class="step">
-                    <span>03. Conversion</span>
-                    <p>Transformez l'intérêt en action grâce à des études de cas et des livres blancs convaincants.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section style="padding: var(--spacing) 0; background: var(--light);">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px;">Ma Méthode de Création</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary); margin-bottom: 15px;">Éditorial & SEO</h4>
-                    <p>Recherche de sujets à fort volume et rédaction d'articles qui plaisent autant aux lecteurs qu'à Google.</p>
+                <div class="faq-item">
+                    <h4>Combien d'articles faut-il publier par mois ?</h4>
+                    <p>La qualité l'emporte toujours sur la quantité. Un seul article d'expertise de 2000 mots par mois aura plus d'impact sur votre SEO que quatre articles faibles de 500 mots. Nous adaptons la fréquence à vos ressources.</p>
                 </div>
-                <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary); margin-bottom: 15px;">Lead Magnets</h4>
-                    <p>Conception de ressources téléchargeables pour transformer vos visiteurs anonymes en prospects identifiés.</p>
+
+                <div class="faq-item">
+                    <h4>Allez-vous utiliser l'Intelligence Artificielle pour rédiger ?</h4>
+                    <p>L'IA est un outil, pas une fin. Je l'utilise pour la recherche et la structure, mais l'expertise, l'angle éditorial et la touche humaine (votre "Tone of Voice") sont garantis par mon intervention directe pour éviter les contenus génériques.</p>
                 </div>
-                <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary); margin-bottom: 15px;">Copywriting</h4>
-                    <p>Optimisation de vos pages de vente et emails pour maximiser l'impact de chaque mot écrit.</p>
+
+                <div class="faq-item">
+                    <h4>Quel est le retour sur investissement (ROI) attendu ?</h4>
+                    <p>Le contenu est un investissement dont le coût d'acquisition baisse avec le temps. Un article publié aujourd'hui peut vous rapporter des clients gratuitement dans 2 ans. C'est le levier le plus durable pour votre croissance.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section style="padding: 100px 0; text-align: center;">
+    <section style="padding: 100px 0; background: var(--primary); color: white; text-align: center;">
         <div class="container">
-            <h3 style="font-size: 2.5rem; margin-bottom: 20px;">Prêt à raconter votre histoire ?</h3>
-            <p style="color: var(--gray); margin-bottom: 40px;">Bâtissons ensemble une ligne éditoriale qui fait la différence.</p>
-            <a href="index.html#contact" class="btn btn-primary">Prendre rendez-vous</a>
+            <h2 style="font-size: 2.5rem; margin-bottom: 25px;">Prêt à devenir le média de votre secteur ?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Ne laissez plus votre site à l'abandon. Donnez-lui enfin la voix qu'il mérite.</p>
+            <a href="index.html#contact" class="btn" style="background: var(--white); color: var(--primary);">Discuter de ma stratégie éditoriale</a>
         </div>
     </section>
 
-    <footer style="background: var(--dark); color: white; padding: 40px 0; text-align: center; font-size: 0.9rem;">
-        <div class="container">
-            <p>&copy; 2026 FlackoInsight. Tous droits réservés.</p>
-        </div>
+    <footer style="background: var(--dark); color: white; padding: 50px 0; text-align: center;">
+        <p>&copy; 2026 FlackoInsight - Olivier Kabongo | Expert Content & Data à Lille</p>
     </footer>
 
 </body>
 </html>
-    <section style="padding: 60px 20px; text-align: center;">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h3>Pourquoi investir dans le contenu ?</h3>
-            <p style="color: #64748B; margin-top: 20px;">
-                Contrairement à la publicité, le contenu est un actif qui prend de la valeur avec le temps. Un bon article peut attirer des clients pendant des années sans coût publicitaire supplémentaire.
-            </p>
-        </div>
-    </section>
-</main>
