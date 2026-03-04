@@ -273,7 +273,15 @@
                     </ul>
                 </li>
 
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="dropdown">
+    <a href="blog.html" class="nav-link dropdown-toggle">Blog <small>▼</small></a>
+    <ul class="dropdown-menu">
+        <li><a href="blog.html" style="font-weight: 800; border-bottom: 1px solid #EEE;">Voir tous les articles</a></li>
+        <li><a href="articles/seo-lille-2026.html">Pourquoi le SEO local à Lille ?</a></li>
+        <li><a href="articles/configurer-ga4.html">5 erreurs GA4 à éviter</a></li>
+        <li><a href="articles/budget-google-ads.html">Quel budget pour Google Ads ?</a></li>
+    </ul>
+</li>
                 <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
             </ul>
         </nav>
@@ -431,6 +439,24 @@
         padding: 40px 20px;
         align-items: flex-start;
     }
+    /* Style spécifique pour le lien principal du blog dans le menu */
+.dropdown-menu li:first-child a {
+    color: var(--primary);
+    background-color: #F0F9FF;
+    margin-bottom: 5px;
+}
+
+/* On s'assure que le menu déroulant est assez large pour les titres d'articles */
+.dropdown-menu {
+    min-width: 280px; /* Un peu plus large pour les titres longs */
+}
+
+/* Petit indicateur de lien survolé */
+.dropdown-menu li a:hover {
+    background: #F8FAFC;
+    color: var(--primary);
+    padding-left: 30px; /* Effet de décalage au survol */
+}
 
     .dropdown-menu {
         position: static;
