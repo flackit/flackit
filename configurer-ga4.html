@@ -1,663 +1,175 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBSPKDZTY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GMBSPKDZTY');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBSPKDZTY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GMBSPKDZTY');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GA4 : 5 Erreurs de configuration qui ruinent vos données | FlackoInsight</title>
+    <title>GA4 : 5 Erreurs de Configuration Qui Faussent Vos Données | FlackoInsight</title>
     <meta name="description" content="Votre tracking Google Analytics 4 est-il fiable ? Découvrez les 5 erreurs critiques de configuration qui faussent vos rapports et comment les corriger.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root { --primary: #10B981; --dark: #020617; --gray: #64748B; --light: #F0FDF4; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #1E293B; background: #FFF; }
-        .container-article { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
-        header { padding: 20px 0; border-bottom: 1px solid #EEE; }
-        .logo { font-weight: 800; color: #2563EB; text-decoration: none; font-size: 1.2rem; }
-        
-        h1 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 25px; color: var(--dark); }
-        h2 { font-size: 1.9rem; margin-top: 50px; margin-bottom: 20px; color: var(--primary); border-bottom: 2px solid var(--light); padding-bottom: 10px; }
-        h3 { font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; color: var(--dark); }
-        p { margin-bottom: 25px; font-size: 1.15rem; }
-        
-        .meta { color: var(--gray); font-size: 0.95rem; margin-bottom: 30px; display: flex; gap: 20px; }
-        .warning-box { background: #FFF7ED; padding: 30px; border-radius: 15px; border-left: 6px solid #F97316; margin: 40px 0; }
-        .solution-box { background: var(--light); padding: 30px; border-radius: 15px; border-left: 6px solid var(--primary); margin: 40px 0; }
-        
-        .cta-article { background: var(--dark); color: white; padding: 40px; border-radius: 20px; margin-top: 60px; text-align: center; }
-        .btn { display: inline-block; background: var(--primary); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 20px; transition: 0.3s; }
-        
-        .toc { background: #F8FAFC; padding: 20px; border-radius: 10px; margin-bottom: 40px; border: 1px solid #E2E8F0; }
-        .toc b { display: block; margin-bottom: 10px; }
-        .toc a { color: #2563EB; text-decoration: none; font-size: 0.95rem; }
-
-        :root { --primary: #10B981; --dark: #020617; --gray: #64748B; --light: #F0FDF4; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #1E293B; background: #FFF; }
-        .container-article { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
-        header { padding: 20px 0; border-bottom: 1px solid #EEE; }
-        .logo { font-weight: 800; color: #2563EB; text-decoration: none; font-size: 1.2rem; }
-        
-        h1 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 25px; color: var(--dark); }
-        h2 { font-size: 1.9rem; margin-top: 50px; margin-bottom: 20px; color: var(--primary); border-bottom: 2px solid var(--light); padding-bottom: 10px; }
-        h3 { font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; color: var(--dark); }
-        p { margin-bottom: 25px; font-size: 1.15rem; }
-        
-        .meta { color: var(--gray); font-size: 0.95rem; margin-bottom: 30px; display: flex; gap: 20px; }
-        .warning-box { background: #FFF7ED; padding: 30px; border-radius: 15px; border-left: 6px solid #F97316; margin: 40px 0; }
-        .solution-box { background: var(--light); padding: 30px; border-radius: 15px; border-left: 6px solid var(--primary); margin: 40px 0; }
-        
-        .cta-article { background: var(--dark); color: white; padding: 40px; border-radius: 20px; margin-top: 60px; text-align: center; }
-        .btn { display: inline-block; background: var(--primary); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 20px; transition: 0.3s; }
-        
-        .toc { background: #F8FAFC; padding: 20px; border-radius: 10px; margin-bottom: 40px; border: 1px solid #E2E8F0; }
-        .toc b { display: block; margin-bottom: 10px; }
-        .toc a { color: #2563EB; text-decoration: none; font-size: 0.95rem; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    
 </head>
 <body>
-
-     <style>
-        /* --- 1. VARIABLES & RESET --- */
-        :root {
-            --primary: #2563EB;       /* Bleu roi dynamique */
-            --dark: #0F172A;          /* Bleu nuit très foncé (texte et fonds) */
-            --light: #F8FAFC;         /* Gris très clair pour les fonds alternés */
-            --white: #FFFFFF;
-            --gray: #64748B;          /* Gris pour les textes secondaires */
-            --accent: #F59E0B;        /* Orange pour les détails */
-            --spacing: 80px;          /* Espacement standard entre sections */
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
-
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
-
-        /* --- 2. LAYOUT & UTILITIES --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .btn-primary:hover { background-color: #1d4ed8; }
-
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            margin-left: 10px;
-        }
-
-        .btn-outline:hover { background-color: var(--primary); color: var(--white); }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* --- 3. HEADER --- */
-        header {
-            background: var(--white);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .nav-links { display: flex; gap: 30px; }
-        .nav-links a { font-weight: 500; font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--primary); }
-
-        /* --- 4. HERO SECTION --- */
-        .hero {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(180deg, var(--light) 0%, var(--white) 100%);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-        }
-
-        /* --- 5. SERVICES (GRID) --- */
-        .services { padding: var(--spacing) 0; }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-color: var(--primary);
-        }
-
-        .icon {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .service-card h3 { margin-bottom: 15px; font-size: 1.25rem; }
-        .service-card p { color: var(--gray); font-size: 0.95rem; }
-
-        /* --- 6. STATS / PREUVE SOCIALE --- */
-        .stats {
-            background: var(--dark);
-            color: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .stats-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .stat-item h3 {
-            font-size: 3rem;
-            color: var(--accent);
-            font-weight: 800;
-        }
-
-        .stat-item p { font-size: 1.1rem; opacity: 0.9; }
-
-        /* --- 7. ABOUT & CONTACT --- */
-        .about-contact {
-            padding: var(--spacing) 0;
-            background: var(--light);
-        }
-        
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text h2 { margin-bottom: 20px; }
-        .about-text p { margin-bottom: 20px; color: var(--gray); }
-
-        /* --- 8. FOOTER --- */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 50px 0 20px 0;
-            font-size: 0.9rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h4 { margin-bottom: 20px; color: var(--white); }
-        .footer-col ul li { margin-bottom: 10px; }
-        .footer-col a { color: #94a3b8; }
-        .footer-col a:hover { color: var(--white); }
-
-        .copyright {
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            color: #64748B;
-        }
-
-        /* --- MOBILE --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Pour simplifier, menu caché sur mobile pour l'instant */
-            .about-grid { grid-template-columns: 1fr; }
-            .btn { width: 100%; margin: 10px 0 0 0; }
-        }
-    </style>
-</head>
-<body>
-
-    <header class="main-header">
-    <div class="container nav-container">
-        <a href="index.html" class="logo">FlackoInsight</a>
-        
-        <input type="checkbox" id="nav-check" style="display:none;">
-        <label for="nav-check" class="nav-toggler">
-            <span></span>
-        </label>
-
-        <nav class="nav-menu">
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-link">Accueil</a></li>
-                
-                <li class="dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Services <small>▼</small></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="seo.html">SEO (Référencement naturel)</a></li>
-                        <li><a href="sea.html">SEA (Google Ads)</a></li>
-                        <li><a href="content-marketing.html">Content marketing</a></li>
-                        <li><a href="creation-de-site-web.html">Création de Site Web</a></li>
-                        <li><a href="web-analytics-et-datas.html">Web analytics & Data</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-    <a href="projets.html" class="nav-link dropdown-toggle">Blog <small>▼</small></a>
-    <ul class="dropdown-menu">
-        <li><a href="projets.html" style="font-weight: 800; border-bottom: 1px solid #EEE;">Voir tous les articles</a></li>
-        <li><a href="seolocal_lille.html">Pourquoi le SEO local à Lille ?</a></li>
-        <li><a href="configurer-ga4.html">5 erreurs GA4 à éviter</a></li>
-        <li><a href="budgetAds.html">Quel budget pour Google Ads ?</a></li>
-    </ul>
-</li>
-                <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<style>
-/* --- STYLES DU HEADER --- */
-:root {
-    --header-height: 80px;
-    --primary: #2563EB;
-    --dark: #0F172A;
-    --white: #FFFFFF;
-}
-
-.main-header {
-    background: var(--white);
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--dark);
-    text-decoration: none;
-}
-
-.logo span { color: var(--primary); }
-
-.nav-list {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: 0.3s;
-}
-
-.nav-link:hover { color: var(--primary); }
-
-/* --- MENU DÉROULANT (DROPDOWN) --- */
-.dropdown { position: relative; }
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--white);
-    min-width: 240px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-radius: 12px;
-    padding: 15px 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: 0.3s;
-    list-style: none;
-}
-
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.dropdown-menu li a {
-    display: block;
-    padding: 10px 25px;
-    color: var(--dark);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: 0.2s;
-}
-
-.dropdown-menu li a:hover {
-    background: #F8FAFC;
-    color: var(--primary);
-    padding-left: 30px;
-}
-
-/* --- BOUTON CONTACT --- */
-.btn-contact-nav {
-    background: var(--primary);
-    color: white;
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.btn-contact-nav:hover {
-    background: #1d4ed8;
-    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
-}
-
-/* --- RESPONSIVE MOBILE --- */
-@media (max-width: 992px) {
-    .nav-toggler {
-        display: block;
-        width: 30px;
-        height: 20px;
-        cursor: pointer;
-        position: relative;
-    }
-    
-    .nav-toggler span, .nav-toggler span::before, .nav-toggler span::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background: var(--dark);
-        transition: 0.3s;
-    }
-    
-    .nav-toggler span::before { top: -8px; }
-    .nav-toggler span::after { top: 8px; }
-
-    .nav-menu {
-        position: fixed;
-        top: var(--header-height);
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - var(--header-height));
-        background: var(--white);
-        transition: 0.4s;
-        overflow-y: auto;
-    }
-
-    #nav-check:checked ~ .nav-menu { left: 0; }
-
-    .nav-list {
-        flex-direction: column;
-        padding: 40px 20px;
-        align-items: flex-start;
-    }
-    /* Style spécifique pour le lien principal du blog dans le menu */
-.dropdown-menu li:first-child a {
-    color: var(--primary);
-    background-color: #F0F9FF;
-    margin-bottom: 5px;
-}
-
-/* On s'assure que le menu déroulant est assez large pour les titres d'articles */
-.dropdown-menu {
-    min-width: 280px; /* Un peu plus large pour les titres longs */
-}
-
-/* Petit indicateur de lien survolé */
-.dropdown-menu li a:hover {
-    background: #F8FAFC;
-    color: var(--primary);
-    padding-left: 30px; /* Effet de décalage au survol */
-}
-
-    .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        box-shadow: none;
-        transform: none;
-        padding: 10px 0 10px 20px;
-        display: none; /* Caché par défaut sur mobile, s'affiche au clic si besoin */
-    }
-
-    .dropdown:hover .dropdown-menu { display: block; }
-}
-</style>
-
-    <article class="container-article">
-        <div class="meta">
-            <span>📅 25 Février 2026</span>
-            <span>📂 Catégorie : Web Analytics</span>
-            <span>⏱️ Lecture : 15 min</span>
+    <header class="main-header" id="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Flacko<span class="accent">Insight</span><span class="dot">.</span></a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="seo.html"><span class="menu-icon">🔍</span>SEO — Référencement</a></li>
+                            <li><a href="sea.html"><span class="menu-icon">🚀</span>SEA — Google Ads</a></li>
+                            <li><a href="content-marketing.html"><span class="menu-icon">✍️</span>Content Marketing</a></li>
+                            <li><a href="creation-de-site-web.html"><span class="menu-icon">💻</span>Création de site web</a></li>
+                            <li><a href="web-analytics-et-datas.html"><span class="menu-icon">📊</span>Web Analytics & Data</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="projets.html" class="nav-link">Blog ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projets.html"><span class="menu-icon">📚</span>Tous les articles</a></li>
+                            <li><a href="seolocal_lille.html"><span class="menu-icon">📍</span>SEO local à Lille</a></li>
+                            <li><a href="configurer-ga4.html"><span class="menu-icon">📈</span>5 erreurs GA4</a></li>
+                            <li><a href="budgetAds.html"><span class="menu-icon">💶</span>Budget Google Ads</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        
-        <h1>GA4 : 5 erreurs de configuration qui faussent vos données (et comment les réparer)</h1>
-        
-        <p>
-            Depuis le passage forcé à <strong>Google Analytics 4 (GA4)</strong>, de nombreuses entreprises pensent être "bien configurées" simplement parce qu'elles voient des chiffres monter dans leurs rapports. Pourtant, la réalité technique est souvent bien différente. En tant qu'expert Data, j'audite chaque semaine des comptes où 30% à 50% de la donnée est soit manquante, soit totalement erronée.
-        </p>
-        
-        <p>
-            Une mauvaise donnée est plus dangereuse que pas de donnée du tout : elle vous pousse à prendre des décisions d'investissement basées sur des mirages. Voici les 5 erreurs critiques que je rencontre le plus souvent dans la métropole lilloise et ailleurs.
-        </p>
+    </header>
 
-        <div class="toc">
-            <b>Sommaire de l'article :</b>
-            <ul>
-                <li><a href="#retention">1. La rétention des données limitée à 2 mois</a></li>
-                <li><a href="#referral">2. L'absence d'exclusion des sites référents (Self-Referral)</a></li>
-                <li><a href="#events">3. Confondre Événements et Conversions</a></li>
-                <li><a href="#consent">4. Ignorer le Consent Mode V2 et le RGPD</a></li>
-                <li><a href="#debug">5. Ne pas tester via le DebugView de GTM</a></li>
-            </ul>
+    <nav class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Accueil</a>
+            <div class="mobile-section-label">Services</div>
+            <div class="mobile-submenu">
+                <a href="seo.html">🔍 SEO — Référencement</a>
+                <a href="sea.html">🚀 SEA — Google Ads</a>
+                <a href="content-marketing.html">✍️ Content Marketing</a>
+                <a href="creation-de-site-web.html">💻 Création de site web</a>
+                <a href="web-analytics-et-datas.html">📊 Web Analytics & Data</a>
+            </div>
+            <div class="mobile-section-label">Blog</div>
+            <div class="mobile-submenu">
+                <a href="projets.html">📚 Tous les articles</a>
+                <a href="seolocal_lille.html">📍 SEO local à Lille</a>
+                <a href="configurer-ga4.html">📈 5 erreurs GA4</a>
+                <a href="budgetAds.html">💶 Budget Google Ads</a>
+            </div>
+            <div class="mobile-nav-cta">
+                <a href="contact.html" class="btn btn-primary">Prendre contact</a>
+            </div>
         </div>
+    </nav>
 
-        <h2 id="retention">1. La rétention des données limitée à 2 mois</h2>
-        <p>
-            C'est l'erreur "silencieuse" par excellence. Par défaut, lors de la création d'une propriété GA4, Google configure la rétention des données d'exploration sur <strong>2 mois seulement</strong>. 
-        </p>
-        <p>
-            Concrètement, cela signifie que si vous voulez comparer vos performances actuelles avec celles de l'année dernière dans l'onglet "Explorer", vous n'aurez aucun historique. Pour un business saisonnier (comme la Braderie de Lille ou les soldes d'hiver), c'est une catastrophe stratégique.
-        </p>
-        <div class="solution-box">
-            <strong>La solution :</strong> Allez dans Administration > Paramètres des données > Conservation des données. Changez "2 mois" par "14 mois" et enregistrez immédiatement.
-        </div>
-
-        <h2 id="referral">2. L'absence d'exclusion des sites référents</h2>
-        <p>
-            Avez-vous remarqué que votre canal "Referral" (sites référents) contient souvent votre propre nom de domaine ou des plateformes de paiement comme <strong>Stripe, PayPal ou Sogenactif</strong> ?
-        </p>
-        <p>
-            Lorsqu'un client quitte votre site pour payer et revient après la validation, GA4 peut considérer cela comme une nouvelle session. Résultat : la vente est attribuée à "paypal.com" au lieu de votre campagne SEO ou Google Ads. Votre analyse de ROI est alors totalement faussée.
-        </p>
-        <p>
-            À Lille, beaucoup d'e-commerçants font cette erreur, ce qui rend leur pilotage publicitaire impossible. Il est impératif d'exclure ces domaines de la liste des sites référents.
-        </p>
-
-        <h2 id="events">3. Confondre Événements et Conversions</h2>
-        <p>
-            Dans GA4, "tout est un événement". Un clic, un scroll, une vue de page. Mais <strong>tout n'est pas une conversion</strong>. 
-        </p>
-        <p>
-            L'erreur courante consiste à marquer trop d'événements comme conversions (par exemple, le clic sur un bouton social). Si votre taux de conversion affiche 80%, vous ne mesurez plus votre business, vous mesurez le bruit. Une conversion doit être une action qui a une valeur économique directe : un formulaire de contact rempli, un achat ou une demande de devis.
-        </p>
-        <div class="warning-box">
-            <strong>Conséquence :</strong> Si vous liez un compte GA4 mal configuré à Google Ads, l'intelligence artificielle de Google va optimiser vos publicités pour des actions inutiles, gaspillant ainsi votre budget.
-        </div>
-
-        
-
-        <h2 id="consent">4. Ignorer le Consent Mode V2 et le RGPD</h2>
-        <p>
-            Depuis mars 2024, le <strong>Consent Mode V2</strong> est devenu obligatoire pour continuer à utiliser les fonctionnalités de ciblage et de mesure de Google. Si vous n'avez pas correctement lié votre bannière de cookies (CMP) à GA4, vous perdez une quantité massive de données, notamment pour les utilisateurs refusant les cookies.
-        </p>
-        <p>
-            Le Consent Mode V2 permet de faire de la "modélisation de données". Il aide à estimer les conversions perdues via des modèles mathématiques, tout en restant 100% conforme au RGPD. Sans cela, vos rapports Analytics sous-estiment systématiquement votre performance réelle.
-        </p>
-
-        <h2 id="debug">5. Ne pas tester via le DebugView</h2>
-        <p>
-            Beaucoup installent des tags via Google Tag Manager (GTM) et vérifient simplement si les chiffres montent dans le rapport "Temps réel". C'est insuffisant.
-        </p>
-        <p>
-            L'utilisation du <strong>DebugView</strong> dans GA4 est la seule manière de vérifier que les paramètres envoyés sont corrects. Par exemple, si vous envoyez une valeur de transaction, est-elle bien formatée ? La devise est-elle la bonne ? L'ID de transaction est-il unique ? Sans test rigoureux, vous accumulez des données "sales" (Garbage In, Garbage Out).
-        </p>
-
-        <h2 id="conclusion">Conclusion : La data est le carburant de votre stratégie</h2>
-        <p>
-            Le Web Analytics n'est pas un projet "One-Shot" que l'on configure et que l'on oublie. C'est une infrastructure qui doit être maintenue. À Lille, la compétition digitale exige une précision chirurgicale : chaque euro investi en SEO ou SEA doit être justifié par une donnée fiable.
-        </p>
-        <p>
-            Prenez le temps d'ouvrir votre compte GA4 aujourd'hui et vérifiez ces 5 points. Si vous avez un doute, il est souvent préférable de repartir sur une configuration propre via un plan de marquage rigoureux.
-        </p>
-
-        <div class="cta-article">
-            <h2>Un doute sur la fiabilité de vos rapports ?</h2>
-            <p>Ne prenez plus de décisions dans le noir. Je réalise un audit technique complet de votre tracking pour sécuriser votre mesure de performance.</p>
-            <a href="../contact.html" class="btn">Réserver mon audit Analytics</a>
-        </div>
-    </article>
-
-    <footer style="background: var(--dark); color: white; padding: 80px 0 30px; border-top: 1px solid rgba(255,255,255,0.1);">
     <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px;">
-            
-            <div>
-                <div style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px;">FlackoInsight<span style="color: var(--primary);">.</span></div>
-                <p style="opacity: 0.7; font-size: 0.95rem; margin-bottom: 20px;">
-                    Expert en stratégie digitale à Lille. J'accompagne les entreprises dans leur croissance via le SEO, le SEA, la Data et le Développement Web sur-mesure.
-                </p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="www.linkedin.com/in/olivier-kabongo-39097a219" target="_blank" style="background: rgba(255,255,255,0.1); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">In</a>
+        <div class="article-wrap">
+            <div class="article-meta">
+                <span class="meta-chip">📅 Février 2026</span>
+                <span class="meta-chip">📂 Web Analytics</span>
+                <span class="meta-chip">⏱️ 15 min de lecture</span>
+            </div>
+            <h1>GA4 : 5 erreurs de configuration qui faussent vos données (et comment les réparer)</h1>
+            <p>De nombreuses entreprises pensent être "bien configurées" simplement parce qu'elles voient des chiffres monter dans leurs rapports GA4. Pourtant, j'audite chaque semaine des comptes où 30% à 50% de la donnée est soit manquante, soit totalement erronée. Une mauvaise donnée est plus dangereuse que pas de donnée du tout.</p>
+
+            <div class="toc">
+                <strong>Sommaire</strong>
+                <a href="#retention">1. La rétention des données limitée à 2 mois</a>
+                <a href="#referral">2. L'absence d'exclusion des sites référents</a>
+                <a href="#events">3. Confondre Événements et Conversions</a>
+                <a href="#consent">4. Ignorer le Consent Mode V2 et le RGPD</a>
+                <a href="#debug">5. Ne pas tester via le DebugView</a>
+            </div>
+
+            <h2 id="retention">1. La rétention des données limitée à 2 mois</h2>
+            <p>C'est l'erreur "silencieuse" par excellence. Par défaut, GA4 configure la rétention des données d'exploration sur 2 mois seulement. Si vous voulez comparer vos performances actuelles avec celles de l'année dernière dans l'onglet "Explorer", vous n'aurez aucun historique. Pour un business saisonnier, c'est une catastrophe stratégique.</p>
+            <div class="tip-box">
+                <strong>La solution :</strong> Administration → Paramètres des données → Conservation des données. Passez de "2 mois" à "14 mois" et enregistrez immédiatement.
+            </div>
+
+            <h2 id="referral">2. L'absence d'exclusion des sites référents</h2>
+            <p>Votre canal "Referral" contient souvent votre propre nom de domaine ou des plateformes de paiement comme Stripe ou PayPal. Lorsqu'un client quitte votre site pour payer et revient après validation, GA4 peut considérer cela comme une nouvelle session. Résultat : la vente est attribuée à "paypal.com" au lieu de votre campagne SEO ou Google Ads. Votre analyse de ROI est alors totalement faussée.</p>
+
+            <h2 id="events">3. Confondre Événements et Conversions</h2>
+            <p>Dans GA4, "tout est un événement". Un clic, un scroll, une vue de page. Mais tout n'est pas une conversion. L'erreur courante : marquer trop d'événements comme conversions. Si votre taux de conversion affiche 80%, vous ne mesurez plus votre business, vous mesurez le bruit. Une conversion doit avoir une valeur économique directe : formulaire rempli, achat, demande de devis.</p>
+            <div class="warning-box">
+                <strong>Conséquence :</strong> Si vous liez un compte GA4 mal configuré à Google Ads, l'IA de Google va optimiser vos publicités pour des actions inutiles, gaspillant ainsi votre budget.
+            </div>
+
+            <h2 id="consent">4. Ignorer le Consent Mode V2 et le RGPD</h2>
+            <p>Depuis mars 2024, le Consent Mode V2 est obligatoire pour continuer à utiliser les fonctionnalités de ciblage de Google. Sans une bonne liaison entre votre bannière de cookies (CMP) et GA4, vous perdez une quantité massive de données pour les utilisateurs refusant les cookies. Le Consent Mode V2 permet la "modélisation de données" pour estimer les conversions perdues, tout en restant 100% conforme au RGPD.</p>
+
+            <h2 id="debug">5. Ne pas tester via le DebugView</h2>
+            <p>Beaucoup installent des tags via GTM et vérifient simplement si les chiffres montent dans le rapport "Temps réel". C'est insuffisant. Le DebugView dans GA4 est la seule manière de vérifier que les paramètres envoyés sont corrects : valeur de transaction bien formatée, devise correcte, ID de transaction unique. Sans test rigoureux, vous accumulez des données "sales" (Garbage In, Garbage Out).</p>
+
+            <div class="article-cta">
+                <h2>Un doute sur la fiabilité de vos rapports ?</h2>
+                <p>Je réalise un audit technique complet de votre tracking pour sécuriser votre mesure de performance.</p>
+                <a href="contact.html" class="btn btn-emerald">Réserver mon audit Analytics</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Flacko<span style="color:var(--blue-light)">Insight</span><span style="color:var(--emerald-light)">.</span></div>
+                    <p class="footer-desc">Expert en stratégie digitale à Lille. J'accompagne les entreprises dans leur croissance via le SEO, le SEA, la Data et le Développement Web sur-mesure.</p>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/olivier-kabongo-39097a219" target="_blank" class="social-btn" title="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <div class="footer-links">
+                        <a href="seo.html">Référencement naturel (SEO)</a>
+                        <a href="sea.html">Publicité Google Ads (SEA)</a>
+                        <a href="content-marketing.html">Stratégie de contenu</a>
+                        <a href="creation-de-site-web.html">Développement web</a>
+                        <a href="web-analytics-et-datas.html">Web Analytics & Data</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Blog</h5>
+                    <div class="footer-links">
+                        <a href="projets.html">Tous les articles</a>
+                        <a href="seolocal_lille.html">SEO local à Lille</a>
+                        <a href="configurer-ga4.html">5 erreurs GA4</a>
+                        <a href="budgetAds.html">Budget Google Ads</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <div class="footer-contact-item">📍 <span>Lille, Hauts-de-France</span></div>
+                    <div class="footer-contact-item">📧 <span>olivierjoachimkabongo@gmail.com</span></div>
+                    <div class="footer-contact-item">🕒 <span>Lun–Ven : 10h–17h</span></div>
                 </div>
             </div>
-
-            <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 25px; border-left: 3px solid var(--primary); padding-left: 15px;">Expertises</h4>
-                <ul style="display: flex; flex-direction: column; gap: 12px; opacity: 0.8; font-size: 0.9rem;">
-                    <li><a href="seo.html" style="hover: color: var(--primary);">Référencement naturel (SEO)</a></li>
-                    <li><a href="sea.html">Publicité Google Ads (SEA)</a></li>
-                    <li><a href="content-marketing.html">Stratégie de contenu</a></li>
-                    <li><a href="creation-de-site-web.html">Développement web</a></li>
-                    <li><a href="web-analytics-et-data.html">Web Analytics & Data</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 25px; border-left: 3px solid var(--primary); padding-left: 15px;">Contact</h4>
-                <ul style="display: flex; flex-direction: column; gap: 12px; opacity: 0.8; font-size: 0.9rem;">
-                    <li>📍 Basé à Lille, Hauts-de-France</li>
-                    <li>📧 <a href="mailto:olivierjoachimkabongo@gmail.com">contact@flackoinsight.com</a></li>
-                    <li>🕒 Lun - Ven : 10:00 - 17:00</li>
-                    <li style="margin-top: 10px;">
-                        <a href="contact.html" style="color: var(--primary); font-weight: 800;">Prendre rendez-vous →</a>
-                    </li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FlackoInsight — Olivier Kabongo</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="politique-confidentialite.html">Confidentialité</a>
+                </div>
             </div>
         </div>
-
-        <div style="padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 0.85rem; opacity: 0.6;">
-            <p>&copy; 2026 FlackoInsight - Olivier Kabongo. Tous droits réservés.</p>
-            <div style="display: flex; gap: 20px;">
-                <a href="mentions-legales.html">Mentions légales</a>
-                <a href="politique-confidentialite.html">Confidentialité</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
+    </footer>
+    <script src="global.js"></script>
 </body>
 </html>

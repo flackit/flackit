@@ -1,635 +1,176 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBSPKDZTY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GMBSPKDZTY');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBSPKDZTY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GMBSPKDZTY');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEO Local Lille 2026 : Le guide complet pour dominer Google</title>
-    <meta name="description" content="Pourquoi le SEO local est vital pour les entreprises de la métropole lilloise en 2026 ? Stratégies, Google Business Profile et optimisation pour capturer le trafic du Nord.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-     <style>
-        /* --- 1. VARIABLES & RESET --- */
-        :root {
-            --primary: #2563EB;       /* Bleu roi dynamique */
-            --dark: #0F172A;          /* Bleu nuit très foncé (texte et fonds) */
-            --light: #F8FAFC;         /* Gris très clair pour les fonds alternés */
-            --white: #FFFFFF;
-            --gray: #64748B;          /* Gris pour les textes secondaires */
-            --accent: #F59E0B;        /* Orange pour les détails */
-            --spacing: 80px;          /* Espacement standard entre sections */
-        }
-
-     
-        :root { --primary: #2563EB; --dark: #0F172A; --gray: #64748B; --light: #F8FAFC; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: var(--dark); background: #FFF; }
-        .container-article { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
-        header { padding: 20px 0; border-bottom: 1px solid #EEE; }
-        .logo { font-weight: 800; color: var(--primary); text-decoration: none; font-size: 1.2rem; }
-        
-        h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 25px; color: var(--dark); }
-        h2 { font-size: 2rem; margin-top: 50px; margin-bottom: 20px; color: var(--primary); border-bottom: 2px solid var(--light); padding-bottom: 10px; }
-        h3 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; color: var(--dark); }
-        p { margin-bottom: 25px; font-size: 1.15rem; color: #334155; }
-        ul, ol { margin-bottom: 25px; padding-left: 20px; }
-        li { margin-bottom: 10px; font-size: 1.1rem; }
-        
-        .meta { color: var(--gray); font-size: 0.95rem; margin-bottom: 30px; display: flex; gap: 20px; }
-        .highlight-box { background: var(--light); padding: 30px; border-radius: 15px; border-left: 6px solid var(--primary); margin: 40px 0; }
-        .cta-article { background: var(--dark); color: white; padding: 40px; border-radius: 20px; margin-top: 60px; text-align: center; }
-        .btn { display: inline-block; background: var(--primary); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 20px; transition: 0.3s; }
-        .btn:hover { background: #1d4ed8; transform: scale(1.05); }
-        
-        strong { color: var(--dark); }
-        .toc { background: var(--light); padding: 20px; border-radius: 10px; margin-bottom: 40px; }
-        .toc b { display: block; margin-bottom: 10px; }
-        .toc a { color: var(--primary); text-decoration: none; font-size: 0.95rem; }
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
-
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
-
-        /* --- 2. LAYOUT & UTILITIES --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .btn-primary:hover { background-color: #1d4ed8; }
-
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            margin-left: 10px;
-        }
-
-        .btn-outline:hover { background-color: var(--primary); color: var(--white); }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* --- 3. HEADER --- */
-        header {
-            background: var(--white);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .nav-links { display: flex; gap: 30px; }
-        .nav-links a { font-weight: 500; font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--primary); }
-
-        /* --- 4. HERO SECTION --- */
-        .hero {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(180deg, var(--light) 0%, var(--white) 100%);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-        }
-
-        /* --- 5. SERVICES (GRID) --- */
-        .services { padding: var(--spacing) 0; }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-color: var(--primary);
-        }
-
-        .icon {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .service-card h3 { margin-bottom: 15px; font-size: 1.25rem; }
-        .service-card p { color: var(--gray); font-size: 0.95rem; }
-
-        /* --- 6. STATS / PREUVE SOCIALE --- */
-        .stats {
-            background: var(--dark);
-            color: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .stats-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .stat-item h3 {
-            font-size: 3rem;
-            color: var(--accent);
-            font-weight: 800;
-        }
-
-        .stat-item p { font-size: 1.1rem; opacity: 0.9; }
-
-        /* --- 7. ABOUT & CONTACT --- */
-        .about-contact {
-            padding: var(--spacing) 0;
-            background: var(--light);
-        }
-        
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text h2 { margin-bottom: 20px; }
-        .about-text p { margin-bottom: 20px; color: var(--gray); }
-
-        /* --- 8. FOOTER --- */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 50px 0 20px 0;
-            font-size: 0.9rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h4 { margin-bottom: 20px; color: var(--white); }
-        .footer-col ul li { margin-bottom: 10px; }
-        .footer-col a { color: #94a3b8; }
-        .footer-col a:hover { color: var(--white); }
-
-        .copyright {
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            color: #64748B;
-        }
-
-        /* --- MOBILE --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Pour simplifier, menu caché sur mobile pour l'instant */
-            .about-grid { grid-template-columns: 1fr; }
-            .btn { width: 100%; margin: 10px 0 0 0; }
-        }
-    </style>
+    <title>Pourquoi le SEO local est indispensable à Lille en 2026 | FlackoInsight</title>
+    <meta name="description" content="Stratégie SEO local complète pour dominer les recherches géolocalisées à Lille. Google Business Profile, citations et contenus géolocalisés.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    
 </head>
 <body>
-
-    <header class="main-header">
-    <div class="container nav-container">
-        <a href="index.html" class="logo">FlackoInsight</a>
-        
-        <input type="checkbox" id="nav-check" style="display:none;">
-        <label for="nav-check" class="nav-toggler">
-            <span></span>
-        </label>
-
-        <nav class="nav-menu">
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-link">Accueil</a></li>
-                
-                <li class="dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Services <small>▼</small></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="seo.html">SEO (Référencement naturel)</a></li>
-                        <li><a href="sea.html">SEA (Google Ads)</a></li>
-                        <li><a href="content-marketing.html">Content marketing</a></li>
-                        <li><a href="creation-de-site-web.html">Création de Site Web</a></li>
-                        <li><a href="web-analytics-et-datas.html">Web analytics & Data</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-    <a href="projets.html" class="nav-link dropdown-toggle">Blog <small>▼</small></a>
-    <ul class="dropdown-menu">
-        <li><a href="projets.html" style="font-weight: 800; border-bottom: 1px solid #EEE;">Voir tous les articles</a></li>
-        <li><a href="seolocal_lille.html">Pourquoi le SEO local à Lille ?</a></li>
-        <li><a href="configurer-ga4.html">5 erreurs GA4 à éviter</a></li>
-        <li><a href="budgetAds.html">Quel budget pour Google Ads ?</a></li>
-    </ul>
-</li>
-                <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<style>
-/* --- STYLES DU HEADER --- */
-:root {
-    --header-height: 80px;
-    --primary: #2563EB;
-    --dark: #0F172A;
-    --white: #FFFFFF;
-}
-
-.main-header {
-    background: var(--white);
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--dark);
-    text-decoration: none;
-}
-
-.logo span { color: var(--primary); }
-
-.nav-list {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: 0.3s;
-}
-
-.nav-link:hover { color: var(--primary); }
-
-/* --- MENU DÉROULANT (DROPDOWN) --- */
-.dropdown { position: relative; }
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--white);
-    min-width: 240px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-radius: 12px;
-    padding: 15px 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: 0.3s;
-    list-style: none;
-}
-
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.dropdown-menu li a {
-    display: block;
-    padding: 10px 25px;
-    color: var(--dark);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: 0.2s;
-}
-
-.dropdown-menu li a:hover {
-    background: #F8FAFC;
-    color: var(--primary);
-    padding-left: 30px;
-}
-
-/* --- BOUTON CONTACT --- */
-.btn-contact-nav {
-    background: var(--primary);
-    color: white;
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.btn-contact-nav:hover {
-    background: #1d4ed8;
-    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
-}
-
-/* --- RESPONSIVE MOBILE --- */
-@media (max-width: 992px) {
-    .nav-toggler {
-        display: block;
-        width: 30px;
-        height: 20px;
-        cursor: pointer;
-        position: relative;
-    }
-    
-    .nav-toggler span, .nav-toggler span::before, .nav-toggler span::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background: var(--dark);
-        transition: 0.3s;
-    }
-    
-    .nav-toggler span::before { top: -8px; }
-    .nav-toggler span::after { top: 8px; }
-
-    .nav-menu {
-        position: fixed;
-        top: var(--header-height);
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - var(--header-height));
-        background: var(--white);
-        transition: 0.4s;
-        overflow-y: auto;
-    }
-
-    #nav-check:checked ~ .nav-menu { left: 0; }
-
-    .nav-list {
-        flex-direction: column;
-        padding: 40px 20px;
-        align-items: flex-start;
-    }
-    /* Style spécifique pour le lien principal du blog dans le menu */
-.dropdown-menu li:first-child a {
-    color: var(--primary);
-    background-color: #F0F9FF;
-    margin-bottom: 5px;
-}
-
-/* On s'assure que le menu déroulant est assez large pour les titres d'articles */
-.dropdown-menu {
-    min-width: 280px; /* Un peu plus large pour les titres longs */
-}
-
-/* Petit indicateur de lien survolé */
-.dropdown-menu li a:hover {
-    background: #F8FAFC;
-    color: var(--primary);
-    padding-left: 30px; /* Effet de décalage au survol */
-}
-
-    .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        box-shadow: none;
-        transform: none;
-        padding: 10px 0 10px 20px;
-        display: none; /* Caché par défaut sur mobile, s'affiche au clic si besoin */
-    }
-
-    .dropdown:hover .dropdown-menu { display: block; }
-}
-</style>
-
-    <article class="container-article">
-        <div class="meta">
-            <span>📅 25 Février 2026</span>
-            <span>📂 Catégorie : SEO Local</span>
-            <span>⏱️ Lecture : 12 min</span>
+    <header class="main-header" id="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Flacko<span class="accent">Insight</span><span class="dot">.</span></a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="seo.html"><span class="menu-icon">🔍</span>SEO — Référencement</a></li>
+                            <li><a href="sea.html"><span class="menu-icon">🚀</span>SEA — Google Ads</a></li>
+                            <li><a href="content-marketing.html"><span class="menu-icon">✍️</span>Content Marketing</a></li>
+                            <li><a href="creation-de-site-web.html"><span class="menu-icon">💻</span>Création de site web</a></li>
+                            <li><a href="web-analytics-et-datas.html"><span class="menu-icon">📊</span>Web Analytics & Data</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="projets.html" class="nav-link">Blog ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projets.html"><span class="menu-icon">📚</span>Tous les articles</a></li>
+                            <li><a href="seolocal_lille.html"><span class="menu-icon">📍</span>SEO local à Lille</a></li>
+                            <li><a href="configurer-ga4.html"><span class="menu-icon">📈</span>5 erreurs GA4</a></li>
+                            <li><a href="budgetAds.html"><span class="menu-icon">💶</span>Budget Google Ads</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        
-        <h1>Pourquoi le SEO local est crucial pour les entreprises lilloises en 2026</h1>
-        
-        <p class="intro">
-            Lille, capitale des Flandres, est devenue un hub technologique et économique majeur. Avec l'essor d'Euralille, de la Plaine Images et d'Euratechnologies, la concurrence numérique n'a jamais été aussi féroce. En 2026, posséder un site web ne suffit plus : il faut être <strong>visible là où vos clients vous cherchent</strong>. Que vous soyez un cabinet d'avocats sur la Grand Place, un restaurant dans le Vieux-Lille ou une startup à Loos, le SEO local est votre arme la plus puissante pour capter une clientèle de proximité prête à convertir.
-        </p>
+    </header>
 
-        <div class="toc">
-            <b>Sommaire de l'article :</b>
-            <ul>
-                <li><a href="#definition">1. Qu'est-ce que le SEO local en 2026 ?</a></li>
-                <li><a href="#comportement">2. Le comportement de recherche des Lillois</a></li>
-                <li><a href="#google-business">3. L'importance du Google Business Profile</a></li>
-                <li><a href="#mots-cles">4. Cibler les quartiers de Lille et la MEL</a></li>
-                <li><a href="#avis-clients">5. Les avis clients : Le carburant de votre visibilité</a></li>
-                <li><a href="#technique">6. Optimisation technique pour le mobile</a></li>
-            </ul>
+    <nav class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Accueil</a>
+            <div class="mobile-section-label">Services</div>
+            <div class="mobile-submenu">
+                <a href="seo.html">🔍 SEO — Référencement</a>
+                <a href="sea.html">🚀 SEA — Google Ads</a>
+                <a href="content-marketing.html">✍️ Content Marketing</a>
+                <a href="creation-de-site-web.html">💻 Création de site web</a>
+                <a href="web-analytics-et-datas.html">📊 Web Analytics & Data</a>
+            </div>
+            <div class="mobile-section-label">Blog</div>
+            <div class="mobile-submenu">
+                <a href="projets.html">📚 Tous les articles</a>
+                <a href="seolocal_lille.html">📍 SEO local à Lille</a>
+                <a href="configurer-ga4.html">📈 5 erreurs GA4</a>
+                <a href="budgetAds.html">💶 Budget Google Ads</a>
+            </div>
+            <div class="mobile-nav-cta">
+                <a href="contact.html" class="btn btn-primary">Prendre contact</a>
+            </div>
         </div>
+    </nav>
 
-        <h2 id="definition">1. Qu'est-ce que le SEO local en 2026 ?</h2>
-        <p>
-            Le SEO local est une branche du référencement naturel qui vise à positionner votre entreprise sur des requêtes incluant une dimension géographique (ex: "expert-comptable Lille" ou "réparation vélo Vieux-Lille"). En 2026, Google a affiné ses algorithmes pour privilégier l'<strong>hyper-proximité</strong>.
-        </p>
-        <p>
-            L'algorithme ne se contente plus de lire vos mots-clés. Il analyse la position GPS de l'utilisateur, l'historique de ses déplacements dans la métropole lilloise et la pertinence de votre établissement par rapport à son besoin immédiat. Être premier sur "SEO" au niveau national est prestigieux, mais être premier sur "SEO Lille" est ce qui remplit votre carnet de commandes localement.
-        </p>
-
-        <h2 id="comportement">2. Le comportement de recherche des Lillois</h2>
-        <p>
-            En 2026, plus de 80% des recherches locales sur smartphone se terminent par une visite en magasin ou un appel téléphonique dans les 24 heures. Les Lillois sont mobiles et impatients. Ils utilisent la recherche vocale dans les transports en commun d'Ilévia ou cherchent une solution rapide en marchant rue de Béthune.
-        </p>
-        <div class="highlight-box">
-            <p><strong>Le saviez-vous ?</strong> Les recherches contenant la mention "à proximité" ou "ouvert maintenant" ont augmenté de 400% ces deux dernières années. Si votre fiche n'est pas optimisée pour ces critères, vous donnez littéralement vos clients à vos concurrents directs.</p>
-        </div>
-
-        <h2 id="google-business">3. L'importance capitale du Google Business Profile</h2>
-        <p>
-            Votre fiche <strong>Google Business Profile</strong> (anciennement Google My Business) est devenue votre véritable devanture digitale. À Lille, apparaître dans le "Local Pack" (les 3 résultats affichés sur la carte Google Maps) génère plus de clics que le premier résultat organique standard.
-        </p>
-        <h3>Comment optimiser votre fiche pour Lille ?</h3>
-        <ul>
-            <li><strong>Photos de haute qualité :</strong> Montrez l'intérieur de vos bureaux à Euralille ou votre boutique. Les photos de l'extérieur aident les Lillois à vous identifier rapidement dans la rue.</li>
-            <li><strong>Attributs locaux :</strong> Précisez si vous proposez le click-and-collect, si vous avez une terrasse ou si vos locaux sont accessibles.</li>
-            <li><strong>Google Posts :</strong> Publiez vos actualités. Vous participez à la Braderie de Lille ? Dites-le ! Google adore le contenu frais et localisé.</li>
-        </ul>
-
-        <h2 id="mots-cles">4. Cibler les quartiers de Lille et les communes de la MEL</h2>
-        <p>
-            Lille n'est pas un bloc monolithique. Les intentions de recherche varient entre le <strong>Vieux-Lille</strong>, <strong>Vauban</strong>, <strong>Wazemmes</strong> ou <strong>Hellemmes</strong>. Une stratégie SEO local performante doit inclure une sémantique granulaire.
-        </p>
-        <p>
-            Ne vous contentez pas de "Lille". Si vous intervenez dans toute la métropole (MEL), créez des sections ou des pages dédiées à <strong>Roubaix</strong>, <strong>Tourcoing</strong>, <strong>Villeneuve-d'Ascq</strong> ou <strong>Marcq-en-Barœul</strong>. Cela permet de capter les recherches de longue traîne très spécifiques.
-        </p>
-
-        <h2 id="avis-clients">5. Les avis clients : Le carburant de votre visibilité</h2>
-        <p>
-            En 2026, Google accorde une importance démesurée à la preuve sociale. Mais attention, ce n'est pas seulement le nombre d'étoiles qui compte, c'est aussi la <strong>récurrence</strong> et les <strong>mots-clés contenus dans les avis</strong>.
-        </p>
-        <p>
-            Lorsqu'un client lillois laisse un avis mentionnant : "Excellent consultant SEO à Lille, très réactif", Google associe directement votre fiche à ces termes de recherche. Encouragez vos clients satisfaits à être précis dans leurs retours. Répondez à chaque avis, qu'il soit positif ou négatif, pour montrer à l'algorithme que votre établissement est actif et soucieux de son audience.
-        </p>
-
-        <h2 id="technique">6. Optimisation technique pour le mobile</h2>
-        <p>
-            Avec le déploiement massif de la 5G dans le Nord, la vitesse de chargement est devenue un critère d'exclusion. Un site qui met plus de 3 secondes à charger sur un mobile rue de la Clé est un site qui perd 50% de son trafic.
-        </p>
-        <p>
-            Assurez-vous que votre site respecte les <strong>Core Web Vitals</strong>. En tant qu'expert Data, je constate souvent que les entreprises lilloises négligent l'optimisation des images et le cache serveur. C'est pourtant la base pour convertir un utilisateur mobile en client fidèle.
-        </p>
-
-        <div class="highlight-box">
-            <h3>Conclusion : Lille est une opportunité, ne la manquez pas</h3>
-            <p>Le SEO local n'est pas une option, c'est le moteur de votre croissance de proximité. En 2026, la barrière entre le monde physique et le monde numérique a disparu. Votre visibilité sur Google Maps et dans les résultats locaux détermine votre chiffre d'affaires réel en boutique ou en agence.</p>
-        </div>
-
-        <div class="cta-article">
-            <h2>Prêt à dominer la métropole lilloise ?</h2>
-            <p>Votre site ne génère pas assez d'appels ou de visites ? Analysons ensemble votre présence locale et identifions les leviers pour dépasser vos concurrents.</p>
-            <a href="../contact.html" class="btn">Demander mon audit SEO local offert</a>
-        </div>
-    </article>
-
-    <footer style="background: var(--dark); color: white; padding: 80px 0 30px; border-top: 1px solid rgba(255,255,255,0.1);">
     <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px;">
-            
-            <div>
-                <div style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px;">FlackoInsight<span style="color: var(--primary);">.</span></div>
-                <p style="opacity: 0.7; font-size: 0.95rem; margin-bottom: 20px;">
-                    Expert en stratégie digitale à Lille. J'accompagne les entreprises dans leur croissance via le SEO, le SEA, la Data et le Développement Web sur-mesure.
-                </p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="www.linkedin.com/in/olivier-kabongo-39097a219" target="_blank" style="background: rgba(255,255,255,0.1); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">In</a>
+        <div class="article-wrap">
+            <div class="article-meta">
+                <span class="meta-chip">📅 Février 2026</span>
+                <span class="meta-chip">📂 SEO Local</span>
+                <span class="meta-chip">⏱️ 12 min de lecture</span>
+            </div>
+            <h1>Pourquoi le SEO local est indispensable pour les entreprises lilloises en 2026</h1>
+            <p>Si vous possédez une boutique, un cabinet ou une agence dans la métropole lilloise, vous passez à côté d'une mine d'or si vous négligez le SEO local. Voici pourquoi c'est devenu un impératif stratégique.</p>
+
+            <div class="toc">
+                <strong>Sommaire</strong>
+                <a href="#pourquoi">1. Qu'est-ce que le SEO local et pourquoi ça compte ?</a>
+                <a href="#gbp">2. Google Business Profile : votre vitrine numérique</a>
+                <a href="#citations">3. Les citations locales et la cohérence NAP</a>
+                <a href="#contenu">4. Créer du contenu ancré dans Lille</a>
+                <a href="#mesurer">5. Comment mesurer votre performance locale ?</a>
+            </div>
+
+            <h2 id="pourquoi">1. Qu'est-ce que le SEO local et pourquoi ça compte ?</h2>
+            <p>Le SEO local désigne l'ensemble des techniques qui permettent à votre site d'apparaître en haut des résultats Google lorsqu'un internaute effectue une recherche géolocalisée : "avocat Lille", "restaurant vieux-lille", "agence marketing Lille". Avec 46% des recherches Google ayant une intention locale, l'enjeu est colossal.</p>
+            <p>La spécificité de Lille tient à sa dynamique économique : une métropole de plus d'un million d'habitants, un tissu de PME dense et une population jeune très connectée. La concurrence locale est réelle, mais le potentiel est proportionnel.</p>
+
+            <div class="tip-box">
+                <strong>Chiffre clé :</strong> 76% des consommateurs qui effectuent une recherche locale sur mobile visitent un commerce dans les 24 heures. Être visible localement, c'est attirer des clients qui sont prêts à acheter maintenant.
+            </div>
+
+            <h2 id="gbp">2. Google Business Profile : votre vitrine numérique gratuite</h2>
+            <p>Le Google Business Profile (anciennement Google My Business) est LE levier n°1 du SEO local. Lorsque quelqu'un recherche votre type de service à Lille, Google affiche un "Local Pack" : une carte avec 3 entreprises en haut des résultats. Apparaître dans ce pack peut multiplier vos appels téléphoniques et visites par 5.</p>
+            <p>Pour optimiser votre fiche, vous devez : choisir les bonnes catégories, remplir 100% des informations, ajouter des photos régulièrement et surtout collecter des avis clients de manière proactive. La quantité et la qualité des avis Google sont parmi les facteurs de classement local les plus puissants.</p>
+
+            <h2 id="citations">3. Les citations locales et la cohérence NAP</h2>
+            <p>Une "citation" est toute mention de votre entreprise sur le web avec votre Nom, Adresse et Numéro de téléphone (NAP). Google croise ces informations pour valider l'existence et la légitimité de votre entreprise. Si votre adresse est écrite différemment sur PagesJaunes, Yelp et votre site, Google interprète cela comme un signal de méfiance.</p>
+            <p>À Lille, les annuaires prioritaires à optimiser sont PagesJaunes, Yelp, TripAdvisor (si pertinent), les chambres de commerce locales et les annuaires sectoriels spécifiques à votre métier.</p>
+
+            <h2 id="contenu">4. Créer du contenu ancré dans Lille</h2>
+            <p>Pour dominer les requêtes locales, votre contenu doit refléter votre ancrage géographique. Un article sur "Les tendances marketing à Lille en 2026", une page de service mentionnant les quartiers que vous couvrez (Vieux-Lille, Euralille, Wazemmes…) : ces signaux géographiques renforcent votre pertinence locale aux yeux de Google.</p>
+
+            <h2 id="mesurer">5. Comment mesurer votre performance locale ?</h2>
+            <p>Google Business Profile fournit nativement des données précieuses : nombre d'appels générés, demandes d'itinéraires, clics sur votre site. Côté GSC, filtrez vos positions par requêtes contenant "Lille" ou votre commune. Et n'oubliez pas GA4 pour mesurer les conversions issues du trafic local.</p>
+
+            <div class="article-cta">
+                <h2>Vous voulez dominer les recherches à Lille ?</h2>
+                <p>Je réalise un audit complet de votre visibilité locale et vous propose une feuille de route prioritaire.</p>
+                <a href="contact.html" class="btn btn-emerald">Demander mon audit SEO local</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Flacko<span style="color:var(--blue-light)">Insight</span><span style="color:var(--emerald-light)">.</span></div>
+                    <p class="footer-desc">Expert en stratégie digitale à Lille. J'accompagne les entreprises dans leur croissance via le SEO, le SEA, la Data et le Développement Web sur-mesure.</p>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/olivier-kabongo-39097a219" target="_blank" class="social-btn" title="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <div class="footer-links">
+                        <a href="seo.html">Référencement naturel (SEO)</a>
+                        <a href="sea.html">Publicité Google Ads (SEA)</a>
+                        <a href="content-marketing.html">Stratégie de contenu</a>
+                        <a href="creation-de-site-web.html">Développement web</a>
+                        <a href="web-analytics-et-datas.html">Web Analytics & Data</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Blog</h5>
+                    <div class="footer-links">
+                        <a href="projets.html">Tous les articles</a>
+                        <a href="seolocal_lille.html">SEO local à Lille</a>
+                        <a href="configurer-ga4.html">5 erreurs GA4</a>
+                        <a href="budgetAds.html">Budget Google Ads</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <div class="footer-contact-item">📍 <span>Lille, Hauts-de-France</span></div>
+                    <div class="footer-contact-item">📧 <span>olivierjoachimkabongo@gmail.com</span></div>
+                    <div class="footer-contact-item">🕒 <span>Lun–Ven : 10h–17h</span></div>
                 </div>
             </div>
-
-            <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 25px; border-left: 3px solid var(--primary); padding-left: 15px;">Expertises</h4>
-                <ul style="display: flex; flex-direction: column; gap: 12px; opacity: 0.8; font-size: 0.9rem;">
-                    <li><a href="seo.html" style="hover: color: var(--primary);">Référencement naturel (SEO)</a></li>
-                    <li><a href="sea.html">Publicité Google Ads (SEA)</a></li>
-                    <li><a href="content-marketing.html">Stratégie de contenu</a></li>
-                    <li><a href="creation-de-site-web.html">Développement web</a></li>
-                    <li><a href="web-analytics-et-data.html">Web Analytics & Data</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 25px; border-left: 3px solid var(--primary); padding-left: 15px;">Contact</h4>
-                <ul style="display: flex; flex-direction: column; gap: 12px; opacity: 0.8; font-size: 0.9rem;">
-                    <li>📍 Basé à Lille, Hauts-de-France</li>
-                    <li>📧 <a href="mailto:olivierjoachimkabongo@gmail.com">contact@flackoinsight.com</a></li>
-                    <li>🕒 Lun - Ven : 10:00 - 17:00</li>
-                    <li style="margin-top: 10px;">
-                        <a href="contact.html" style="color: var(--primary); font-weight: 800;">Prendre rendez-vous →</a>
-                    </li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FlackoInsight — Olivier Kabongo</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="politique-confidentialite.html">Confidentialité</a>
+                </div>
             </div>
         </div>
-
-        <div style="padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 0.85rem; opacity: 0.6;">
-            <p>&copy; 2026 FlackoInsight - Olivier Kabongo. Tous droits réservés.</p>
-            <div style="display: flex; gap: 20px;">
-                <a href="mentions-legales.html">Mentions légales</a>
-                <a href="politique-confidentialite.html">Confidentialité</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
+    </footer>
+    <script src="global.js"></script>
 </body>
 </html>

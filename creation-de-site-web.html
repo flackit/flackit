@@ -8,140 +8,147 @@
       gtag('js', new Date());
       gtag('config', 'G-GMBSPKDZTY');
     </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Création de Site Web Lille | Développeur WordPress, Prestashop & Sur-mesure | FlackoInsight</title>
+    <title>Création de Site Web Lille | WordPress, Prestashop & Sur-mesure | FlackoInsight</title>
     <meta name="description" content="Conception de sites web performants à Lille. Expert WordPress, Prestashop et développement sur-mesure (HTML, CSS, JS, PHP, Python) pour booster votre business.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
     
-    <style>
-        :root {
-            --primary: #2563EB;
-            --dark: #0F172A;
-            --light: #F8FAFC;
-            --white: #FFFFFF;
-            --gray: #64748B;
-            --accent: #6366F1; /* Un violet/bleu moderne pour le dev */
-            --header-height: 80px;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        
-        /* HEADER AVEC MÉGA MENU */
-        .main-header { background: var(--white); height: var(--header-height); display: flex; align-items: center; position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo { font-size: 1.6rem; font-weight: 800; color: var(--dark); }
-        .logo span { color: var(--primary); }
-        .nav-list { display: flex; align-items: center; gap: 30px; }
-        .nav-link { font-weight: 600; font-size: 0.95rem; }
-        .nav-link:hover { color: var(--primary); }
-
-        .dropdown { position: relative; }
-        .dropdown-menu { 
-            position: absolute; top: 100%; left: 0; background: var(--white); 
-            min-width: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            border-radius: 12px; padding: 15px 0; opacity: 0; visibility: hidden; 
-            transform: translateY(10px); transition: 0.3s; 
-        }
-        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .dropdown-menu li a { display: block; padding: 10px 25px; font-size: 0.9rem; font-weight: 500; }
-        .dropdown-menu li a:hover { background: var(--light); color: var(--primary); padding-left: 30px; }
-
-        .btn-contact-nav { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
-
-        /* HERO SECTION */
-        .hero { padding: 120px 0; background: var(--dark); color: white; }
-        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
-        .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
-        .hero p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 40px; }
-        
-        .hero-badge { background: rgba(255,255,255,0.05); padding: 50px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); text-align: center; }
-        .hero-badge .stat { font-size: 3rem; font-weight: 800; color: var(--accent); display: block; }
-        .hero-badge .label { text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; opacity: 0.7; margin-bottom: 20px; display: block; }
-
-        /* TECH PILLARS SECTION */
-        .section { padding: 100px 0; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-        .card { padding: 40px; border-radius: 16px; background: var(--white); border: 1px solid #E2E8F0; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .card h3 { margin-bottom: 20px; color: var(--accent); font-size: 1.4rem; }
-
-        /* EXPERTISE SECTION */
-        .expertise-section { background: var(--light); padding: 100px 0; }
-        .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .tech-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-        .tag { background: var(--white); border: 1px solid #E2E8F0; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: var(--primary); }
-
-        /* FAQ */
-        .faq-section { padding: 100px 0; }
-        .faq-item { border-bottom: 1px solid #E2E8F0; padding: 25px 0; }
-        .faq-item h4 { color: var(--primary); margin-bottom: 12px; font-size: 1.2rem; }
-
-        /* CTA */
-        .cta-final { padding: 100px 0; background: var(--accent); color: white; text-align: center; }
-        .btn-white { background: var(--white); color: var(--accent); padding: 20px 45px; border-radius: 50px; font-weight: 800; display: inline-block; margin-top: 30px; }
-
-        footer { background: var(--dark); color: white; padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
-
-        @media (max-width: 992px) {
-            .hero-grid, .expertise-grid { grid-template-columns: 1fr; text-align: center; }
-            .hero h1 { font-size: 2.5rem; }
-            .tech-tags { justify-content: center; }
-        }
-    </style>
 </head>
 <body>
-
-    <header class="main-header">
+    <header class="main-header" id="main-header">
         <div class="container nav-container">
-            <a href="index.html" class="logo">FlackoInsight</a>
-            <nav class="nav-menu">
+            <a href="index.html" class="logo">Flacko<span class="accent">Insight</span><span class="dot">.</span></a>
+            <nav>
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li class="dropdown">
-                        <a href="#" class="nav-link">Services ▼</a>
+                        <a href="#" class="nav-link">Services ▾</a>
                         <ul class="dropdown-menu">
-                            <li><a href="seo.html">SEO (Référencement)</a></li>
-                            <li><a href="sea.html">SEA (Google Ads)</a></li>
-                            <li><a href="content-marketing.html">Content Marketing</a></li>
-                            <li><a href="creation-de-site-web.html">Création de Site Web</a></li>
-                            <li><a href="web-analytics-et-datas.html">Web Analytics & Data</a></li>
+                            <li><a href="seo.html"><span class="menu-icon">🔍</span>SEO — Référencement</a></li>
+                            <li><a href="sea.html"><span class="menu-icon">🚀</span>SEA — Google Ads</a></li>
+                            <li><a href="content-marketing.html"><span class="menu-icon">✍️</span>Content Marketing</a></li>
+                            <li><a href="creation-de-site-web.html"><span class="menu-icon">💻</span>Création de site web</a></li>
+                            <li><a href="web-analytics-et-datas.html"><span class="menu-icon">📊</span>Web Analytics & Data</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="projets.html" class="nav-link">Blog ▼</a>
+                        <a href="projets.html" class="nav-link">Blog ▾</a>
                         <ul class="dropdown-menu">
-                            <li><a href="projets.html" style="color: var(--primary); font-weight: 800;">Voir tout le blog</a></li>
-                            <li><a href="seolocal_lille.html">Pourquoi le SEO local à Lille ?</a></li>
-                            <li><a href="configurer-ga4.html">5 erreurs GA4 à éviter</a></li>
-                            <li><a href="budgetAds.html">Budget Google Ads</a></li>
+                            <li><a href="projets.html"><span class="menu-icon">📚</span>Tous les articles</a></li>
+                            <li><a href="seolocal_lille.html"><span class="menu-icon">📍</span>SEO local à Lille</a></li>
+                            <li><a href="configurer-ga4.html"><span class="menu-icon">📈</span>5 erreurs GA4</a></li>
+                            <li><a href="budgetAds.html"><span class="menu-icon">💶</span>Budget Google Ads</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
                 </ul>
             </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <section class="hero">
+    <nav class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Accueil</a>
+            <div class="mobile-section-label">Services</div>
+            <div class="mobile-submenu">
+                <a href="seo.html">🔍 SEO — Référencement</a>
+                <a href="sea.html">🚀 SEA — Google Ads</a>
+                <a href="content-marketing.html">✍️ Content Marketing</a>
+                <a href="creation-de-site-web.html">💻 Création de site web</a>
+                <a href="web-analytics-et-datas.html">📊 Web Analytics & Data</a>
+            </div>
+            <div class="mobile-section-label">Blog</div>
+            <div class="mobile-submenu">
+                <a href="projets.html">📚 Tous les articles</a>
+                <a href="seolocal_lille.html">📍 SEO local à Lille</a>
+                <a href="configurer-ga4.html">📈 5 erreurs GA4</a>
+                <a href="budgetAds.html">💶 Budget Google Ads</a>
+            </div>
+            <div class="mobile-nav-cta">
+                <a href="contact.html" class="btn btn-primary">Prendre contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="service-hero">
+        <canvas id="particles-canvas"></canvas>
+        <div class="container service-hero-grid">
+            <div style="position:relative;z-index:2;">
+                <div class="hero-badge">Développement Web · Sur-mesure</div>
+                <h1>Un site web qui est votre <span class="grad">meilleur commercial</span></h1>
+                <p>Pas seulement beau — performant, rapide, optimisé SEO et centré sur vos résultats. Je conçois des plateformes qui transforment vos visiteurs en clients.</p>
+                <a href="contact.html" class="btn btn-emerald">Démarrer mon projet web</a>
+            </div>
+            <div class="service-hero-stat" style="position:relative;z-index:2;">
+                <span class="big-num">&lt;2s</span>
+                <span class="big-label">Temps de chargement optimisé</span>
+                <hr style="border-color:rgba(255,255,255,0.1);margin:16px 0;">
+                <p class="quote">"Votre présence en ligne est la première impression que vous donnez."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
         <div class="container">
-            <div class="hero-grid">
-                <div>
-                    <h1>Création de site web Lille : Performance & sur-mesure</h1>
-                    <p>Un site web ne doit pas seulement être beau, il doit être votre meilleur commercial. Je conçois des plateformes ultra-rapides, optimisées pour le SEO et centrées sur vos résultats.</p>
-                    <a href="contact.html" class="btn-contact-nav" style="background: var(--accent); padding: 18px 40px; font-size: 1.1rem;">Démarrer mon projet web</a>
+            <div class="reveal" style="text-align:center;margin-bottom:56px;">
+                <div class="section-label">Solutions</div>
+                <h2 class="section-title">Une solution pour <span class="highlight">chaque besoin</span></h2>
+                <p class="section-subtitle" style="margin:0 auto;">Du site vitrine au e-commerce complexe, j'utilise les technologies les plus adaptées à vos objectifs.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card reveal reveal-delay-1">
+                    <div class="card-icon">💻</div>
+                    <h3>Développement custom</h3>
+                    <p>Pour une liberté totale. Sites et web-apps performants utilisant les langages modernes pour une expérience utilisateur unique sans limites techniques.</p>
                 </div>
-                <div class="hero-badge">
-                    <span class="stat">&lt; 2s</span>
-                    <span class="label">Temps de chargement optimisé</span>
-                    <hr style="margin: 20px auto; width: 50px; opacity: 0.2;">
-                    <p style="font-style: italic; opacity: 0.9;">"Votre présence en ligne est la première impression que vous donnez."</p>
+                <div class="card reveal reveal-delay-2">
+                    <div class="card-icon">🎨</div>
+                    <h3>WordPress & CMS</h3>
+                    <p>La solution idéale pour l'autonomie. Site WordPress propre et sécurisé pour gérer vos contenus sans compétences techniques particulières.</p>
+                </div>
+                <div class="card reveal reveal-delay-3">
+                    <div class="card-icon">🛍️</div>
+                    <h3>E-commerce & Prestashop</h3>
+                    <p>Boutiques WooCommerce ou modules Prestashop sur-mesure pour booster vos ventes en ligne avec une UX soignée.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section split-section">
+        <div class="container">
+            <div class="split-grid">
+                <div class="reveal">
+                    <div class="section-label">Stack technique</div>
+                    <h2 class="section-title">Ma stack technique <span class="highlight">à votre service</span></h2>
+                    <p style="color:var(--gray);margin-bottom:24px;">Maîtriser le code jusqu'au PHP et Python me permet d'aller là où les plugins s'arrêtent.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5 / CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">WordPress</span>
+                        <span class="tech-tag">Prestashop</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-2">
+                    <div class="info-panel-card">
+                        <h4>SEO-Friendly dès la conception</h4>
+                        <p style="color:var(--gray);margin-bottom:16px;">Contrairement à beaucoup de créateurs de sites, j'intègre l'optimisation pour les moteurs de recherche dès la première ligne de code. Votre site est prêt à monter sur Google dès sa mise en ligne.</p>
+                        <div class="check-list">
+                            <div class="check-item">Structure sémantique HTML5 correcte</div>
+                            <div class="check-item">Core Web Vitals optimisés</div>
+                            <div class="check-item">Responsive Mobile-First</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,133 +156,68 @@
 
     <section class="section">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Une solution pour chaque besoin</h2>
-                <p style="color: var(--gray); font-size: 1.1rem;">Du site vitrine au e-commerce complexe, j'utilise les technologies les plus adaptées à vos objectifs commerciaux.</p>
-            </div>
-
-            <div class="grid-3">
-                <div class="card">
-                    <h3>💻 Développement custom</h3>
-                    <p>Pour une liberté totale. Conception de sites et web-apps performantes utilisant les langages modernes pour une expérience utilisateur unique et sans limites techniques.</p>
-                </div>
-                <div class="card">
-                    <h3>🎨 CMS & WordPress</h3>
-                    <p>La solution idéale pour garder la main. Je crée votre site sur WordPress de manière propre et sécurisée, pour que vous puissiez gérer vos contenus en toute autonomie.</p>
-                </div>
-                <div class="card">
-                    <h3>🛍️ E-commerce & Prestashop</h3>
-                    <p>Boostez vos ventes en ligne. De la création de boutique WordPress/WooCommerce à l'implémentation de modules complexes sur Prestashop.</p>
-                </div>
+            <h2 style="text-align:center;margin-bottom:48px;" class="section-title reveal">FAQ — <span class="highlight">Création de site</span></h2>
+            <div style="max-width:860px;margin:0 auto;">
+                <div class="faq-item reveal"><h4>Serai-je propriétaire de mon site ?</h4><p>Oui, à 100%. Une fois le projet finalisé, vous êtes propriétaire du nom de domaine, de l'hébergement et de l'intégralité du code ou des accès CMS.</p></div>
+                <div class="faq-item reveal"><h4>Intervenez-vous sur un site Prestashop existant ?</h4><p>Absolument. Installation, configuration ou développement de modules spécifiques pour améliorer les fonctionnalités de votre boutique en ligne.</p></div>
+                <div class="faq-item reveal"><h4>Mon site sera-t-il adapté aux mobiles ?</h4><p>C'est une priorité absolue. Tous mes sites sont développés en Responsive Design, garantissant une expérience parfaite sur smartphones, tablettes et ordinateurs.</p></div>
             </div>
         </div>
     </section>
 
-    <section class="expertise-section">
+    <section class="cta-section">
+        <div class="container" style="position:relative;z-index:2;">
+            <h2>Prêt à donner vie à votre projet ?</h2>
+            <p>Parlons de votre futur site web et de vos objectifs de croissance.</p>
+            <a href="contact.html" class="btn btn-ghost" style="font-size:1.05rem;padding:16px 40px;">Demander un devis gratuit →</a>
+        </div>
+    </section>
+
+    <footer class="main-footer">
         <div class="container">
-            <div class="expertise-grid">
+            <div class="footer-grid">
                 <div>
-                    <h2 style="font-size: 2.2rem; margin-bottom: 25px;">Ma stack technique à votre service</h2>
-                    <p style="margin-bottom: 25px;">Chaque projet est unique. Que vous ayez besoin d'un script spécifique ou d'une refonte complète, je maîtrise les technologies qui font le web d'aujourd'hui :</p>
-                    
-                    <div class="tech-tags">
-                        <span class="tag">HTML5 / CSS3</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">WordPress</span>
-                        <span class="tag">Prestashop</span>
-                        <span class="tag">MySQL</span>
+                    <div class="footer-logo">Flacko<span style="color:var(--blue-light)">Insight</span><span style="color:var(--emerald-light)">.</span></div>
+                    <p class="footer-desc">Expert en stratégie digitale à Lille. J'accompagne les entreprises dans leur croissance via le SEO, le SEA, la Data et le Développement Web sur-mesure.</p>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/olivier-kabongo-39097a219" target="_blank" class="social-btn" title="LinkedIn">in</a>
                     </div>
-
-                    <p style="margin-top: 30px;"><strong>Pourquoi c'est important ?</strong> Maîtriser le code (PHP, Python) me permet d'aller là où les plugins s'arrêtent, en créant des fonctionnalités sur-mesure pour votre business à Lille.</p>
                 </div>
-                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                    <h4 style="margin-bottom: 20px; color: var(--accent); font-size: 1.3rem;">SEO-Friendly dès la conception</h4>
-                    <p>Contrairement à beaucoup de créateurs de sites, j'intègre l'optimisation pour les moteurs de recherche (SEO) dès la première ligne de code. Votre site est prêt à monter sur Google le jour même de sa mise en ligne.</p>
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <div class="footer-links">
+                        <a href="seo.html">Référencement naturel (SEO)</a>
+                        <a href="sea.html">Publicité Google Ads (SEA)</a>
+                        <a href="content-marketing.html">Stratégie de contenu</a>
+                        <a href="creation-de-site-web.html">Développement web</a>
+                        <a href="web-analytics-et-datas.html">Web Analytics & Data</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Blog</h5>
+                    <div class="footer-links">
+                        <a href="projets.html">Tous les articles</a>
+                        <a href="seolocal_lille.html">SEO local à Lille</a>
+                        <a href="configurer-ga4.html">5 erreurs GA4</a>
+                        <a href="budgetAds.html">Budget Google Ads</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <div class="footer-contact-item">📍 <span>Lille, Hauts-de-France</span></div>
+                    <div class="footer-contact-item">📧 <span>olivierjoachimkabongo@gmail.com</span></div>
+                    <div class="footer-contact-item">🕒 <span>Lun–Ven : 10h–17h</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FlackoInsight — Olivier Kabongo</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="politique-confidentialite.html">Confidentialité</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="faq-section">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.2rem;">FAQ : Création de Site</h2>
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div class="faq-item">
-                    <h4>Serais-je propriétaire de mon site web ?</h4>
-                    <p>Oui, à 100%. Une fois le projet finalisé et réglé, vous êtes propriétaire du nom de domaine, de l'hébergement et de l'intégralité du code ou des accès CMS.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Pouvez-vous intervenir sur un site Prestashop existant ?</h4>
-                    <p>Absolument. Je vous aide pour l'installation, la configuration ou le développement de modules spécifiques afin d'améliorer les fonctionnalités de votre boutique en ligne.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Pourquoi choisir du sur-mesure (Python/PHP) plutôt qu'un CMS ?</h4>
-                    <p>Le sur-mesure offre des performances supérieures, une sécurité accrue et une flexibilité totale pour des fonctionnalités métier complexes que les CMS ne peuvent pas toujours gérer nativement.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Mon site sera-t-il adapté aux mobiles ?</h4>
-                    <p>C'est une priorité absolue. Tous mes sites sont développés en "Responsive Design", garantissant une expérience de navigation parfaite sur smartphones, tablettes et ordinateurs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-final">
-        <div class="container">
-            <h2>Prêt à donner vie à votre projet digital ?</h2>
-            <p style="font-size: 1.2rem; margin-top: 15px; opacity: 0.9;">Parlons de votre futur site web et de vos objectifs de croissance.</p>
-            <a href="contact.html" class="btn-white">Demander un devis gratuit</a>
-        </div>
-    </section>
-
-    <footer style="background: var(--dark); color: white; padding: 80px 0 30px; border-top: 1px solid rgba(255,255,255,0.1);">
-    <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px;">
-            
-            <div>
-                <div style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px;">FlackoInsight<span style="color: var(--primary);">.</span></div>
-                <p style="opacity: 0.7; font-size: 0.95rem; margin-bottom: 20px;">
-                    Expert en stratégie digitale à Lille. J'accompagne les entreprises dans leur croissance via le SEO, le SEA, la Data et le Développement Web sur-mesure.
-                </p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="www.linkedin.com/in/olivier-kabongo-39097a219" target="_blank" style="background: rgba(255,255,255,0.1); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">In</a>
-                </div>
-            </div>
-
-            <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 25px; border-left: 3px solid var(--primary); padding-left: 15px;">Expertises</h4>
-                <ul style="display: flex; flex-direction: column; gap: 12px; opacity: 0.8; font-size: 0.9rem;">
-                    <li><a href="seo.html" style="hover: color: var(--primary);">Référencement naturel (SEO)</a></li>
-                    <li><a href="sea.html">Publicité Google Ads (SEA)</a></li>
-                    <li><a href="content-marketing.html">Stratégie de contenu</a></li>
-                    <li><a href="creation-de-site-web.html">Développement web</a></li>
-                    <li><a href="web-analytics-et-datas.html">Web Analytics & Data</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 25px; border-left: 3px solid var(--primary); padding-left: 15px;">Contact</h4>
-                <ul style="display: flex; flex-direction: column; gap: 12px; opacity: 0.8; font-size: 0.9rem;">
-                    <li>📍 Basé à Lille, Hauts-de-France</li>
-                    <li>📧 <a href="mailto:olivierjoachimkabongo@gmail.com">contact@flackoinsight.com</a></li>
-                    <li>🕒 Lun - Ven : 10:00 - 17:00</li>
-                    <li style="margin-top: 10px;">
-                        <a href="contact.html" style="color: var(--primary); font-weight: 800;">Prendre rendez-vous →</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div style="padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 0.85rem; opacity: 0.6;">
-            <p>&copy; 2026 FlackoInsight - Olivier Kabongo. Tous droits réservés.</p>
-            <div style="display: flex; gap: 20px;">
-                <a href="mentions-legales.html">Mentions légales</a>
-                <a href="politique-confidentialite.html">Confidentialité</a>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
+    <script src="global.js"></script>
 </body>
 </html>

@@ -8,146 +8,144 @@
       gtag('js', new Date());
       gtag('config', 'G-GMBSPKDZTY');
     </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stratégie Content Marketing Lille | Création de Contenu & Rédaction Web | FlackoInsight</title>
+    <title>Stratégie Content Marketing Lille | Rédaction Web SEO | FlackoInsight</title>
     <meta name="description" content="Devenez une référence dans votre secteur avec une stratégie de contenu performante. Articles SEO, newsletters et copywriting pour générer des leads à Lille.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
     
-    <style>
-        :root {
-            --primary: #2563EB;
-            --dark: #0F172A;
-            --light: #F8FAFC;
-            --white: #FFFFFF;
-            --gray: #64748B;
-            --accent: #F59E0B;
-            --header-height: 80px;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        
-        /* HEADER AVEC MÉGA MENU */
-        .main-header { background: var(--white); height: var(--header-height); display: flex; align-items: center; position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo { font-size: 1.6rem; font-weight: 800; color: var(--dark); }
-        .logo span { color: var(--primary); }
-        .nav-list { display: flex; align-items: center; gap: 30px; }
-        .nav-link { font-weight: 600; font-size: 0.95rem; }
-        .nav-link:hover { color: var(--primary); }
-
-        .dropdown { position: relative; }
-        .dropdown-menu { 
-            position: absolute; top: 100%; left: 0; background: var(--white); 
-            min-width: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            border-radius: 12px; padding: 15px 0; opacity: 0; visibility: hidden; 
-            transform: translateY(10px); transition: 0.3s; 
-        }
-        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .dropdown-menu li a { display: block; padding: 10px 25px; font-size: 0.9rem; font-weight: 500; }
-        .dropdown-menu li a:hover { background: var(--light); color: var(--primary); padding-left: 30px; }
-
-        .btn-contact-nav { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
-
-        /* HERO SECTION */
-        .hero { padding: 120px 0; background: var(--dark); color: white; }
-        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
-        .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
-        .hero p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 40px; }
-        
-        .hero-badge { background: rgba(255,255,255,0.05); padding: 50px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); text-align: center; }
-        .hero-badge .stat { font-size: 3rem; font-weight: 800; color: var(--accent); display: block; }
-        .hero-badge .label { text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; opacity: 0.7; margin-bottom: 20px; display: block; }
-
-        /* CONTENT SECTION */
-        .section { padding: 100px 0; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-        .card { padding: 40px; border-radius: 16px; background: var(--white); border: 1px solid #E2E8F0; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .card h3 { margin-bottom: 20px; color: var(--primary); font-size: 1.4rem; }
-
-        .quote-box { background: var(--light); padding: 40px; border-radius: 20px; border-right: 6px solid var(--accent); margin-top: 60px; text-align: right; }
-        .quote-box p { font-size: 1.2rem; font-style: italic; font-weight: 600; }
-
-        /* DELEGATION SECTION */
-        .split-section { background: var(--light); padding: 100px 0; }
-        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .split-list li { margin-bottom: 15px; position: relative; padding-left: 30px; }
-        .split-list li::before { content: "🔥"; position: absolute; left: 0; }
-        
-        .info-panel { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-
-        /* FAQ */
-        .faq-section { padding: 100px 0; }
-        .faq-item { border-bottom: 1px solid #E2E8F0; padding: 25px 0; }
-        .faq-item h4 { color: var(--primary); margin-bottom: 12px; font-size: 1.15rem; }
-
-        /* CTA FINAL */
-        .cta-final { padding: 100px 0; background: var(--primary); color: white; text-align: center; }
-        .btn-white { background: var(--white); color: var(--primary); padding: 20px 45px; border-radius: 50px; font-weight: 800; display: inline-block; margin-top: 30px; }
-
-        footer { background: var(--dark); color: white; padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
-
-        @media (max-width: 992px) {
-            .hero-grid, .split-grid { grid-template-columns: 1fr; text-align: center; }
-            .hero h1 { font-size: 2.5rem; }
-            .quote-box { text-align: center; border-right: none; border-bottom: 6px solid var(--accent); }
-            .split-list li { text-align: left; }
-        }
-    </style>
 </head>
 <body>
-
-    <header class="main-header">
+    <header class="main-header" id="main-header">
         <div class="container nav-container">
-            <a href="index.html" class="logo">FlackoInsight</a>
-            <nav class="nav-menu">
+            <a href="index.html" class="logo">Flacko<span class="accent">Insight</span><span class="dot">.</span></a>
+            <nav>
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li class="dropdown">
-                        <a href="#" class="nav-link">Services ▼</a>
+                        <a href="#" class="nav-link">Services ▾</a>
                         <ul class="dropdown-menu">
-                            <li><a href="seo.html">SEO (Référencement)</a></li>
-                            <li><a href="sea.html">SEA (Google Ads)</a></li>
-                            <li><a href="content-marketing.html">Content Marketing</a></li>
-                            <li><a href="creation-de-site-web.html">Création de Site Web</a></li>
-                            <li><a href="web-analytics-et-datas.html">Web Analytics & Data</a></li>
+                            <li><a href="seo.html"><span class="menu-icon">🔍</span>SEO — Référencement</a></li>
+                            <li><a href="sea.html"><span class="menu-icon">🚀</span>SEA — Google Ads</a></li>
+                            <li><a href="content-marketing.html"><span class="menu-icon">✍️</span>Content Marketing</a></li>
+                            <li><a href="creation-de-site-web.html"><span class="menu-icon">💻</span>Création de site web</a></li>
+                            <li><a href="web-analytics-et-datas.html"><span class="menu-icon">📊</span>Web Analytics & Data</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="projets.html" class="nav-link">Blog ▼</a>
+                        <a href="projets.html" class="nav-link">Blog ▾</a>
                         <ul class="dropdown-menu">
-                            <li><a href="projets.html" style="color: var(--primary); font-weight: 800;">Voir tout le blog</a></li>
-                            <li><a href="seolocal_lille.html">Pourquoi le SEO local à Lille ?</a></li>
-                            <li><a href="configurer-ga4.html">5 erreurs GA4 à éviter</a></li>
-                            <li><a href="budgetAds.html">Budget Google Ads</a></li>
+                            <li><a href="projets.html"><span class="menu-icon">📚</span>Tous les articles</a></li>
+                            <li><a href="seolocal_lille.html"><span class="menu-icon">📍</span>SEO local à Lille</a></li>
+                            <li><a href="configurer-ga4.html"><span class="menu-icon">📈</span>5 erreurs GA4</a></li>
+                            <li><a href="budgetAds.html"><span class="menu-icon">💶</span>Budget Google Ads</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
                 </ul>
             </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <section class="hero">
+    <nav class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Accueil</a>
+            <div class="mobile-section-label">Services</div>
+            <div class="mobile-submenu">
+                <a href="seo.html">🔍 SEO — Référencement</a>
+                <a href="sea.html">🚀 SEA — Google Ads</a>
+                <a href="content-marketing.html">✍️ Content Marketing</a>
+                <a href="creation-de-site-web.html">💻 Création de site web</a>
+                <a href="web-analytics-et-datas.html">📊 Web Analytics & Data</a>
+            </div>
+            <div class="mobile-section-label">Blog</div>
+            <div class="mobile-submenu">
+                <a href="projets.html">📚 Tous les articles</a>
+                <a href="seolocal_lille.html">📍 SEO local à Lille</a>
+                <a href="configurer-ga4.html">📈 5 erreurs GA4</a>
+                <a href="budgetAds.html">💶 Budget Google Ads</a>
+            </div>
+            <div class="mobile-nav-cta">
+                <a href="contact.html" class="btn btn-primary">Prendre contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="service-hero">
+        <canvas id="particles-canvas"></canvas>
+        <div class="container service-hero-grid">
+            <div style="position:relative;z-index:2;">
+                <div class="hero-badge">Content Marketing · Rédaction</div>
+                <h1>Transformez votre audience en <span class="grad">clients fidèles</span></h1>
+                <p>Ne produisez plus du contenu pour "faire joli". Créez une machine éditoriale qui assoit votre autorité et booste votre croissance organique.</p>
+                <a href="contact.html" class="btn btn-emerald">Lancer ma stratégie éditoriale</a>
+            </div>
+            <div class="service-hero-stat" style="position:relative;z-index:2;">
+                <span class="big-num">24/7</span>
+                <span class="big-label">Votre contenu travaille sans vous</span>
+                <hr style="border-color:rgba(255,255,255,0.1);margin:16px 0;">
+                <p class="quote">"Le contenu est l'actif numérique le plus rentable sur le long terme."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
         <div class="container">
-            <div class="hero-grid">
-                <div>
-                    <h1>Content marketing : Transformez votre audience en clients</h1>
-                    <p>Ne produisez plus du contenu pour "faire joli". Créez une machine de guerre éditoriale qui assoit votre autorité et booste votre croissance organique.</p>
-                    <a href="contact.html" class="btn-contact-nav" style="padding: 18px 40px; font-size: 1.1rem;">Lancer ma stratégie de contenu</a>
+            <div class="reveal" style="text-align:center;margin-bottom:56px;">
+                <div class="section-label">Tunnel éditorial</div>
+                <h2 class="section-title">Le contenu au service de <span class="highlight">votre tunnel de vente</span></h2>
+                <p class="section-subtitle" style="margin:0 auto;">Une bonne stratégie accompagne votre prospect à chaque étape de son parcours d'achat.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card reveal reveal-delay-1">
+                    <div class="card-icon">📢</div>
+                    <h3>Attraction (TOFU)</h3>
+                    <p>Articles de blog optimisés SEO, contenu social media percutant. On capte l'attention d'un trafic qualifié qui ne vous connaît pas encore.</p>
                 </div>
-                <div class="hero-badge">
-                    <span class="stat">24h/24</span>
-                    <span class="label">Votre site vend pendant que vous dormez</span>
-                    <hr style="margin: 20px auto; width: 50px; opacity: 0.2;">
-                    <p style="font-style: italic; opacity: 0.9;">"Le contenu est l'actif numérique le plus rentable sur le long terme."</p>
+                <div class="card reveal reveal-delay-2">
+                    <div class="card-icon">🧠</div>
+                    <h3>Éducation (MOFU)</h3>
+                    <p>Newsletters approfondies, études de cas et livres blancs pour transformer un visiteur curieux en prospect convaincu de votre valeur.</p>
+                </div>
+                <div class="card reveal reveal-delay-3">
+                    <div class="card-icon">💰</div>
+                    <h3>Conversion (BOFU)</h3>
+                    <p>Copywriting affûté sur vos pages de vente. On lève les dernières objections pour transformer l'essai en chiffre d'affaires réel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section split-section">
+        <div class="container">
+            <div class="split-grid">
+                <div class="reveal">
+                    <div class="section-label">Pourquoi déléguer ?</div>
+                    <h2 class="section-title">Une stratégie <span class="highlight">data-driven</span></h2>
+                    <div class="check-list">
+                        <div class="check-item">Calendrier éditorial respecté mois après mois</div>
+                        <div class="check-item">Recyclage de contenu : 1 article → 5 posts LinkedIn + newsletter</div>
+                        <div class="check-item">On publie ce qui génère du trafic ET des leads, pas du bruit</div>
+                        <div class="check-item">Optimisation sémantique — contenus pour vos lecteurs ET Google</div>
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-2">
+                    <div class="info-panel-card">
+                        <h4>L'Art du Storytelling Data-Driven</h4>
+                        <p style="color:var(--gray);margin-bottom:20px;">Mon approche mélange créativité du copywriting et rigueur de la donnée. Je mesure le temps de lecture, le taux de clic et la conversion pour ajuster en permanence.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Rédaction SEO</span>
+                            <span class="tech-tag">Copywriting</span>
+                            <span class="tech-tag">Newsletter</span>
+                            <span class="tech-tag">LinkedIn</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,132 +153,69 @@
 
     <section class="section">
         <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Le contenu au service de votre tunnel de vente</h2>
-                <p style="color: var(--gray); font-size: 1.1rem;">Une bonne stratégie de contenu accompagne votre prospect à chaque étape de son parcours d'achat. Je vous aide à construire ce pont.</p>
-            </div>
-
-            <div class="grid-3">
-                <div class="card">
-                    <h3>📢 Attraction (TOFU)</h3>
-                    <p>C'est la phase où l'on capte l'attention. Grâce à des articles de blog optimisés SEO et du contenu social media percutant à Lille, nous attirons un trafic qualifié.</p>
-                </div>
-                <div class="card">
-                    <h3>🧠 Éducation (MOFU)</h3>
-                    <p>Prouvez-leur que vous avez la solution. Newsletters approfondies, études de cas et livres blancs permettent de transformer un visiteur en prospect convaincu.</p>
-                </div>
-                <div class="card">
-                    <h3>💰 Conversion (BOFU)</h3>
-                    <p>Le moment de vérité. Par le biais d'un copywriting affûté sur vos pages de vente, nous levons les dernières objections pour transformer l'essai en CA.</p>
-                </div>
-            </div>
-
-            <div class="quote-box">
-                <p>"Si le SEO est le moteur, le contenu est le carburant. Sans stratégie éditoriale, votre site reste une carcasse vide."</p>
-                <span style="display: block; margin-top: 10px; color: var(--gray);">— FlackoInsight</span>
+            <h2 style="text-align:center;margin-bottom:48px;" class="section-title reveal">FAQ — <span class="highlight">Content Marketing</span></h2>
+            <div style="max-width:860px;margin:0 auto;">
+                <div class="faq-item reveal"><h4>Le Content Marketing est-il efficace en B2B ?</h4><p>C'est vital. Le cycle de décision est long en B2B ; le contenu permet de rester présent dans l'esprit du décideur et de construire la confiance avant l'acte d'achat.</p></div>
+                <div class="faq-item reveal"><h4>Combien d'articles faut-il publier par mois ?</h4><p>La qualité prime. Un article d'expertise de 2000 mots par mois aura plus d'impact SEO que quatre articles faibles de 500 mots.</p></div>
+                <div class="faq-item reveal"><h4>Utilisez-vous l'IA pour rédiger ?</h4><p>L'IA peut aider à la structure, mais l'expertise, l'angle éditorial et votre "Tone of Voice" unique sont garantis par mon intervention humaine.</p></div>
+                <div class="faq-item reveal"><h4>Quel est le ROI attendu ?</h4><p>Le contenu est un investissement durable. Un article publié aujourd'hui peut vous rapporter des leads gratuitement dans 2 ans. C'est le levier le plus rentable.</p></div>
             </div>
         </div>
     </section>
 
-    <section class="split-section">
-        <div class="container">
-            <div class="split-grid">
-                <div>
-                    <h2 style="font-size: 2.2rem; margin-bottom: 25px;">Pourquoi déléguer votre stratégie ?</h2>
-                    <p style="margin-bottom: 25px;">La plupart des entreprises publient sans fil conducteur. En travaillant avec un expert, vous bénéficiez de :</p>
-                    <ul class="split-list">
-                        <li><strong>Régularité :</strong> Un calendrier éditorial respecté mois après mois.</li>
-                        <li><strong>Recyclage de contenu :</strong> Un article devient 5 posts LinkedIn et une newsletter.</li>
-                        <li><strong>Analyse data :</strong> On publie ce qui génère réellement du trafic et des leads.</li>
-                        <li><strong>Optimisation sémantique :</strong> Des textes pensés pour plaire à vos lecteurs ET à Google.</li>
-                    </ul>
-                </div>
-                <div class="info-panel">
-                    <h4 style="margin-bottom: 20px; color: var(--primary); font-size: 1.3rem;">L'Art du storytelling data-driven</h4>
-                    <p>Mon approche mélange la créativité du copywriting et la rigueur de la donnée. À Lille, j'aide les marques à raconter leur histoire tout en gardant un œil sur les KPIs : temps de lecture, taux de clic et conversion.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq-section">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.2rem;">FAQ : Marketing de Contenu</h2>
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div class="faq-item">
-                    <h4>Le Content Marketing est-il efficace pour le B2B ?</h4>
-                    <p>C'est vital. Le cycle de décision est long en B2B ; le contenu permet de rester présent dans l'esprit du décideur et de construire la confiance avant l'acte d'achat.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Combien d'articles faut-il publier par mois ?</h4>
-                    <p>La qualité l'emporte. Un article d'expertise de 2000 mots par mois aura plus d'impact SEO que quatre articles faibles de 500 mots.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Allez-vous utiliser l'IA pour rédiger ?</h4>
-                    <p>L'IA est un assistant pour la structure, mais l'expertise, l'angle éditorial et votre "Tone of Voice" unique sont garantis par mon intervention humaine.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Quel est le ROI attendu ?</h4>
-                    <p>Le contenu est un investissement durable. Un article publié aujourd'hui peut vous rapporter des leads gratuitement dans 2 ans. C'est le levier le plus rentable.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-final">
-        <div class="container">
+    <section class="cta-section">
+        <div class="container" style="position:relative;z-index:2;">
             <h2>Prêt à devenir le média de votre secteur ?</h2>
-            <p style="font-size: 1.2rem; margin-top: 15px; opacity: 0.9;">Donnez enfin à votre site la voix qu'il mérite.</p>
-            <a href="contact.html" class="btn-white">Discuter de ma stratégie éditoriale</a>
+            <p>Donnez enfin à votre site la voix qu'il mérite.</p>
+            <a href="contact.html" class="btn btn-ghost" style="font-size:1.05rem;padding:16px 40px;">Discuter de ma stratégie →</a>
         </div>
     </section>
 
-    <footer style="background: var(--dark); color: white; padding: 80px 0 30px; border-top: 1px solid rgba(255,255,255,0.1);">
-    <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px;">
-            
-            <div>
-                <div style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px;">FlackoInsight<span style="color: var(--primary);">.</span></div>
-                <p style="opacity: 0.7; font-size: 0.95rem; margin-bottom: 20px;">
-                    Expert en stratégie digitale à Lille. J'accompagne les entreprises dans leur croissance via le SEO, le SEA, la Data et le Développement Web sur-mesure.
-                </p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="www.linkedin.com/in/olivier-kabongo-39097a219" target="_blank" style="background: rgba(255,255,255,0.1); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">In</a>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Flacko<span style="color:var(--blue-light)">Insight</span><span style="color:var(--emerald-light)">.</span></div>
+                    <p class="footer-desc">Expert en stratégie digitale à Lille. J'accompagne les entreprises dans leur croissance via le SEO, le SEA, la Data et le Développement Web sur-mesure.</p>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/olivier-kabongo-39097a219" target="_blank" class="social-btn" title="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <div class="footer-links">
+                        <a href="seo.html">Référencement naturel (SEO)</a>
+                        <a href="sea.html">Publicité Google Ads (SEA)</a>
+                        <a href="content-marketing.html">Stratégie de contenu</a>
+                        <a href="creation-de-site-web.html">Développement web</a>
+                        <a href="web-analytics-et-datas.html">Web Analytics & Data</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Blog</h5>
+                    <div class="footer-links">
+                        <a href="projets.html">Tous les articles</a>
+                        <a href="seolocal_lille.html">SEO local à Lille</a>
+                        <a href="configurer-ga4.html">5 erreurs GA4</a>
+                        <a href="budgetAds.html">Budget Google Ads</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <div class="footer-contact-item">📍 <span>Lille, Hauts-de-France</span></div>
+                    <div class="footer-contact-item">📧 <span>olivierjoachimkabongo@gmail.com</span></div>
+                    <div class="footer-contact-item">🕒 <span>Lun–Ven : 10h–17h</span></div>
                 </div>
             </div>
-
-            <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 25px; border-left: 3px solid var(--primary); padding-left: 15px;">Expertises</h4>
-                <ul style="display: flex; flex-direction: column; gap: 12px; opacity: 0.8; font-size: 0.9rem;">
-                    <li><a href="seo.html" style="hover: color: var(--primary);">Référencement naturel (SEO)</a></li>
-                    <li><a href="sea.html">Publicité Google Ads (SEA)</a></li>
-                    <li><a href="content-marketing.html">Stratégie de contenu</a></li>
-                    <li><a href="creation-de-site-web.html">Développement web</a></li>
-                    <li><a href="web-analytics-et-datas.html">Web Analytics & Data</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 25px; border-left: 3px solid var(--primary); padding-left: 15px;">Contact</h4>
-                <ul style="display: flex; flex-direction: column; gap: 12px; opacity: 0.8; font-size: 0.9rem;">
-                    <li>📍 Basé à Lille, Hauts-de-France</li>
-                    <li>📧 <a href="mailto:olivierjoachimkabongo@gmail.com">contact@flackoinsight.com</a></li>
-                    <li>🕒 Lun - Ven : 10:00 - 17:00</li>
-                    <li style="margin-top: 10px;">
-                        <a href="contact.html" style="color: var(--primary); font-weight: 800;">Prendre rendez-vous →</a>
-                    </li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FlackoInsight — Olivier Kabongo</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="politique-confidentialite.html">Confidentialité</a>
+                </div>
             </div>
         </div>
-
-        <div style="padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 0.85rem; opacity: 0.6;">
-            <p>&copy; 2026 FlackoInsight - Olivier Kabongo. Tous droits réservés.</p>
-            <div style="display: flex; gap: 20px;">
-                <a href="mentions-legales.html">Mentions légales</a>
-                <a href="politique-confidentialite.html">Confidentialité</a>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
+    <script src="global.js"></script>
 </body>
 </html>
