@@ -15,8 +15,7 @@
     <title>SEO Local Lille 2026 : Le guide complet pour dominer Google</title>
     <meta name="description" content="Pourquoi le SEO local est vital pour les entreprises de la métropole lilloise en 2026 ? Stratégies, Google Business Profile et optimisation pour capturer le trafic du Nord.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-         <style>
+     <style>
         /* --- 1. VARIABLES & RESET --- */
         :root {
             --primary: #2563EB;       /* Bleu roi dynamique */
@@ -243,50 +242,232 @@
             .about-grid { grid-template-columns: 1fr; }
             .btn { width: 100%; margin: 10px 0 0 0; }
         }
-
-        :root { --primary: #2563EB; --dark: #0F172A; --gray: #64748B; --light: #F8FAFC; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: var(--dark); background: #FFF; }
-        .container-article { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
-        header { padding: 20px 0; border-bottom: 1px solid #EEE; }
-        .logo { font-weight: 800; color: var(--primary); text-decoration: none; font-size: 1.2rem; }
-        
-        h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 25px; color: var(--dark); }
-        h2 { font-size: 2rem; margin-top: 50px; margin-bottom: 20px; color: var(--primary); border-bottom: 2px solid var(--light); padding-bottom: 10px; }
-        h3 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; color: var(--dark); }
-        p { margin-bottom: 25px; font-size: 1.15rem; color: #334155; }
-        ul, ol { margin-bottom: 25px; padding-left: 20px; }
-        li { margin-bottom: 10px; font-size: 1.1rem; }
-        
-        .meta { color: var(--gray); font-size: 0.95rem; margin-bottom: 30px; display: flex; gap: 20px; }
-        .highlight-box { background: var(--light); padding: 30px; border-radius: 15px; border-left: 6px solid var(--primary); margin: 40px 0; }
-        .cta-article { background: var(--dark); color: white; padding: 40px; border-radius: 20px; margin-top: 60px; text-align: center; }
-        .btn { display: inline-block; background: var(--primary); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 20px; transition: 0.3s; }
-        .btn:hover { background: #1d4ed8; transform: scale(1.05); }
-        
-        strong { color: var(--dark); }
-        .toc { background: var(--light); padding: 20px; border-radius: 10px; margin-bottom: 40px; }
-        .toc b { display: block; margin-bottom: 10px; }
-        .toc a { color: var(--primary); text-decoration: none; font-size: 0.95rem; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <a href="index.html" style="color: inherit; text-decoration: none;">FlackoInsight</a>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="seo.html">SEO</a></li>
-                    <li><a href="sea.html">SEA</a></li>
-                    <li><a href="projets.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <header class="main-header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">FlackoInsight</a>
+        
+        <input type="checkbox" id="nav-check" style="display:none;">
+        <label for="nav-check" class="nav-toggler">
+            <span></span>
+        </label>
+
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Services <small>▼</small></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="seo.html">SEO (Référencement naturel)</a></li>
+                        <li><a href="sea.html">SEA (Google Ads)</a></li>
+                        <li><a href="content-marketing.html">Content marketing</a></li>
+                        <li><a href="creation-de-site-web.html">Création de Site Web</a></li>
+                        <li><a href="web-analytics-et-datas.html">Web analytics & Data</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+    <a href="projets.html" class="nav-link dropdown-toggle">Blog <small>▼</small></a>
+    <ul class="dropdown-menu">
+        <li><a href="projets.html" style="font-weight: 800; border-bottom: 1px solid #EEE;">Voir tous les articles</a></li>
+        <li><a href="seolocal_lille.html">Pourquoi le SEO local à Lille ?</a></li>
+        <li><a href="configurer-ga4.html">5 erreurs GA4 à éviter</a></li>
+        <li><a href="budgetAds.html">Quel budget pour Google Ads ?</a></li>
+    </ul>
+</li>
+                <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+/* --- STYLES DU HEADER --- */
+:root {
+    --header-height: 80px;
+    --primary: #2563EB;
+    --dark: #0F172A;
+    --white: #FFFFFF;
+}
+
+.main-header {
+    background: var(--white);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.logo span { color: var(--primary); }
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-link:hover { color: var(--primary); }
+
+/* --- MENU DÉROULANT (DROPDOWN) --- */
+.dropdown { position: relative; }
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    min-width: 240px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s;
+    list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 25px;
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    background: #F8FAFC;
+    color: var(--primary);
+    padding-left: 30px;
+}
+
+/* --- BOUTON CONTACT --- */
+.btn-contact-nav {
+    background: var(--primary);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-contact-nav:hover {
+    background: #1d4ed8;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 992px) {
+    .nav-toggler {
+        display: block;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .nav-toggler span, .nav-toggler span::before, .nav-toggler span::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: var(--dark);
+        transition: 0.3s;
+    }
+    
+    .nav-toggler span::before { top: -8px; }
+    .nav-toggler span::after { top: 8px; }
+
+    .nav-menu {
+        position: fixed;
+        top: var(--header-height);
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        background: var(--white);
+        transition: 0.4s;
+        overflow-y: auto;
+    }
+
+    #nav-check:checked ~ .nav-menu { left: 0; }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 40px 20px;
+        align-items: flex-start;
+    }
+    /* Style spécifique pour le lien principal du blog dans le menu */
+.dropdown-menu li:first-child a {
+    color: var(--primary);
+    background-color: #F0F9FF;
+    margin-bottom: 5px;
+}
+
+/* On s'assure que le menu déroulant est assez large pour les titres d'articles */
+.dropdown-menu {
+    min-width: 280px; /* Un peu plus large pour les titres longs */
+}
+
+/* Petit indicateur de lien survolé */
+.dropdown-menu li a:hover {
+    background: #F8FAFC;
+    color: var(--primary);
+    padding-left: 30px; /* Effet de décalage au survol */
+}
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        transform: none;
+        padding: 10px 0 10px 20px;
+        display: none; /* Caché par défaut sur mobile, s'affiche au clic si besoin */
+    }
+
+    .dropdown:hover .dropdown-menu { display: block; }
+}
+</style>
 
     <article class="container-article">
         <div class="meta">
