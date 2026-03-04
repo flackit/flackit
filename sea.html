@@ -11,60 +11,86 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert Google Ads Lille | Consultant SEA & publicité payante | FlackoInsight</title>
-    <meta name="description" content="Boostez votre chiffre d'affaires immédiatement avec un expert Google Ads à Lille. Création, gestion et optimisation de campagnes SEA pour un ROI maximal.">
+    <title>Expert SEA & Google Ads Lille | Publicité Payante & ROI | FlackoInsight</title>
+    <meta name="description" content="Boostez vos ventes immédiatement avec des campagnes Google Ads performantes. Expert SEA à Lille pour maximiser votre ROI et dominer les résultats payants.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
-        :root { --primary: #2563EB; --dark: #0F172A; --white: #FFFFFF; --light: #F8FAFC; --header-height: 80px; }
+        :root {
+            --primary: #2563EB;
+            --dark: #0F172A;
+            --light: #F8FAFC;
+            --white: #FFFFFF;
+            --gray: #64748B;
+            --accent: #F59E0B;
+            --header-height: 80px;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; background-color: var(--white); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
-        /* HEADER UNIFIÉ */
+        /* HEADER AVEC MÉGA MENU */
         .main-header { background: var(--white); height: var(--header-height); display: flex; align-items: center; position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo { font-size: 1.6rem; font-weight: 800; color: var(--dark); text-decoration: none; }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--dark); }
         .logo span { color: var(--primary); }
-        .nav-list { display: flex; align-items: center; gap: 30px; list-style: none; }
-        .nav-link { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
+        .nav-list { display: flex; align-items: center; gap: 30px; }
+        .nav-link { font-weight: 600; font-size: 0.95rem; }
         .nav-link:hover { color: var(--primary); }
+
         .dropdown { position: relative; }
-        .dropdown-menu { position: absolute; top: 100%; left: 0; background: var(--white); min-width: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 12px; padding: 15px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: 0.3s; list-style: none; }
+        .dropdown-menu { 
+            position: absolute; top: 100%; left: 0; background: var(--white); 
+            min-width: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            border-radius: 12px; padding: 15px 0; opacity: 0; visibility: hidden; 
+            transform: translateY(10px); transition: 0.3s; 
+        }
         .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .dropdown-menu li a { display: block; padding: 10px 25px; color: var(--dark); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.2s; }
+        .dropdown-menu li a { display: block; padding: 10px 25px; font-size: 0.9rem; font-weight: 500; }
         .dropdown-menu li a:hover { background: var(--light); color: var(--primary); padding-left: 30px; }
-        .btn-contact-nav { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
 
-        /* SECTIONS */
-        .hero { padding: 120px 0; background: #1E293B; color: white; text-align: center; }
-        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
-        .hero p { font-size: 1.3rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
+        .btn-contact-nav { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
 
+        /* HERO SECTION */
+        .hero { padding: 100px 0; background: var(--dark); color: white; }
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+        .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
+        .hero p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 35px; }
+        .hero-badge { background: var(--primary); padding: 50px; border-radius: 24px; text-align: center; }
+        .hero-badge span { display: block; font-size: 3rem; font-weight: 800; margin-bottom: 10px; }
+
+        /* CARDS & CONTENT */
         .section { padding: 100px 0; }
-        .bg-light { background-color: var(--light); }
-        .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--dark); }
-        
-        /* GRID & CARDS */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { padding: 40px; background: white; border: 1px solid #E5E7EB; border-radius: 20px; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); border-color: var(--primary); }
-        .card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
+        .perf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .perf-card { padding: 40px; background: white; border: 1px solid #E2E8F0; border-radius: 20px; transition: 0.3s; }
+        .perf-card:hover { border-color: var(--primary); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .perf-card h3 { color: var(--primary); margin-bottom: 20px; font-size: 1.5rem; }
 
-        /* METHODOLOGIE */
-        .step { display: flex; align-items: flex-start; gap: 30px; margin-bottom: 40px; }
-        .step-number { background: var(--primary); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; }
-        .step-content h4 { font-size: 1.3rem; margin-bottom: 10px; }
+        /* DARK SECTION (METHODE) */
+        .method-section { background: var(--dark); color: white; padding: 100px 0; }
+        .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 50px; }
+        .method-item { padding: 30px; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; }
+        .method-item h4 { color: var(--accent); margin-bottom: 15px; font-size: 1.2rem; }
 
         /* FAQ */
-        .faq-item { background: white; padding: 25px; border-radius: 12px; margin-bottom: 15px; border: 1px solid #E5E7EB; }
-        .faq-item h4 { color: var(--primary); margin-bottom: 10px; }
+        .faq-section { background: var(--light); padding: 100px 0; }
+        .faq-item { background: white; padding: 30px; border-radius: 16px; margin-bottom: 20px; border: 1px solid #E2E8F0; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 15px; }
 
-        .cta-final { text-align: center; padding: 80px 20px; background: var(--primary); color: white; border-radius: 30px; margin-bottom: 100px; }
-        .btn-white { background: white; color: var(--primary); padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.3s; }
+        /* CTA */
+        .cta-section { padding: 100px 0; text-align: center; }
+        .btn-large { background: var(--primary); color: white; padding: 20px 45px; border-radius: 50px; font-weight: 800; font-size: 1.1rem; display: inline-block; }
 
-        footer { padding: 60px 0; background: var(--dark); color: white; text-align: center; }
+        footer { background: var(--dark); color: white; padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+
+        @media (max-width: 992px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -102,68 +128,15 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Expert Google Ads à Lille : Des leads immédiats</h1>
-            <p>Ne dépensez pas votre budget, investissez-le. Je crée des campagnes publicitaires ultra-ciblées pour générer des ventes dès le premier jour.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>La puissance du SEA (Google Ads)</h2>
-                <p>Soyez visible là où vos clients cherchent, au moment exact où ils veulent acheter.</p>
-            </div>
-            <div class="grid">
-                <div class="card">
-                    <h3>Visibilité instantanée</h3>
-                    <p>Contrairement au SEO, le SEA vous place en 1ère position de Google dès le lancement de vos campagnes. Idéal pour des résultats rapides.</p>
+            <div class="hero-grid">
+                <div>
+                    <h1>Expert Google Ads : Des leads immédiats</h1>
+                    <p>Ne gaspillez plus votre budget publicitaire. Je crée et optimise vos campagnes SEA pour un retour sur investissement (ROI) maximal.</p>
+                    <a href="contact.html" class="btn-large">Lancer mes campagnes SEA</a>
                 </div>
-                <div class="card">
-                    <h3>Ciblage chirurgical</h3>
-                    <p>Mots-clés, zone géographique (Lille et alentours), horaires, type d'appareil... On ne touche que les prospects qui comptent vraiment.</p>
-                </div>
-                <div class="card">
-                    <h3>Maîtrise du budget</h3>
-                    <p>Vous décidez du montant que vous investissez. Chaque euro est tracé pour mesurer votre retour sur investissement (ROI) précisément.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Ma méthodologie SEA</h2>
-                <p>Optimisation continue pour faire baisser votre coût par clic et augmenter vos conversions.</p>
-            </div>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h4>Stratégie & mots-clés</h4>
-                        <p>Analyse de la concurrence et sélection des mots-clés les plus rentables pour maximiser votre taux de conversion.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h4>Création des campagnes</h4>
-                        <p>Rédaction d'annonces percutantes et configuration des extensions pour dominer l'espace visuel sur Google.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h4>Landing aages & tracking</h4>
-                        <p>Vérification de vos pages de destination et mise en place du suivi des conversions (GA4) pour mesurer l'efficacité réelle.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h4>Optimisation A/B testing</h4>
-                        <p>Analyse quotidienne des performances pour ajuster les enchères et tester de nouvelles annonces plus performantes.</p>
-                    </div>
+                <div class="hero-badge">
+                    <span>ROI positif</span>
+                    <p>Optimisation continue de votre coût par acquisition (CPA).</p>
                 </div>
             </div>
         </div>
@@ -171,60 +144,82 @@
 
     <section class="section">
         <div class="container">
-            <div class="section-title">
-                <h2>Types de campagnes maîtrisées</h2>
-            </div>
-            <div class="grid">
-                <div class="card">
-                    <h3>Search (Réseau de recherche)</h3>
-                    <p>Les annonces textuelles classiques pour capter les intentions de recherche directes à Lille.</p>
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 10px;">Le SEA : Croissance Accélérée</h2>
+            <p style="text-align: center; color: var(--gray); margin-bottom: 50px;">Le levier le plus rapide pour dominer votre marché à Lille.</p>
+            
+            <div class="perf-grid">
+                <div class="perf-card">
+                    <h3>🎯 Précision chirurgicale</h3>
+                    <p>Ciblez vos clients par mots-clés, zone géographique (Lille, France ou international) et par horaires pour ne jamais rater une opportunité.</p>
                 </div>
-                <div class="card">
-                    <h3>Google Shopping</h3>
-                    <p>Essentiel pour l'E-commerce : affichez vos produits avec photo et prix directement en haut des résultats.</p>
+                <div class="perf-card">
+                    <h3>⚡ Résultats instantanés</h3>
+                    <p>Contrairement au SEO, le SEA vous place en tête de Google dès l'activation. Idéal pour les lancements ou les périodes de forte saisonnalité.</p>
                 </div>
-                <div class="card">
-                    <h3>Remarketing</h3>
-                    <p>Reciblez les personnes ayant déjà visité votre site pour les inciter à finaliser leur achat ou demande de devis.</p>
+                <div class="perf-card">
+                    <h3>📊 Maîtrise totale</h3>
+                    <p>Vous contrôlez votre budget au centime près. Grâce au tracking précis, nous savons quel mot-clé génère réellement du profit.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section bg-light">
+    <section class="method-section">
         <div class="container">
-            <div class="section-title">
-                <h2>FAQ SEA</h2>
-            </div>
-            <div style="max-width: 850px; margin: 0 auto;">
-                <div class="faq-item">
-                    <h4>Quel budget faut-il prévoir pour Google Ads ?</h4>
-                    <p>Il n'y a pas de minimum, mais pour obtenir des données significatives à Lille, un budget de 500€ à 1000€ par mois est souvent recommandé pour débuter.</p>
+            <h2 style="text-align: center; font-size: 2.2rem;">Ma gestion de campagnes Google Ads</h2>
+            <div class="method-grid">
+                <div class="method-item">
+                    <h4>1. Audit & setup</h4>
+                    <p style="opacity: 0.8; font-size: 0.95rem;">Analyse du marché et configuration des tags de conversion pour un suivi sans faille.</p>
                 </div>
-                <div class="faq-item">
-                    <h4>Est-ce que je paye à l'affichage de mon annonce ?</h4>
-                    <p>Non, avec le modèle CPC (Coût par Clic), vous ne payez que lorsqu'un utilisateur clique réellement sur votre annonce pour visiter votre site.</p>
+                <div class="method-item">
+                    <h4>2. Copywriting ads</h4>
+                    <p style="opacity: 0.8; font-size: 0.95rem;">Rédaction d'annonces percutantes qui captent l'attention et boostent votre taux de clic (CTR).</p>
                 </div>
-                <div class="faq-item">
-                    <h4>Puis-je arrêter mes campagnes à tout moment ?</h4>
-                    <p>Oui, Google Ads offre une flexibilité totale. On peut activer, mettre en pause ou modifier le budget instantanément selon votre actualité.</p>
+                <div class="method-item">
+                    <h4>3. Optimisation A/B</h4>
+                    <p style="opacity: 0.8; font-size: 0.95rem;">Tests permanents sur les audiences et les visuels pour réduire drastiquement votre coût par clic.</p>
+                </div>
+                <div class="method-item">
+                    <h4>4. Reporting data</h4>
+                    <p style="opacity: 0.8; font-size: 0.95rem;">Analyse mensuelle rigoureuse des performances pour ajuster la stratégie à vos objectifs business.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container">
-        <section class="cta-final">
-            <h2>Prêt à booster vos ventes ?</h2>
-            <p style="margin-bottom: 30px; font-size: 1.2rem;">Lançons votre première campagne rentable ensemble.</p>
-            <a href="contact.html" class="btn-white">Obtenir mon Devis SEA Personnalisé</a>
-        </section>
-    </div>
+    <section class="faq-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 60px; font-size: 2.2rem;">Questions fréquentes sur le SEA</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="faq-item">
+                    <h4>Quel budget faut-il prévoir pour débuter sur Google Ads ?</h4>
+                    <p>Je recommande de commencer avec au moins 15€ à 20€ par jour selon la compétitivité de votre secteur à Lille pour obtenir des données viables.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Qu'est-ce que le Quality Score ?</h4>
+                    <p>C'est la note de Google sur vos annonces. Plus elle est haute, moins vous payez cher. Mon rôle est d'optimiser cette note pour rentabiliser chaque euro.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Le SEA aide-t-il mon référencement naturel (SEO) ?</h4>
+                    <p>Indirectement. Le trafic SEA permet de tester la conversion de vos pages, identifiant ainsi les priorités stratégiques pour votre futur SEO.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h3 style="font-size: 2rem; margin-bottom: 20px;">Marre de payer pour des clics inutiles ?</h3>
+            <p style="color: var(--gray); margin-bottom: 40px; font-size: 1.1rem;">Confiez vos campagnes à un expert Data pour un pilotage à la performance.</p>
+            <a href="contact.html" class="btn-large">Demander un audit SEA offert</a>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <p><strong>FlackoInsight</strong> - Votre partenaire croissance Google Ads à Lille.</p>
-            <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.7;">SEA | SEO | WEB ANALYTICS</p>
+            <p><strong>FlackoInsight</strong> - Accélérateur de croissance digitale à Lille.</p>
+            <p style="opacity: 0.6; margin-top: 15px; font-size: 0.9rem;">&copy; 2026 Tous droits réservés.</p>
         </div>
     </footer>
 
