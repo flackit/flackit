@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBSPKDZTY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GMBSPKDZTY');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales | FlackoInsight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2563EB;
+            --dark: #0F172A;
+            --light: #F8FAFC;
+            --white: #FFFFFF;
+            --gray: #64748B;
+            --header-height: 80px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        /* HEADER MÉGA MENU HARMONISÉ */
+        .main-header { background: var(--white); height: var(--header-height); display: flex; align-items: center; position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--dark); }
+        .logo span { color: var(--primary); }
+        .nav-list { display: flex; align-items: center; gap: 30px; }
+        .nav-link { font-weight: 600; font-size: 0.95rem; }
+        .nav-link:hover { color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-menu { 
+            position: absolute; top: 100%; left: 0; background: var(--white); 
+            min-width: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            border-radius: 12px; padding: 15px 0; opacity: 0; visibility: hidden; 
+            transform: translateY(10px); transition: 0.3s; 
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-menu li a { display: block; padding: 10px 25px; font-size: 0.9rem; font-weight: 500; }
+        .btn-contact-nav { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
+
+        /* CONTENT */
+        .legal-content { padding: 80px 0; max-width: 800px; margin: 0 auto; }
+        h1 { font-size: 2.5rem; margin-bottom: 30px; font-weight: 800; }
+        h2 { font-size: 1.4rem; color: var(--primary); margin: 40px 0 20px; font-weight: 700; }
+        p { margin-bottom: 15px; color: var(--gray); }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">FlackoInsight</a>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">Services ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="seo.html">SEO (Référencement)</a></li>
+                            <li><a href="sea.html">SEA (Google Ads)</a></li>
+                            <li><a href="content-marketing.html">Content Marketing</a></li>
+                            <li><a href="creation-de-site-web.html">Création de Site Web</a></li>
+                            <li><a href="web-analytics-et-datas.html">Web Analytics & Data</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article class="legal-content">
+            <h1>Mentions légales</h1>
+            <p>Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), il est précisé aux utilisateurs du site FlackoInsight l'identité des différents intervenants.</p>
+
+            <h2>1. Éditeur du site</h2>
+            <p>Le site FlackoInsight est édité par <strong>Olivier Kabongo</strong>, entrepreneur individuel, domicilié à Loos (59120).</p>
+            <p><strong>SIRET :</strong> Bientôt disponible <br>
+               <strong>Email :</strong> olivierjoachimkabongo@gmail.com.com</p>
+
+            <h2>2. Hébergement</h2>
+            <p>Le site est hébergé par : GitHub.com<br>
+               Adresse : 37 QUAI DU PRESIDENT ROOSEVELT 92130 ISSY-LES-MOULINEAUX </p>
+
+            <h2>3. Propriété intellectuelle</h2>
+            <p>L'intégralité du contenu présent sur ce site, incluant les textes, graphismes, logos et codes sources, est la propriété exclusive de FlackoInsight. Toute reproduction est strictement interdite sans accord écrit préalable.</p>
+        </article>
+    </div>
+
+    <footer style="background: var(--dark); color: white; padding: 80px 0 30px; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px;">
+                <div>
+                    <div style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px;">FlackoInsight<span style="color: var(--primary);">.</span></div>
+                    <p style="opacity: 0.7; font-size: 0.95rem;">Expert en stratégie digitale à Lille. J'accompagne les entreprises dans leur croissance via le SEO, le SEA et la Data.</p>
+                </div>
+                <div>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 25px; border-left: 3px solid var(--primary); padding-left: 15px;">Services</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 12px; opacity: 0.8; font-size: 0.9rem;">
+                        <li><a href="seo.html">SEO</a></li>
+                        <li><a href="sea.html">SEA</a></li>
+                        <li><a href="web-analytics-et-datas.html">Data Analytics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 25px; border-left: 3px solid var(--primary); padding-left: 15px;">Contact</h4>
+                    <p style="opacity: 0.8; font-size: 0.9rem;">📍 Lille, France<br>📧 contact@flackoinsight.com</p>
+                </div>
+            </div>
+            <div style="padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.85rem; opacity: 0.6;">
+                <p>&copy; 2026 FlackoInsight <a href="mentions-legales.html">Mentions légales</a> | <a href="politique-confidentialite.html">Confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
