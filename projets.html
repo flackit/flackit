@@ -11,14 +11,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog & Ressources Digitales | FlackoInsight Lille</title>
-    <meta name="description" content="Conseils experts en SEO, SEA et Data Analytics. Découvrez nos derniers articles pour booster votre visibilité et vos performances en ligne.">
+    <meta name="description" content="Conseils experts en SEO, Google Ads, performance web et développement. Découvrez 6 articles pour booster votre stratégie digitale à Lille.">
+    <link rel="canonical" href="https://flackoinsight.github.io/projets.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="global.css">
-    
 </head>
 <body>
+
     <header class="main-header" id="main-header">
         <div class="container nav-container">
             <a href="index.html" class="logo">Flacko<span class="accent">Insight</span><span class="dot">.</span></a>
@@ -39,6 +40,9 @@
                         <a href="projets.html" class="nav-link">Blog ▾</a>
                         <ul class="dropdown-menu">
                             <li><a href="projets.html"><span class="menu-icon">📚</span>Tous les articles</a></li>
+                            <li><a href="ads-vs-seo.html"><span class="menu-icon">⚔️</span>Google Ads vs SEO</a></li>
+                            <li><a href="core-web-vitals.html"><span class="menu-icon">⚡</span>Core Web Vitals</a></li>
+                            <li><a href="wordpress-vs-sur-mesure.html"><span class="menu-icon">🏗️</span>WordPress vs Sur-mesure</a></li>
                             <li><a href="seolocal_lille.html"><span class="menu-icon">📍</span>SEO local à Lille</a></li>
                             <li><a href="configurer-ga4.html"><span class="menu-icon">📈</span>5 erreurs GA4</a></li>
                             <li><a href="budgetAds.html"><span class="menu-icon">💶</span>Budget Google Ads</a></li>
@@ -67,6 +71,9 @@
             <div class="mobile-section-label">Blog</div>
             <div class="mobile-submenu">
                 <a href="projets.html">📚 Tous les articles</a>
+                <a href="ads-vs-seo.html">⚔️ Google Ads vs SEO</a>
+                <a href="core-web-vitals.html">⚡ Core Web Vitals</a>
+                <a href="wordpress-vs-sur-mesure.html">🏗️ WordPress vs Sur-mesure</a>
                 <a href="seolocal_lille.html">📍 SEO local à Lille</a>
                 <a href="configurer-ga4.html">📈 5 erreurs GA4</a>
                 <a href="budgetAds.html">💶 Budget Google Ads</a>
@@ -77,62 +84,132 @@
         </div>
     </nav>
 
+    <!-- HERO -->
     <section style="background:var(--dark);padding:80px 0 60px;position:relative;overflow:hidden;">
         <canvas id="particles-canvas"></canvas>
         <div class="container" style="position:relative;z-index:2;text-align:center;">
             <div class="hero-badge" style="margin:0 auto 20px;">Blog & Ressources</div>
-            <h1 style="font-size:clamp(2rem,4vw,3.2rem);color:white;margin-bottom:16px;">Expertise digitale <span class="grad">à votre portée</span></h1>
-            <p style="color:rgba(255,255,255,0.6);font-size:1.1rem;max-width:600px;margin:0 auto;">Articles de fond sur le SEO, Google Ads, la Data Analytics et le marketing digital à Lille.</p>
+            <h1 style="font-size:clamp(2rem,4vw,3.2rem);color:white;margin-bottom:16px;">
+                Expertise digitale <span style="background:linear-gradient(135deg,#3B82F6,#10B981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">à votre portée</span>
+            </h1>
+            <p style="color:rgba(255,255,255,0.6);font-size:1.1rem;max-width:620px;margin:0 auto;">
+                Articles de fond sur le SEO, Google Ads, la performance web et le développement — pour prendre de meilleures décisions digitales à Lille.
+            </p>
         </div>
     </section>
 
+    <!-- NOUVEAUX ARTICLES -->
     <section class="section">
         <div class="container">
+
+            <div class="reveal" style="margin-bottom:48px;">
+                <div class="section-label">Nouveaux articles — Mars 2026</div>
+                <h2 class="section-title">Les <span class="highlight">dernières publications</span></h2>
+            </div>
+
+            <div class="grid-3" style="margin-bottom:90px;">
+
+                <div class="blog-card reveal reveal-delay-1">
+                    <div style="padding:28px 28px 0;background:linear-gradient(135deg,rgba(59,130,246,0.07),rgba(16,185,129,0.04));border-radius:14px 14px 0 0;">
+                        <span style="font-size:2.5rem;">⚔️</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;">
+                            <span class="blog-tag">SEO vs SEA</span>
+                            <span style="font-size:0.78rem;color:var(--gray);">📅 Mars 2026 · 15 min</span>
+                        </div>
+                        <h3>Google Ads vs SEO : quel levier prioriser pour votre business ?</h3>
+                        <p>Comparatif complet : budgets, délais, ROI, et comment combiner les deux intelligemment selon votre phase de développement.</p>
+                        <a href="ads-vs-seo.html" class="btn btn-primary" style="margin-top:22px;font-size:0.875rem;padding:10px 22px;">Lire l'article →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card reveal reveal-delay-2">
+                    <div style="padding:28px 28px 0;background:linear-gradient(135deg,rgba(16,185,129,0.07),rgba(59,130,246,0.04));border-radius:14px 14px 0 0;">
+                        <span style="font-size:2.5rem;">⚡</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;">
+                            <span class="blog-tag" style="color:var(--emerald-light);">Performance Web</span>
+                            <span style="font-size:0.78rem;color:var(--gray);">📅 Mars 2026 · 16 min</span>
+                        </div>
+                        <h3>Core Web Vitals : le guide complet pour booster votre performance</h3>
+                        <p>LCP, INP, CLS expliqués simplement. 8 actions concrètes pour améliorer votre score PageSpeed et votre classement Google.</p>
+                        <a href="core-web-vitals.html" class="btn btn-emerald" style="margin-top:22px;font-size:0.875rem;padding:10px 22px;">Lire l'article →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card reveal reveal-delay-3">
+                    <div style="padding:28px 28px 0;background:linear-gradient(135deg,rgba(99,102,241,0.07),rgba(59,130,246,0.04));border-radius:14px 14px 0 0;">
+                        <span style="font-size:2.5rem;">🏗️</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;">
+                            <span class="blog-tag" style="color:#6366F1;">Développement Web</span>
+                            <span style="font-size:0.78rem;color:var(--gray);">📅 Mars 2026 · 14 min</span>
+                        </div>
+                        <h3>WordPress vs site sur-mesure : que choisir pour votre projet ?</h3>
+                        <p>Comparatif honnête sur les coûts, la maintenance, le SEO et les cas d'usage concrets pour les entreprises lilloises.</p>
+                        <a href="wordpress-vs-sur-mesure.html" class="btn btn-outline" style="margin-top:22px;font-size:0.875rem;padding:10px 22px;">Lire l'article →</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ARTICLES PRECEDENTS -->
+            <div class="reveal" style="margin-bottom:40px;">
+                <div class="section-label">Articles — Février 2026</div>
+                <h2 class="section-title">Les <span class="highlight">fondamentaux</span></h2>
+            </div>
+
             <div class="grid-3">
+
                 <div class="blog-card reveal reveal-delay-1">
                     <div class="blog-card-body">
-                        <span class="blog-tag">📍 SEO Local</span>
-                        <h3>Pourquoi le SEO local est indispensable à Lille en 2026</h3>
-                        <p>Découvrez comment dominer les recherches géolocalisées sur la métropole lilloise et attirer des clients à proximité.</p>
-                        <div class="blog-meta">
-                            <span>📅 Février 2026</span>
-                            <span>⏱️ 12 min</span>
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;">
+                            <span class="blog-tag">📍 SEO Local</span>
+                            <span style="font-size:0.78rem;color:var(--gray);">📅 Fév. 2026 · 12 min</span>
                         </div>
-                        <a href="seolocal_lille.html" class="btn btn-outline" style="margin-top:20px;font-size:0.875rem;">Lire l'article →</a>
+                        <h3>Pourquoi le SEO local est indispensable à Lille en 2026</h3>
+                        <p>Google Business Profile, citations NAP, contenus géolocalisés : dominez les recherches locales dans la métropole lilloise.</p>
+                        <a href="seolocal_lille.html" class="btn btn-outline" style="margin-top:22px;font-size:0.875rem;padding:10px 22px;">Lire l'article →</a>
                     </div>
                 </div>
+
                 <div class="blog-card reveal reveal-delay-2">
                     <div class="blog-card-body">
-                        <span class="blog-tag" style="color:var(--emerald-light);">📊 Web Analytics</span>
-                        <h3>GA4 : 5 erreurs de configuration qui faussent vos données</h3>
-                        <p>Votre tracking est-il vraiment fiable ? Découvrez les 5 erreurs critiques que j'audite chaque semaine chez mes clients lillois.</p>
-                        <div class="blog-meta">
-                            <span>📅 Février 2026</span>
-                            <span>⏱️ 15 min</span>
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;">
+                            <span class="blog-tag" style="color:var(--emerald-light);">📊 Analytics</span>
+                            <span style="font-size:0.78rem;color:var(--gray);">📅 Fév. 2026 · 15 min</span>
                         </div>
-                        <a href="configurer-ga4.html" class="btn btn-outline" style="margin-top:20px;font-size:0.875rem;">Lire l'article →</a>
+                        <h3>GA4 : 5 erreurs de configuration qui faussent vos données</h3>
+                        <p>Rétention, self-referrals, Consent Mode… Les erreurs critiques que j'audite chaque semaine chez mes clients lillois.</p>
+                        <a href="configurer-ga4.html" class="btn btn-outline" style="margin-top:22px;font-size:0.875rem;padding:10px 22px;">Lire l'article →</a>
                     </div>
                 </div>
+
                 <div class="blog-card reveal reveal-delay-3">
                     <div class="blog-card-body">
-                        <span class="blog-tag" style="color:#F59E0B;">🚀 Google Ads</span>
-                        <h3>Quel budget investir sur Google Ads pour débuter sans se ruiner ?</h3>
-                        <p>La formule mathématique pour définir votre budget publicitaire initial et éviter les 3 erreurs qui siphonnent votre budget.</p>
-                        <div class="blog-meta">
-                            <span>📅 Février 2026</span>
-                            <span>⏱️ 14 min</span>
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;">
+                            <span class="blog-tag" style="color:#F59E0B;">🚀 Google Ads</span>
+                            <span style="font-size:0.78rem;color:var(--gray);">📅 Fév. 2026 · 14 min</span>
                         </div>
-                        <a href="budgetAds.html" class="btn btn-outline" style="margin-top:20px;font-size:0.875rem;">Lire l'article →</a>
+                        <h3>Quel budget investir sur Google Ads pour débuter sans se ruiner ?</h3>
+                        <p>La formule mathématique pour définir votre budget publicitaire et les 3 erreurs qui siphonnent vos campagnes.</p>
+                        <a href="budgetAds.html" class="btn btn-outline" style="margin-top:22px;font-size:0.875rem;padding:10px 22px;">Lire l'article →</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
+    <!-- CTA -->
     <section class="cta-section">
         <div class="container" style="position:relative;z-index:2;">
-            <h2>Besoin d'un accompagnement personnalisé ?</h2>
-            <p>Ces articles vous donnent les bases — je vous aide à les appliquer à votre cas concret.</p>
+            <div class="section-label" style="margin-bottom:20px;display:inline-flex;">Besoin d'un accompagnement ?</div>
+            <h2>Ces articles vous donnent les bases.<br>Je vous aide à les appliquer.</h2>
+            <p>Diagnostic gratuit de votre stratégie digitale actuelle.</p>
             <a href="contact.html" class="btn btn-ghost" style="font-size:1.05rem;padding:16px 40px;">Prendre contact →</a>
         </div>
     </section>
@@ -161,6 +238,9 @@
                     <h5>Blog</h5>
                     <div class="footer-links">
                         <a href="projets.html">Tous les articles</a>
+                        <a href="ads-vs-seo.html">Google Ads vs SEO</a>
+                        <a href="core-web-vitals.html">Core Web Vitals</a>
+                        <a href="wordpress-vs-sur-mesure.html">WordPress vs Sur-mesure</a>
                         <a href="seolocal_lille.html">SEO local à Lille</a>
                         <a href="configurer-ga4.html">5 erreurs GA4</a>
                         <a href="budgetAds.html">Budget Google Ads</a>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBSPKDZTY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GMBSPKDZTY');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Web Vitals : Le Guide Complet pour Booster votre Performance Web | FlackoInsight</title>
+    <meta name="description" content="Qu'est-ce que les Core Web Vitals et pourquoi sont-ils essentiels pour votre SEO ? LCP, INP, CLS expliqués simplement avec des actions concrètes pour améliorer votre score.">
+    <meta name="author" content="Olivier Kabongo — FlackoInsight">
+    <link rel="canonical" href="https://flackoinsight.github.io/core-web-vitals.html">
+
+    <meta property="og:title" content="Core Web Vitals : Le Guide Complet pour Booster votre Performance Web">
+    <meta property="og:description" content="LCP, INP, CLS : comprendre et améliorer les Core Web Vitals pour booster votre SEO et votre expérience utilisateur.">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-03-04">
+    <meta property="article:author" content="Olivier Kabongo">
+    <meta property="article:tag" content="Core Web Vitals, performance web, LCP, INP, CLS, SEO technique">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Core Web Vitals : Le Guide Complet pour Booster votre Performance Web",
+      "description": "LCP, INP, CLS : comprendre et améliorer les Core Web Vitals pour booster votre SEO et votre expérience utilisateur.",
+      "author": { "@type": "Person", "name": "Olivier Kabongo", "url": "https://flackoinsight.github.io" },
+      "publisher": { "@type": "Organization", "name": "FlackoInsight" },
+      "datePublished": "2026-03-04",
+      "keywords": ["Core Web Vitals", "LCP", "INP", "CLS", "performance web", "SEO technique", "vitesse site"]
+    }
+    </script>
+</head>
+<body>
+
+    <header class="main-header" id="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Flacko<span class="accent">Insight</span><span class="dot">.</span></a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="seo.html"><span class="menu-icon">🔍</span>SEO — Référencement</a></li>
+                            <li><a href="sea.html"><span class="menu-icon">🚀</span>SEA — Google Ads</a></li>
+                            <li><a href="content-marketing.html"><span class="menu-icon">✍️</span>Content Marketing</a></li>
+                            <li><a href="creation-de-site-web.html"><span class="menu-icon">💻</span>Création de site web</a></li>
+                            <li><a href="web-analytics-et-datas.html"><span class="menu-icon">📊</span>Web Analytics & Data</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="projets.html" class="nav-link">Blog ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projets.html"><span class="menu-icon">📚</span>Tous les articles</a></li>
+                            <li><a href="ads-vs-seo.html"><span class="menu-icon">⚔️</span>Google Ads vs SEO</a></li>
+                            <li><a href="core-web-vitals.html"><span class="menu-icon">⚡</span>Core Web Vitals</a></li>
+                            <li><a href="wordpress-vs-sur-mesure.html"><span class="menu-icon">🏗️</span>WordPress vs Sur-mesure</a></li>
+                            <li><a href="seolocal_lille.html"><span class="menu-icon">📍</span>SEO local à Lille</a></li>
+                            <li><a href="configurer-ga4.html"><span class="menu-icon">📈</span>5 erreurs GA4</a></li>
+                            <li><a href="budgetAds.html"><span class="menu-icon">💶</span>Budget Google Ads</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Accueil</a>
+            <div class="mobile-section-label">Services</div>
+            <div class="mobile-submenu">
+                <a href="seo.html">🔍 SEO — Référencement</a>
+                <a href="sea.html">🚀 SEA — Google Ads</a>
+                <a href="content-marketing.html">✍️ Content Marketing</a>
+                <a href="creation-de-site-web.html">💻 Création de site web</a>
+                <a href="web-analytics-et-datas.html">📊 Web Analytics & Data</a>
+            </div>
+            <div class="mobile-section-label">Blog</div>
+            <div class="mobile-submenu">
+                <a href="projets.html">📚 Tous les articles</a>
+                <a href="ads-vs-seo.html">⚔️ Google Ads vs SEO</a>
+                <a href="core-web-vitals.html">⚡ Core Web Vitals</a>
+                <a href="wordpress-vs-sur-mesure.html">🏗️ WordPress vs Sur-mesure</a>
+                <a href="seolocal_lille.html">📍 SEO local à Lille</a>
+                <a href="configurer-ga4.html">📈 5 erreurs GA4</a>
+                <a href="budgetAds.html">💶 Budget Google Ads</a>
+            </div>
+            <div class="mobile-nav-cta">
+                <a href="contact.html" class="btn btn-primary">Prendre contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section style="background:var(--dark);padding:80px 0 60px;position:relative;overflow:hidden;">
+        <div class="container" style="position:relative;z-index:2;max-width:860px;">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;">
+                <span class="meta-chip">⚡ Performance Web</span>
+                <span class="meta-chip">📅 Mars 2026</span>
+                <span class="meta-chip">⏱️ 16 min de lecture</span>
+            </div>
+            <h1 style="font-size:clamp(2rem,4vw,3rem);color:white;line-height:1.1;margin-bottom:20px;">
+                Core Web Vitals : le guide complet pour <span style="background:linear-gradient(135deg,#3B82F6,#10B981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">booster votre performance web</span>
+            </h1>
+            <p style="color:rgba(255,255,255,0.65);font-size:1.1rem;line-height:1.75;max-width:700px;">
+                LCP, INP, CLS… Ces acronymes vous semblent obscurs ? Ce sont pourtant des métriques que Google utilise officiellement pour classer votre site. Dans ce guide pédagogique, je vous explique chaque indicateur, son impact réel sur votre SEO et vos conversions, et surtout les actions concrètes pour améliorer votre score dès aujourd'hui.
+            </p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="article-wrap" style="padding-top:60px;">
+
+            <div class="toc">
+                <strong>Sommaire de l'article</strong>
+                <a href="#cwv-intro">1. Qu'est-ce que les Core Web Vitals ?</a>
+                <a href="#lcp">2. LCP — Largest Contentful Paint : la vitesse perçue</a>
+                <a href="#inp">3. INP — Interaction to Next Paint : la réactivité</a>
+                <a href="#cls">4. CLS — Cumulative Layout Shift : la stabilité visuelle</a>
+                <a href="#impact-seo">5. Quel est l'impact réel des CWV sur votre SEO ?</a>
+                <a href="#mesurer">6. Comment mesurer vos Core Web Vitals ?</a>
+                <a href="#ameliorer">7. 8 actions concrètes pour améliorer vos scores</a>
+                <a href="#wordpress">8. Cas pratique : optimiser un site WordPress</a>
+            </div>
+
+            <h2 id="cwv-intro">1. Qu'est-ce que les Core Web Vitals ?</h2>
+            <p>Les Core Web Vitals (ou "Signaux Web Essentiels" en français) sont un ensemble de métriques définies par Google pour mesurer l'<strong>expérience utilisateur réelle</strong> sur votre site web. Introduits comme facteur de classement officiel en mai 2021, ils représentent la tentative de Google de s'assurer que les sites qu'il recommande en première page offrent une bonne expérience à leurs visiteurs.</p>
+            <p>L'idée est simple : Google ne veut pas envoyer ses utilisateurs sur des sites lents, instables ou qui ne répondent pas aux interactions. Si votre site est techniquement lent ou visuellement instable, Google le pénalisera progressivement dans ses classements, indépendamment de la qualité de votre contenu.</p>
+            <p>Aujourd'hui, trois métriques composent les Core Web Vitals : le <strong>LCP</strong> (Largest Contentful Paint), l'<strong>INP</strong> (Interaction to Next Paint) et le <strong>CLS</strong> (Cumulative Layout Shift). Chacune mesure un aspect différent de l'expérience utilisateur : la vitesse, la réactivité et la stabilité.</p>
+
+            <div class="tip-box">
+                <strong>Bon à savoir :</strong> En mars 2024, Google a remplacé le FID (First Input Delay) par l'INP comme métrique officielle, car l'INP mesure la réactivité de manière beaucoup plus complète et représentative de l'expérience réelle.
+            </div>
+
+            <h2 id="lcp">2. LCP — Largest Contentful Paint : la vitesse perçue</h2>
+            <p>Le LCP mesure le temps nécessaire pour que le plus grand élément visible de votre page soit affiché à l'écran. Concrètement, il s'agit souvent de votre image principale, de votre titre hero ou d'un bloc de texte volumineux. C'est la métrique qui correspond le mieux à ce que vos visiteurs ressentent comme "vitesse de chargement" d'une page.</p>
+
+            <h3>Les seuils à connaître</h3>
+            <p>Google classe les sites selon trois niveaux : <strong>Bon</strong> (LCP inférieur à 2,5 secondes), <strong>À améliorer</strong> (entre 2,5 et 4 secondes) et <strong>Mauvais</strong> (au-delà de 4 secondes). L'objectif est d'être dans la zone "Bon" pour au moins 75% de vos visiteurs.</p>
+
+            <h3>Les causes fréquentes d'un mauvais LCP</h3>
+            <p>Dans la grande majorité des cas que j'audite à Lille, les problèmes de LCP ont des causes identifiables : des <strong>images non optimisées</strong> (photos de 3 Mo chargées sur mobile), un <strong>hébergement trop lent</strong> (hébergeurs mutualisés bas de gamme avec un TTFB — Time To First Byte — élevé), des <strong>ressources bloquantes</strong> (JavaScript et CSS qui retardent l'affichage), ou un <strong>manque de mise en cache</strong>.</p>
+            <p>Un LCP élevé est souvent le résultat combiné de plusieurs petits problèmes. Il faut les résoudre dans l'ordre de leur impact : d'abord l'hébergement, ensuite les images, puis les ressources bloquantes.</p>
+
+            <h2 id="inp">3. INP — Interaction to Next Paint : la réactivité</h2>
+            <p>L'INP mesure le temps entre une interaction de l'utilisateur (clic, toucher, frappe au clavier) et la mise à jour visuelle correspondante à l'écran. En d'autres termes : quand votre visiteur clique sur un bouton, combien de temps faut-il avant que quelque chose change visuellement sur la page ?</p>
+            <p>Un INP élevé donne l'impression d'un site "gelé" ou peu réactif — ce qui frustre les utilisateurs et les pousse à partir. C'est particulièrement problématique sur les sites avec beaucoup de JavaScript (applications React, Vue.js, sites avec de nombreux plugins).</p>
+
+            <h3>Les seuils INP</h3>
+            <p><strong>Bon</strong> = moins de 200 millisecondes. <strong>À améliorer</strong> = entre 200 et 500 ms. <strong>Mauvais</strong> = au-delà de 500 ms. La plupart des mauvais scores INP que j'observe sont causés par du JavaScript excessif ou mal optimisé, des plugins tiers (chatbots, pop-ups, sliders) qui bloquent le thread principal du navigateur.</p>
+
+            <h2 id="cls">4. CLS — Cumulative Layout Shift : la stabilité visuelle</h2>
+            <p>Le CLS mesure à quel point les éléments de votre page "bougent" de manière inattendue pendant son chargement. Vous avez certainement déjà vécu cette expérience frustrante : vous êtes sur le point de cliquer sur un lien, et soudain la page se décale d'un coup, vous faisant cliquer sur une publicité à la place. C'est exactement ce que mesure le CLS.</p>
+            <p>Un CLS élevé est souvent causé par des images sans dimensions prédéfinies (le navigateur ne sait pas quelle place réserver avant de les charger), des publicités ou bannières dont la taille n'est pas spécifiée à l'avance, ou des polices de caractères web qui, une fois chargées, remplacent les polices système et font "sauter" le texte.</p>
+
+            <h3>Les seuils CLS</h3>
+            <p><strong>Bon</strong> = inférieur à 0,1. <strong>À améliorer</strong> = entre 0,1 et 0,25. <strong>Mauvais</strong> = supérieur à 0,25. Le CLS est souvent la métrique la plus facile à corriger une fois qu'on a identifié les éléments responsables.</p>
+
+            <div class="tip-box">
+                <strong>Astuce pratique :</strong> Pour corriger le CLS causé par les images, ajoutez systématiquement les attributs <code style="background:var(--off-white);padding:2px 6px;border-radius:4px;font-family:monospace;">width</code> et <code style="background:var(--off-white);padding:2px 6px;border-radius:4px;font-family:monospace;">height</code> à toutes vos balises <code style="background:var(--off-white);padding:2px 6px;border-radius:4px;font-family:monospace;">&lt;img&gt;</code>. C'est souvent suffisant pour passer de "Mauvais" à "Bon" sur cette métrique.
+            </div>
+
+            <h2 id="impact-seo">5. Quel est l'impact réel des Core Web Vitals sur votre SEO ?</h2>
+            <p>C'est la question que tout le monde pose — et la réponse est nuancée. Google a toujours affirmé que les Core Web Vitals sont un <strong>facteur de départage</strong> : à contenu et autorité équivalents entre deux sites, celui qui offre la meilleure expérience utilisateur sera favorisé.</p>
+            <p>En pratique, l'impact est particulièrement notable dans les secteurs très compétitifs où de nombreux sites se disputent les mêmes positions. Dans les secteurs de niche ou les marchés locaux comme Lille, un bon score CWV peut faire la différence face à des concurrents qui n'ont jamais audité leur site.</p>
+            <p>Mais au-delà du SEO pur, les Core Web Vitals ont un impact direct sur vos <strong>taux de conversion</strong>. Des études de Google ont montré qu'une amélioration d'une seconde du temps de chargement peut augmenter les conversions de 7%. Un site rapide et stable retient mieux les visiteurs, réduit le taux de rebond et leur donne plus confiance pour remplir un formulaire ou effectuer un achat.</p>
+
+            <div class="warning-box">
+                <strong>Attention :</strong> N'optimisez pas vos CWV uniquement pour plaire à Google. Faites-le d'abord pour vos utilisateurs. Un site rapide convertit mieux, et c'est là la vraie victoire business.
+            </div>
+
+            <h2 id="mesurer">6. Comment mesurer vos Core Web Vitals ?</h2>
+            <p>Google met à votre disposition plusieurs outils gratuits pour analyser vos scores, et il est important de comprendre la différence entre les mesures "Lab" (en laboratoire, simulées) et "Field" (données réelles de vos vrais visiteurs).</p>
+            <p><strong>PageSpeed Insights</strong> (pagespeed.web.dev) est l'outil le plus accessible. Il analyse votre URL et vous donne à la fois les données de terrain (Core Web Vitals réels) et les données de laboratoire (mesures simulées), avec des recommandations priorisées.</p>
+            <p><strong>Google Search Console → Expérience → Signaux Web Essentiels</strong> vous montre l'état de l'ensemble de votre site, page par page, avec une répartition entre URLs "Bonnes", "À améliorer" et "Mauvaises". C'est votre tableau de bord principal pour suivre votre progression dans le temps.</p>
+            <p><strong>Chrome DevTools → Onglet Performance</strong> et <strong>Lighthouse</strong> permettent des analyses plus poussées pour les développeurs souhaitant identifier précisément les ressources responsables d'un mauvais score.</p>
+
+            <h2 id="ameliorer">7. 8 actions concrètes pour améliorer vos scores</h2>
+            <p>Voici les actions les plus efficaces, classées par impact potentiel sur la majorité des sites :</p>
+            <p><strong>1. Optimisez vos images.</strong> Convertissez vos images au format WebP (30% plus léger que le JPEG), compressez-les avec un outil comme Squoosh ou Imagify, et implémentez le "lazy loading" (chargement différé) pour les images hors écran. Pour votre image hero, utilisez au contraire le préchargement avec <code style="background:var(--off-white);padding:2px 6px;border-radius:4px;font-family:monospace;">rel="preload"</code>.</p>
+            <p><strong>2. Améliorez votre hébergement.</strong> Un bon hébergeur avec un TTFB inférieur à 200ms est la base de tout. Si vous êtes sur un hébergement mutualisé bas de gamme, passer à un VPS ou un hébergement managé (O2Switch, PlanetHoster, Kinsta pour WordPress) peut seul diviser votre LCP par deux.</p>
+            <p><strong>3. Activez le cache navigateur et le CDN.</strong> Un CDN (Content Delivery Network) sert vos ressources depuis des serveurs géographiquement proches de vos visiteurs, réduisant drastiquement la latence. Cloudflare propose un plan gratuit très performant.</p>
+            <p><strong>4. Minifiez CSS, JavaScript et HTML.</strong> Supprimez les espaces, commentaires et caractères inutiles dans votre code. Sur WordPress, des plugins comme WP Rocket ou LiteSpeed Cache le font automatiquement.</p>
+            <p><strong>5. Éliminez les ressources bloquantes.</strong> Chargez le JavaScript en mode <code style="background:var(--off-white);padding:2px 6px;border-radius:4px;font-family:monospace;">async</code> ou <code style="background:var(--off-white);padding:2px 6px;border-radius:4px;font-family:monospace;">defer</code> pour éviter qu'il bloque l'affichage de la page. Reportez le chargement des CSS non critiques.</p>
+            <p><strong>6. Réduisez l'impact des scripts tiers.</strong> Chaque script tiers (chatbot, widget réseaux sociaux, outil de heatmap, publicité) ajoute du poids et ralentit votre site. Auditez-les régulièrement et supprimez ceux qui ne génèrent pas de valeur mesurable.</p>
+            <p><strong>7. Préconnectez-vous aux origines tierces.</strong> Pour les fonts Google, les CDN et autres ressources externes, ajoutez des balises <code style="background:var(--off-white);padding:2px 6px;border-radius:4px;font-family:monospace;">rel="preconnect"</code> dans votre <code style="background:var(--off-white);padding:2px 6px;border-radius:4px;font-family:monospace;">&lt;head&gt;</code> pour réduire le temps de connexion initial.</p>
+            <p><strong>8. Définissez les dimensions de tous les médias.</strong> Images, vidéos, iframes : spécifiez toujours la largeur et la hauteur pour que le navigateur réserve l'espace correct et évite les décalages de mise en page (CLS).</p>
+
+            <h2 id="wordpress">8. Cas pratique : optimiser un site WordPress à Lille</h2>
+            <p>WordPress représente plus de 40% du web et c'est la plateforme que j'audite le plus souvent chez mes clients lillois. Voici une checklist d'optimisation CWV adaptée à WordPress :</p>
+            <p>Commencez par installer un plugin de cache performant. <strong>WP Rocket</strong> (payant, ~50€/an) est le plus complet et le plus simple à configurer — il gère le cache, la minification, le lazy loading et la préconnexion en quelques clics. <strong>LiteSpeed Cache</strong> est une excellente alternative gratuite si votre hébergeur utilise le serveur LiteSpeed.</p>
+            <p>Passez en revue vos images avec le plugin <strong>Imagify</strong> ou <strong>ShortPixel</strong>, qui convertissent automatiquement vos médias en WebP et les compriment. Vérifiez ensuite que votre thème ne charge pas des dizaines de fichiers CSS et JS inutiles : les thèmes "multipurpose" comme Avada ou Divi sont souvent des champions du gaspillage de ressources.</p>
+            <p>Désactivez les plugins que vous n'utilisez pas — chaque plugin actif peut ajouter des requêtes HTTP et du JavaScript. Un site WordPress optimisé avec 20 plugins bien choisis est souvent plus rapide qu'un site avec 10 plugins mal configurés.</p>
+            <p>Enfin, pensez à votre hébergement. La plupart des sites WordPress lents que j'audite sont hébergés chez des prestataires à 3€/mois qui partagent un serveur entre des centaines de clients. Investir 10 à 20€/mois dans un hébergement de qualité est souvent le retour sur investissement le plus rapide que vous puissiez faire pour votre SEO.</p>
+
+            <div class="article-cta">
+                <h2>Votre site a besoin d'un audit de performance ?</h2>
+                <p>Je réalise un audit complet de vos Core Web Vitals avec un plan d'action priorisé pour améliorer votre score rapidement.</p>
+                <a href="contact.html" class="btn btn-emerald">Demander mon audit performance</a>
+            </div>
+
+            <div style="margin-top:72px;padding-top:48px;border-top:1px solid var(--border);">
+                <h3 style="margin-bottom:24px;font-size:1.3rem;">Articles liés</h3>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+                    <a href="seo.html" class="blog-card" style="text-decoration:none;">
+                        <div class="blog-card-body">
+                            <span class="blog-tag">🔍 SEO</span>
+                            <h3>En savoir plus sur mes prestations SEO</h3>
+                            <p style="font-size:0.875rem;color:var(--gray);">Audit, stratégie, netlinking : mon approche complète du référencement.</p>
+                        </div>
+                    </a>
+                    <a href="wordpress-vs-sur-mesure.html" class="blog-card" style="text-decoration:none;">
+                        <div class="blog-card-body">
+                            <span class="blog-tag">🏗️ Développement Web</span>
+                            <h3>WordPress vs site sur-mesure : que choisir ?</h3>
+                            <p style="font-size:0.875rem;color:var(--gray);">Comparatif complet pour trouver la solution adaptée à votre projet.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Flacko<span style="color:var(--blue-light)">Insight</span><span style="color:var(--emerald-light)">.</span></div>
+                    <p class="footer-desc">Expert en stratégie digitale à Lille. J'accompagne les entreprises dans leur croissance via le SEO, le SEA, la Data et le Développement Web sur-mesure.</p>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/olivier-kabongo-39097a219" target="_blank" class="social-btn" title="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <div class="footer-links">
+                        <a href="seo.html">Référencement naturel (SEO)</a>
+                        <a href="sea.html">Publicité Google Ads (SEA)</a>
+                        <a href="content-marketing.html">Stratégie de contenu</a>
+                        <a href="creation-de-site-web.html">Développement web</a>
+                        <a href="web-analytics-et-datas.html">Web Analytics & Data</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Blog</h5>
+                    <div class="footer-links">
+                        <a href="projets.html">Tous les articles</a>
+                        <a href="ads-vs-seo.html">Google Ads vs SEO</a>
+                        <a href="core-web-vitals.html">Core Web Vitals</a>
+                        <a href="wordpress-vs-sur-mesure.html">WordPress vs Sur-mesure</a>
+                        <a href="seolocal_lille.html">SEO local à Lille</a>
+                        <a href="configurer-ga4.html">5 erreurs GA4</a>
+                        <a href="budgetAds.html">Budget Google Ads</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <div class="footer-contact-item">📍 <span>Lille, Hauts-de-France</span></div>
+                    <div class="footer-contact-item">📧 <span>olivierjoachimkabongo@gmail.com</span></div>
+                    <div class="footer-contact-item">🕒 <span>Lun–Ven : 10h–17h</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FlackoInsight — Olivier Kabongo</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="politique-confidentialite.html">Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="global.js"></script>
+</body>
+</html>
