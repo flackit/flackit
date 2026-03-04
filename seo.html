@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBSPKDZTY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBSPKDZTY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GMBSPKDZTY');
+    </script>
 
-  gtag('config', 'G-GMBSPKDZTY');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expert SEO Lille | Consultant référencement naturel & audit | FlackoInsight</title>
     <meta name="description" content="Boostez votre visibilité sur Google avec un expert SEO. Audit technique, stratégie de mots-clés et netlinking pour générer un trafic qualifié durable à Lille.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-     <style>
-        :root { --primary: #2563EB; --dark: #0F172A; --white: #FFFFFF; --light: #F8FAFC; --header-height: 80px; }
+    
+    <style>
+        :root { --primary: #2563EB; --dark: #0F172A; --white: #FFFFFF; --light: #F8FAFC; --header-height: 80px; --accent: #EFF6FF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
-        /* HEADER UNIFIÉ */
+        /* HEADER */
         .main-header { background: var(--white); height: var(--header-height); display: flex; align-items: center; position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
         .logo { font-size: 1.6rem; font-weight: 800; color: var(--dark); text-decoration: none; }
@@ -34,16 +34,43 @@
         .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
         .dropdown-menu li a { display: block; padding: 10px 25px; color: var(--dark); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.2s; }
         .dropdown-menu li a:hover { background: var(--light); color: var(--primary); padding-left: 30px; }
-        .btn-contact-nav { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .btn-contact-nav { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
 
-        /* HERO & CONTENT */
-        .hero { padding: 80px 0; background: var(--dark); color: white; text-align: center; }
-        .section { padding: 80px 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { padding: 30px; background: white; border: 1px solid #EEE; border-radius: 15px; }
+        /* SECTIONS */
+        .hero { padding: 120px 0; background: var(--dark); color: white; text-align: center; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+        .hero p { font-size: 1.3rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
+
+        .section { padding: 100px 0; }
+        .bg-light { background-color: var(--light); }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--dark); }
+        
+        /* GRID & CARDS */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { padding: 40px; background: white; border: 1px solid #E5E7EB; border-radius: 20px; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
+
+        /* METHODOLOGIE SECTION */
+        .step { display: flex; align-items: flex-start; gap: 30px; margin-bottom: 40px; }
+        .step-number { background: var(--primary); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; }
+        .step-content h4 { font-size: 1.3rem; margin-bottom: 10px; }
+
+        /* FAQ */
+        .faq-item { background: white; padding: 25px; border-radius: 12px; margin-bottom: 15px; border: 1px solid #E5E7EB; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 10px; }
+
+        .cta-final { text-align: center; padding: 80px 20px; background: var(--primary); color: white; border-radius: 30px; margin-bottom: 100px; }
+        .cta-final h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .btn-white { background: white; color: var(--primary); padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.3s; }
+        .btn-white:hover { transform: scale(1.05); }
+
+        footer { padding: 60px 0; background: var(--dark); color: white; text-align: center; }
     </style>
 </head>
 <body>
+
     <header class="main-header">
         <div class="container nav-container">
             <a href="index.html" class="logo">FlackoInsight</a>
@@ -61,7 +88,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="blog.html" class="nav-link">Blog ▼</a>
+                        <a href="projets.html" class="nav-link">Blog ▼</a>
                         <ul class="dropdown-menu">
                             <li><a href="projets.html" style="color: var(--primary); font-weight: 800;">Voir tout le blog</a></li>
                             <li><a href="seolocal_lille.html">Pourquoi le SEO local à Lille ?</a></li>
@@ -77,19 +104,122 @@
 
     <section class="hero">
         <div class="container">
-            <h1>SEO : Dominez les résultats de recherche à Lille</h1>
-            <p>Stratégie de référencement naturel pour attirer un trafic qualifié et durable.</p>
+            <h1>Expert SEO à Lille : Propulsez votre Business</h1>
+            <p>80% des clics se font sur les 3 premiers résultats. Si vous n'y êtes pas, vous n'existez pas pour vos clients. Je vous aide à dominer votre marché.</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
+            <div class="section-title">
+                <h2>Pourquoi investir dans le SEO en 2026 ?</h2>
+                <p>Le référencement naturel est le seul levier qui continue de travailler pour vous, même quand vous dormez.</p>
+            </div>
             <div class="grid">
-                <div class="card"><h3>Audit Technique</h3><p>Analyse de la structure, de la vitesse et de l'indexation de votre site.</p></div>
-                <div class="card"><h3>Sémantique</h3><p>Recherche des mots-clés les plus rentables pour votre business.</p></div>
-                <div class="card"><h3>Netlinking</h3><p>Acquisition de liens de qualité pour booster votre autorité.</p></div>
+                <div class="card">
+                    <h3>Trafic Qualifié</h3>
+                    <p>Attirez des visiteurs qui cherchent activement vos services. Ce ne sont pas de simples "vues", ce sont des futurs clients.</p>
+                </div>
+                <div class="card">
+                    <h3>ROI Durable</h3>
+                    <p>Contrairement à la publicité, le trafic SEO ne s'arrête pas dès que vous coupez le budget. C'est un actif pour votre entreprise.</p>
+                </div>
+                <div class="card">
+                    <h3>Crédibilité</h3>
+                    <p>Être premier sur Google inspire une confiance immédiate. Les utilisateurs perçoivent les leaders du moteur de recherche comme les leaders du marché.</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ma Méthodologie SEO</h2>
+                <p>Une approche scientifique basée sur la donnée, pas sur des suppositions.</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Audit & état des lieux</h4>
+                        <p>Analyse technique complète de votre site existant pour identifier ce qui bloque votre progression sur Google.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Recherche de mots-clés</h4>
+                        <p>Identification des termes de recherche les plus rentables dans votre secteur à Lille et au niveau national.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Optimisation on-page</h4>
+                        <p>Réécriture de vos balises, structure Hn, et optimisation de vos contenus pour les algorithmes et pour l'humain.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Autorité & netlinking</h4>
+                        <p>Mise en place d'une stratégie d'acquisition de liens pour montrer à Google que votre site est une référence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Focus SEO local Lille</h2>
+                <p>Pour les entreprises de la métropole lilloise, la proximité est une force.</p>
+            </div>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px auto; font-size: 1.1rem;">
+                Le SEO Local permet d'apparaître sur Google Maps et sur les requêtes géolocalisées (ex: "expert comptable Lille"). J'optimise votre fiche Google Business Profile et votre sémantique locale pour capter les clients de la MEL (Roubaix, Tourcoing, Villeneuve-d'Ascq, Marcq-en-Barœul).
+            </p>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>FAQ SEO</h2>
+            </div>
+            <div style="max-width: 850px; margin: 0 auto;">
+                <div class="faq-item">
+                    <h4>Combien de temps faut-il pour voir des résultats ?</h4>
+                    <p>Le SEO est un travail de fond. En général, les premiers résultats significatifs apparaissent entre 3 et 6 mois selon la concurrence de votre secteur.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Le SEO est-il garanti ?</h4>
+                    <p>Aucun expert sérieux ne peut garantir la 1ère position (Google seul décide). Cependant, je garantis une progression nette de votre visibilité et de votre trafic qualifié.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Faut-il refaire son site pour le SEO ?</h4>
+                    <p>Pas toujours. Souvent, une optimisation technique et sémantique sur votre site actuel suffit. Un audit préalable nous donnera la réponse.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="cta-final">
+            <h2>Prêt à dépasser vos concurrents ?</h2>
+            <p style="margin-bottom: 30px; font-size: 1.2rem;">Analysons ensemble votre potentiel de croissance sur Google.</p>
+            <a href="contact.html" class="btn-white">Demander mon Audit SEO Offert</a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p><strong>FlackoInsight.</strong> - Accélérateur de visibilité digitale à Lille.</p>
+            <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.7;">SEO | SEA | DATA ANALYTICS</p>
+        </div>
+    </footer>
+
 </body>
 </html>
