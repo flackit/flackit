@@ -1,49 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBSPKDZTY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBSPKDZTY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GMBSPKDZTY');
+    </script>
 
-  gtag('config', 'G-GMBSPKDZTY');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert Web Analytics Lille | Consultant Google Analytics 4 & Data | FlackoInsight</title>
-    <meta name="description" content="Transformez vos données en décisions stratégiques. Expert GA4 et Web Analytics à Lille pour mesurer votre ROI et optimiser vos performances digitales.">
+    <title>Expert Web Analytics Lille | Configuration GA4 & Tracking Data | FlackoInsight</title>
+    <meta name="description" content="Prenez des décisions basées sur les données. Expert Web Analytics à Lille : configuration GA4, Google Tag Manager (GTM) et tableaux de bord Looker Studio.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-     <style>
-        :root { --primary: #10B981; --dark: #020617; --white: #FFFFFF; --light: #F0FDF4; --header-height: 80px; }
+    
+    <style>
+        :root {
+            --primary: #2563EB;
+            --dark: #0F172A;
+            --light: #F8FAFC;
+            --white: #FFFFFF;
+            --gray: #64748B;
+            --accent: #10B981; /* Un vert plus "Data" pour cette page */
+            --header-height: 80px;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
-        /* HEADER UNIFIÉ */
+        /* HEADER AVEC MÉGA MENU */
         .main-header { background: var(--white); height: var(--header-height); display: flex; align-items: center; position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo { font-size: 1.6rem; font-weight: 800; color: var(--dark); text-decoration: none; }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--dark); }
         .logo span { color: var(--primary); }
-        .nav-list { display: flex; align-items: center; gap: 30px; list-style: none; }
-        .nav-link { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
+        .nav-list { display: flex; align-items: center; gap: 30px; }
+        .nav-link { font-weight: 600; font-size: 0.95rem; }
         .nav-link:hover { color: var(--primary); }
-        .dropdown { position: relative; }
-        .dropdown-menu { position: absolute; top: 100%; left: 0; background: var(--white); min-width: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 12px; padding: 15px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: 0.3s; list-style: none; }
-        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .dropdown-menu li a { display: block; padding: 10px 25px; color: var(--dark); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.2s; }
-        .dropdown-menu li a:hover { background: var(--light); color: var(--primary); padding-left: 30px; }
-        .btn-contact-nav { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
 
-        .hero { padding: 100px 0; background: #064E3B; color: white; text-align: center; }
-        .section { padding: 80px 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { padding: 40px; background: white; border: 1px solid #E2E8F0; border-radius: 16px; transition: 0.3s; }
-        .card h3 { margin-bottom: 15px; color: var(--primary); }
+        .dropdown { position: relative; }
+        .dropdown-menu { 
+            position: absolute; top: 100%; left: 0; background: var(--white); 
+            min-width: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            border-radius: 12px; padding: 15px 0; opacity: 0; visibility: hidden; 
+            transform: translateY(10px); transition: 0.3s; 
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-menu li a { display: block; padding: 10px 25px; font-size: 0.9rem; font-weight: 500; }
+        .dropdown-menu li a:hover { background: var(--light); color: var(--primary); padding-left: 30px; }
+
+        .btn-contact-nav { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
+
+        /* HERO SECTION */
+        .hero { padding: 120px 0; background: var(--dark); color: white; }
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+        .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
+        .hero p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 40px; }
+        
+        .hero-badge { background: rgba(255,255,255,0.05); padding: 50px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); text-align: center; }
+        .hero-badge .stat { font-size: 3rem; font-weight: 800; color: var(--accent); display: block; }
+        .hero-badge .label { text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; opacity: 0.7; margin-bottom: 20px; display: block; }
+
+        /* DATA PILLARS SECTION */
+        .section { padding: 100px 0; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .card { padding: 40px; border-radius: 16px; background: var(--white); border: 1px solid #E2E8F0; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .card h3 { margin-bottom: 20px; color: var(--primary); font-size: 1.4rem; }
+
+        /* ANALYTICS METHOD SECTION */
+        .method-section { background: var(--light); padding: 100px 0; }
+        .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .feature-list li { margin-bottom: 18px; position: relative; padding-left: 35px; font-weight: 500; }
+        .feature-list li::before { content: "📊"; position: absolute; left: 0; }
+
+        /* FAQ */
+        .faq-section { padding: 100px 0; }
+        .faq-item { border-bottom: 1px solid #E2E8F0; padding: 25px 0; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 12px; font-size: 1.2rem; }
+
+        /* CTA */
+        .cta-final { padding: 100px 0; background: var(--primary); color: white; text-align: center; }
+        .btn-white { background: var(--white); color: var(--primary); padding: 20px 45px; border-radius: 50px; font-weight: 800; display: inline-block; margin-top: 30px; }
+
+        footer { background: var(--dark); color: white; padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+
+        @media (max-width: 992px) {
+            .hero-grid, .method-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero h1 { font-size: 2.5rem; }
+            .feature-list li { text-align: left; }
+        }
     </style>
 </head>
 <body>
+
     <header class="main-header">
         <div class="container nav-container">
             <a href="index.html" class="logo">FlackoInsight</a>
@@ -79,110 +133,102 @@
         <div class="container">
             <div class="hero-grid">
                 <div>
-                    <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px;">Data & Analytics : Pilotez votre business à la vue, pas au jugé</h1>
-                    <p style="opacity: 0.8; font-size: 1.2rem; margin-bottom: 40px;">Les chiffres ne mentent jamais, à condition de savoir les faire parler. J'installe, configure et analyse vos outils de tracking pour transformer vos données brutes en décisions stratégiques concrètes.</p>
-                    <a href="index.html#contact" class="btn btn-primary">Auditer mon plan de marquage</a>
+                    <h1>Web Analytics Lille : Pilotez votre business par la donnée</h1>
+                    <p>Arrêtez de deviner, commencez à savoir. J'installe et je configure vos outils de tracking pour mesurer précisément chaque euro investi et optimiser votre rentabilité.</p>
+                    <a href="contact.html" class="btn-contact-nav" style="padding: 18px 40px; font-size: 1.1rem;">Maîtriser mes données</a>
                 </div>
-                <div style="background: rgba(16, 185, 129, 0.1); padding: 50px; border-radius: 30px; border: 1px solid var(--accent); text-align: center;">
-                    <div style="font-size: 3rem; font-weight: 800; color: var(--accent);">100%</div>
-                    <p style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; opacity: 0.7;">De vos conversions mesurées</p>
-                    <hr style="margin: 20px auto; width: 50px; opacity: 0.2; border-color: var(--accent);">
-                    <p style="font-style: italic;">"Sans données, vous n'êtes qu'une personne de plus avec une opinion."</p>
+                <div class="hero-badge">
+                    <span class="stat">100%</span>
+                    <span class="label">Fiabilité du tracking des conversions</span>
+                    <hr style="margin: 20px auto; width: 50px; opacity: 0.2;">
+                    <p style="font-style: italic; opacity: 0.9;">"Sans données, vous n'êtes qu'une personne de plus avec une opinion."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section">
         <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 60px;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">L'Analytics, le socle de votre performance digitale</h2>
-                <p style="color: var(--gray);">Vous investissez en SEO, en SEA et en Contenu ? Il est vital de savoir précisément quel levier rapporte de l'argent. Voici comment je sécurise votre lecture de la donnée.</p>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">L'écosystème data indispensable</h2>
+                <p style="color: var(--gray); font-size: 1.1rem;">Une mesure précise est le fondement de toute croissance. Voici comment nous transformons votre site en mine d'informations stratégiques.</p>
             </div>
 
             <div class="grid-3">
                 <div class="card">
-                    <h3>🔍 Implémentation GA4</h3>
-                    <p>Google Analytics 4 est complexe. Je configure votre propriété, vos flux de données et vos événements personnalisés pour capturer chaque action clé (clics, téléchargements, scrolls) sur votre site à Lille.</p>
+                    <h3>📈 Google Analytics 4</h3>
+                    <p>Configuration avancée de GA4. Je paramètre vos événements personnalisés, vos tunnels de conversion et l'exclusion du trafic interne pour des données propres.</p>
                 </div>
                 <div class="card">
-                    <h3>🎯 Tracking de Conversion</h3>
-                    <p>Un formulaire rempli ? Un achat validé ? Un appel passé ? Je mets en place un tracking fiable via <strong>Google Tag Manager (GTM)</strong> pour que vos outils publicitaires sachent exactement ce qui fonctionne.</p>
+                    <h3>🛠️ Google Tag Manager</h3>
+                    <p>Centralisation de vos balises (Pixel Meta, LinkedIn, Google Ads). Une gestion propre pour ne pas ralentir votre site tout en traquant chaque clic crucial.</p>
                 </div>
                 <div class="card">
-                    <h3>📊 Tableaux de Bord (Looker Studio)</h3>
-                    <p>Arrêtez de fouiller dans des rapports illisibles. Je crée pour vous des dashboards personnalisés, clairs et automatisés, qui présentent vos indicateurs clés (KPIs) en un coup d'œil.</p>
+                    <h3>📊 Looker Studio</h3>
+                    <p>Création de tableaux de bord automatisés et visuels. Visualisez vos performances SEO, SEA et ventes en un coup d'œil, sans ouvrir 10 onglets différents.</p>
                 </div>
-            </div>
-
-            <div class="data-box">
-                <h4>🛡️ Conformité RGPD & Consent Mode V2</h4>
-                <p>À Lille et dans toute l'Europe, la protection des données est une obligation légale. J'installe des solutions de gestion du consentement (CMP) conformes à la CNIL et j'implémente le <strong>Consent Mode V2</strong> de Google pour continuer à mesurer vos performances tout en respectant la vie privée de vos utilisateurs.</p>
             </div>
         </div>
     </section>
 
-    <section class="section-padding" style="background: var(--light);">
+    <section class="method-section">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+            <div class="method-grid">
                 <div>
-                    <h2 style="font-size: 2.2rem; margin-bottom: 25px;">L'analyse pour optimiser vos revenus</h2>
-                    <p style="margin-bottom: 20px;">Collecter la donnée est la première étape. L'analyser pour agir est la seconde.</p>
-                    <p>Mon expertise Data vous permet de répondre à ces questions critiques :</p>
-                    <ul style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
-                        <li><strong>📈 Attribution :</strong> Quel canal a réellement déclenché la vente ?</li>
-                        <li><strong>📉 Analyse de l'Entonnoir :</strong> Où vos visiteurs quittent-ils votre site ?</li>
-                        <li><strong>👥 Segmentation :</strong> Qui sont vos clients les plus rentables ?</li>
-                        <li><strong>🧪 A/B Testing :</strong> Quelle version de votre page convertit le mieux ?</li>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 25px;">Pourquoi une expertise Analytics à Lille ?</h2>
+                    <p style="margin-bottom: 25px;">Le passage à GA4 a rendu l'analyse de données complexe. Je vous aide à simplifier la lecture de vos KPIs pour vous concentrer sur ce qui compte : la croissance.</p>
+                    <ul class="feature-list">
+                        <li><strong>Tracking e-commerce :</strong> Mesurez précisément le panier moyen et les produits phares.</li>
+                        <li><strong>Audit de tracking :</strong> Vérification de la conformité RGPD et correction des erreurs.</li>
+                        <li><strong>Analyse de parcours :</strong> Identifiez où vos visiteurs quittent votre site.</li>
+                        <li><strong>Data-visualisation :</strong> Des rapports sur-mesure pour vos besoins spécifiques.</li>
                     </ul>
                 </div>
-                <div style="background: var(--dark); color: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <h4 style="margin-bottom: 20px; color: var(--accent);">Le saviez-vous ?</h4>
-                    <p style="opacity: 0.9; font-style: italic;">"Les entreprises qui utilisent l'analyse de données pour leurs décisions stratégiques constatent une augmentation de leur productivité de 15% à 20% par rapport à leurs concurrents."</p>
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h4 style="margin-bottom: 20px; color: var(--primary); font-size: 1.3rem;">La boucle de croissance</h4>
+                    <p>Mon approche ne s'arrête pas à l'installation des outils. J'interprète les chiffres pour vous proposer des optimisations concrètes sur vos campagnes marketing et sur l'expérience utilisateur de votre site.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding">
+    <section class="faq-section">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px;">Foire aux questions : Web Analytics</h2>
+            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.2rem;">FAQ : Web Analytics & Data</h2>
             <div style="max-width: 900px; margin: 0 auto;">
-                
                 <div class="faq-item">
-                    <h4>Pourquoi passer de l'ancien Analytics à GA4 ?</h4>
-                    <p>L'ancienne version (Universal Analytics) est obsolète. GA4 repose sur un modèle d'événements beaucoup plus précis et intègre de l'intelligence artificielle pour combler les pertes de données liées aux cookies.</p>
+                    <h4>Pourquoi passer par GTM au lieu d'installer les codes directement ?</h4>
+                    <p>GTM (Google Tag Manager) offre une flexibilité totale, permet de tester les balises avant publication et améliore les performances de chargement de votre site web.</p>
                 </div>
-
                 <div class="faq-item">
-                    <h4>Qu'est-ce qu'un plan de marquage ?</h4>
-                    <p>C'est la feuille de route technique de votre tracking. Il définit quels comportements sur votre site doivent être mesurés pour répondre à vos objectifs business. C'est l'étape 1 de toute collaboration Data.</p>
+                    <h4>Mon tracking est-il conforme au RGPD ?</h4>
+                    <p>J'intègre votre solution de consentement (Cookiebot, Axeptio, etc.) avec le Consent Mode de Google pour respecter la vie privée tout en collectant un maximum de données.</p>
                 </div>
-
                 <div class="faq-item">
-                    <h4>Mon site est-il conforme au RGPD ?</h4>
-                    <p>Si vous déposez des cookies Google Analytics ou Pixel Facebook sans consentement clair, la réponse est probablement non. Je vous aide à régulariser votre situation pour éviter les sanctions de la CNIL.</p>
+                    <h4>Puis-je suivre les appels téléphoniques depuis mon site ?</h4>
+                    <p>Oui, absolument. Nous pouvons traquer les clics sur les numéros de téléphone ou utiliser des solutions de Call Tracking pour savoir quelle source a généré l'appel.</p>
                 </div>
-
                 <div class="faq-item">
-                    <h4>Puis-je suivre les appels téléphoniques ?</h4>
-                    <p>Absolument. Grâce à des outils de call-tracking intégrés à GA4, nous pouvons savoir quel mot-clé ou quelle annonce a déclenché un appel vers votre entreprise.</p>
+                    <h4> Looker Studio est-il payant ?</h4>
+                    <p>L'outil est gratuit pour la majorité des utilisations standard. C'est le meilleur moyen de partager vos résultats avec vos équipes sans frais de licence supplémentaires.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section style="padding: 100px 0; background: var(--accent); color: white; text-align: center;">
+    <section class="cta-final">
         <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 25px;">Vos données sont-elles fiables ?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Ne pilotez plus votre entreprise dans le brouillard. Vérifions ensemble la qualité de votre tracking.</p>
-            <a href="contact.html" class="btn" style="background: var(--white); color: #166534;">Demander un audit de mon tracking</a>
+            <h2>Prêt à transformer vos données en CA ?</h2>
+            <p style="font-size: 1.2rem; margin-top: 15px; opacity: 0.9;">Ne laissez plus l'incertitude guider vos investissements marketing.</p>
+            <a href="contact.html" class="btn-white">Demander mon plan de marquage</a>
         </div>
     </section>
 
-    <footer style="background: var(--dark); color: white; padding: 50px 0; text-align: center;">
-        <p>&copy; 2026 FlackoInsight - Olivier Kabongo | Expert Analytics & Performance à Lille</p>
+    <footer>
+        <div class="container">
+            <p><strong>FlackoInsight</strong> - Olivier Kabongo | Expert Analytics & Data à Lille</p>
+            <p style="opacity: 0.6; margin-top: 15px; font-size: 0.9rem;">&copy; 2026 Tous droits réservés.</p>
+        </div>
     </footer>
 
 </body>
