@@ -1,510 +1,241 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Création de site web – FlackoInsight</title>
-  <link rel="stylesheet" href="style.css" />
- <style>
-        /* --- 1. VARIABLES & RESET --- */
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBSPKDZTY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GMBSPKDZTY');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de Site Web Lille | Développeur WordPress, Prestashop & Sur-mesure | FlackoInsight</title>
+    <meta name="description" content="Conception de sites web performants à Lille. Expert WordPress, Prestashop et développement sur-mesure (HTML, CSS, JS, PHP, Python) pour booster votre business.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
         :root {
-            --primary: #2563EB;       /* Bleu roi dynamique */
-            --dark: #0F172A;          /* Bleu nuit très foncé (texte et fonds) */
-            --light: #F8FAFC;         /* Gris très clair pour les fonds alternés */
+            --primary: #2563EB;
+            --dark: #0F172A;
+            --light: #F8FAFC;
             --white: #FFFFFF;
-            --gray: #64748B;          /* Gris pour les textes secondaires */
-            --accent: #F59E0B;        /* Orange pour les détails */
-            --spacing: 80px;          /* Espacement standard entre sections */
+            --gray: #64748B;
+            --accent: #6366F1; /* Un violet/bleu moderne pour le dev */
+            --header-height: 80px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
-        img { max-width: 100%; display: block; }
 
-        /* --- 2. LAYOUT & UTILITIES --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .btn-primary:hover { background-color: #1d4ed8; }
-
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            margin-left: 10px;
-        }
-
-        .btn-outline:hover { background-color: var(--primary); color: var(--white); }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* --- 3. HEADER --- */
-        header {
-            background: var(--white);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .nav-links { display: flex; gap: 30px; }
-        .nav-links a { font-weight: 500; font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--primary); }
-
-        /* --- 4. HERO SECTION --- */
-        .hero {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(180deg, var(--light) 0%, var(--white) 100%);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-        }
-
-        /* --- 5. SERVICES (GRID) --- */
-        .services { padding: var(--spacing) 0; }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-color: var(--primary);
-        }
-
-        .icon {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .service-card h3 { margin-bottom: 15px; font-size: 1.25rem; }
-        .service-card p { color: var(--gray); font-size: 0.95rem; }
-
-        /* --- 6. STATS / PREUVE SOCIALE --- */
-        .stats {
-            background: var(--dark);
-            color: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .stats-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .stat-item h3 {
-            font-size: 3rem;
-            color: var(--accent);
-            font-weight: 800;
-        }
-
-        .stat-item p { font-size: 1.1rem; opacity: 0.9; }
-
-        /* --- 7. ABOUT & CONTACT --- */
-        .about-contact {
-            padding: var(--spacing) 0;
-            background: var(--light);
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+        /* HEADER AVEC MÉGA MENU */
+        .main-header { background: var(--white); height: var(--header-height); display: flex; align-items: center; position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--dark); }
+        .logo span { color: var(--primary); }
+        .nav-list { display: flex; align-items: center; gap: 30px; }
+        .nav-link { font-weight: 600; font-size: 0.95rem; }
+        .nav-link:hover { color: var(--primary); }
+
+        .dropdown { position: relative; }
+        .dropdown-menu { 
+            position: absolute; top: 100%; left: 0; background: var(--white); 
+            min-width: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            border-radius: 12px; padding: 15px 0; opacity: 0; visibility: hidden; 
+            transform: translateY(10px); transition: 0.3s; 
         }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-menu li a { display: block; padding: 10px 25px; font-size: 0.9rem; font-weight: 500; }
+        .dropdown-menu li a:hover { background: var(--light); color: var(--primary); padding-left: 30px; }
 
-        .about-text h2 { margin-bottom: 20px; }
-        .about-text p { margin-bottom: 20px; color: var(--gray); }
+        .btn-contact-nav { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
 
-        /* --- 8. FOOTER --- */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 50px 0 20px 0;
-            font-size: 0.9rem;
-        }
+        /* HERO SECTION */
+        .hero { padding: 120px 0; background: var(--dark); color: white; }
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+        .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
+        .hero p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 40px; }
+        
+        .hero-badge { background: rgba(255,255,255,0.05); padding: 50px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); text-align: center; }
+        .hero-badge .stat { font-size: 3rem; font-weight: 800; color: var(--accent); display: block; }
+        .hero-badge .label { text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; opacity: 0.7; margin-bottom: 20px; display: block; }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
+        /* TECH PILLARS SECTION */
+        .section { padding: 100px 0; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .card { padding: 40px; border-radius: 16px; background: var(--white); border: 1px solid #E2E8F0; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .card h3 { margin-bottom: 20px; color: var(--accent); font-size: 1.4rem; }
 
-        .footer-col h4 { margin-bottom: 20px; color: var(--white); }
-        .footer-col ul li { margin-bottom: 10px; }
-        .footer-col a { color: #94a3b8; }
-        .footer-col a:hover { color: var(--white); }
+        /* EXPERTISE SECTION */
+        .expertise-section { background: var(--light); padding: 100px 0; }
+        .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .tag { background: var(--white); border: 1px solid #E2E8F0; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: var(--primary); }
 
-        .copyright {
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            color: #64748B;
-        }
+        /* FAQ */
+        .faq-section { padding: 100px 0; }
+        .faq-item { border-bottom: 1px solid #E2E8F0; padding: 25px 0; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 12px; font-size: 1.2rem; }
 
-        /* --- MOBILE --- */
-        @media (max-width: 768px) {
+        /* CTA */
+        .cta-final { padding: 100px 0; background: var(--accent); color: white; text-align: center; }
+        .btn-white { background: var(--white); color: var(--accent); padding: 20px 45px; border-radius: 50px; font-weight: 800; display: inline-block; margin-top: 30px; }
+
+        footer { background: var(--dark); color: white; padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+
+        @media (max-width: 992px) {
+            .hero-grid, .expertise-grid { grid-template-columns: 1fr; text-align: center; }
             .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Pour simplifier, menu caché sur mobile pour l'instant */
-            .about-grid { grid-template-columns: 1fr; }
-            .btn { width: 100%; margin: 10px 0 0 0; }
+            .tech-tags { justify-content: center; }
         }
     </style>
 </head>
 <body>
 
     <header class="main-header">
-    <div class="container nav-container">
-        <a href="index.html" class="logo">FlackoInsight</a>
-        
-        <input type="checkbox" id="nav-check" style="display:none;">
-        <label for="nav-check" class="nav-toggler">
-            <span></span>
-        </label>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">FlackoInsight</a>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">Services ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="seo.html">SEO (Référencement)</a></li>
+                            <li><a href="sea.html">SEA (Google Ads)</a></li>
+                            <li><a href="content-marketing.html">Content Marketing</a></li>
+                            <li><a href="creation-de-site-web.html">Création de Site Web</a></li>
+                            <li><a href="web-analytics-et-datas.html">Web Analytics & Data</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="projets.html" class="nav-link">Blog ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projets.html" style="color: var(--primary); font-weight: 800;">Voir tout le blog</a></li>
+                            <li><a href="seolocal_lille.html">Pourquoi le SEO local à Lille ?</a></li>
+                            <li><a href="configurer-ga4.html">5 erreurs GA4 à éviter</a></li>
+                            <li><a href="budgetAds.html">Budget Google Ads</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <nav class="nav-menu">
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-link">Accueil</a></li>
-                
-                <li class="dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Services <small>▼</small></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="seo.html">SEO (Référencement naturel)</a></li>
-                        <li><a href="sea.html">SEA (Google Ads)</a></li>
-                        <li><a href="content-marketing.html">Content marketing</a></li>
-                        <li><a href="creation-de-site-web.html">Création de Site Web</a></li>
-                        <li><a href="web-analytics-et-datas.html">Web analytics & Data</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-    <a href="projets.html" class="nav-link dropdown-toggle">Blog <small>▼</small></a>
-    <ul class="dropdown-menu">
-        <li><a href="projets.html" style="font-weight: 800; border-bottom: 1px solid #EEE;">Voir tous les articles</a></li>
-        <li><a href="seolocal_lille.html">Pourquoi le SEO local à Lille ?</a></li>
-        <li><a href="configurer-ga4.html">5 erreurs GA4 à éviter</a></li>
-        <li><a href="budgetAds.html">Quel budget pour Google Ads ?</a></li>
-    </ul>
-</li>
-                <li><a href="contact.html" class="btn-contact-nav">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<style>
-/* --- STYLES DU HEADER --- */
-:root {
-    --header-height: 80px;
-    --primary: #2563EB;
-    --dark: #0F172A;
-    --white: #FFFFFF;
-}
-
-.main-header {
-    background: var(--white);
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--dark);
-    text-decoration: none;
-}
-
-.logo span { color: var(--primary); }
-
-.nav-list {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: 0.3s;
-}
-
-.nav-link:hover { color: var(--primary); }
-
-/* --- MENU DÉROULANT (DROPDOWN) --- */
-.dropdown { position: relative; }
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--white);
-    min-width: 240px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-radius: 12px;
-    padding: 15px 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: 0.3s;
-    list-style: none;
-}
-
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.dropdown-menu li a {
-    display: block;
-    padding: 10px 25px;
-    color: var(--dark);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: 0.2s;
-}
-
-.dropdown-menu li a:hover {
-    background: #F8FAFC;
-    color: var(--primary);
-    padding-left: 30px;
-}
-
-/* --- BOUTON CONTACT --- */
-.btn-contact-nav {
-    background: var(--primary);
-    color: white;
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.btn-contact-nav:hover {
-    background: #1d4ed8;
-    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
-}
-
-/* --- RESPONSIVE MOBILE --- */
-@media (max-width: 992px) {
-    .nav-toggler {
-        display: block;
-        width: 30px;
-        height: 20px;
-        cursor: pointer;
-        position: relative;
-    }
-    
-    .nav-toggler span, .nav-toggler span::before, .nav-toggler span::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background: var(--dark);
-        transition: 0.3s;
-    }
-    
-    .nav-toggler span::before { top: -8px; }
-    .nav-toggler span::after { top: 8px; }
-
-    .nav-menu {
-        position: fixed;
-        top: var(--header-height);
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - var(--header-height));
-        background: var(--white);
-        transition: 0.4s;
-        overflow-y: auto;
-    }
-
-    #nav-check:checked ~ .nav-menu { left: 0; }
-
-    .nav-list {
-        flex-direction: column;
-        padding: 40px 20px;
-        align-items: flex-start;
-    }
-    /* Style spécifique pour le lien principal du blog dans le menu */
-.dropdown-menu li:first-child a {
-    color: var(--primary);
-    background-color: #F0F9FF;
-    margin-bottom: 5px;
-}
-
-/* On s'assure que le menu déroulant est assez large pour les titres d'articles */
-.dropdown-menu {
-    min-width: 280px; /* Un peu plus large pour les titres longs */
-}
-
-/* Petit indicateur de lien survolé */
-.dropdown-menu li a:hover {
-    background: #F8FAFC;
-    color: var(--primary);
-    padding-left: 30px; /* Effet de décalage au survol */
-}
-
-    .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        box-shadow: none;
-        transform: none;
-        padding: 10px 0 10px 20px;
-        display: none; /* Caché par défaut sur mobile, s'affiche au clic si besoin */
-    }
-
-    .dropdown:hover .dropdown-menu { display: block; }
-}
-</style>
-  <main>
-    <section class="content-block">
-      <div class="text">
-        <h2>Création de site web</h2>
-        <p>Développez un site web professionnel, responsive et optimisé pour vos objectifs.</p>
-      </div>
-      <div class="image"><img src="images/website.jpeg" alt="Website"></div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <h1>Création de site web Lille : Performance & sur-mesure</h1>
+                    <p>Un site web ne doit pas seulement être beau, il doit être votre meilleur commercial. Je conçois des plateformes ultra-rapides, optimisées pour le SEO et centrées sur vos résultats.</p>
+                    <a href="contact.html" class="btn-contact-nav" style="background: var(--accent); padding: 18px 40px; font-size: 1.1rem;">Démarrer mon projet web</a>
+                </div>
+                <div class="hero-badge">
+                    <span class="stat">&lt; 2s</span>
+                    <span class="label">Temps de chargement optimisé</span>
+                    <hr style="margin: 20px auto; width: 50px; opacity: 0.2;">
+                    <p style="font-style: italic; opacity: 0.9;">"Votre présence en ligne est la première impression que vous donnez."</p>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
-  <footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-col">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </div>
 
-    <div class="footer-col">
-      <h4>Nos Services</h4>
-      <ul>
-        <li><a href="seo.html">SEO</a></li>
-        <li><a href="sea.html">SEA</a></li>
-        <li><a href="content-marketing.html">Content Marketing</a></li>
-        <li><a href="creation-de-site-web.html">Création de site web</a></li>
-        <li><a href="web-analytics-et-datas.html">Web Analytics & Datas</a></li>
-        <li><a href="social-media.html">Social Media</a></li>
-        <li><a href="webdesign.html">Webdesign</a></li>
-        <li><a href="marketing-digital.html">Marketing digital</a></li>
-      </ul>
-    </div>
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Une solution pour chaque besoin</h2>
+                <p style="color: var(--gray); font-size: 1.1rem;">Du site vitrine au e-commerce complexe, j'utilise les technologies les plus adaptées à vos objectifs commerciaux.</p>
+            </div>
 
-    <div class="footer-col">
-      <h4>À propos</h4>
-      <p>FlackoInsight est une initiative portée par Olivier Kabongo, expert en marketing digital et communication audiovisuelle.</p>
-      <p>📎 <a href="https://www.linkedin.com/in/olivier-kabongo-39097a219/" target="_blank" class="linkedin-link">Mon LinkedIn</a></p>
-    </div>
-  </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>💻 Développement custom</h3>
+                    <p>Pour une liberté totale. Conception de sites et web-apps performantes utilisant les langages modernes pour une expérience utilisateur unique et sans limites techniques.</p>
+                </div>
+                <div class="card">
+                    <h3>🎨 CMS & WordPress</h3>
+                    <p>La solution idéale pour garder la main. Je crée votre site sur WordPress de manière propre et sécurisée, pour que vous puissiez gérer vos contenus en toute autonomie.</p>
+                </div>
+                <div class="card">
+                    <h3>🛍️ E-commerce & Prestashop</h3>
+                    <p>Boostez vos ventes en ligne. De la création de boutique WordPress/WooCommerce à l'implémentation de modules complexes sur Prestashop.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="footer-bottom">
-    <p>&copy; 2025 FlackoInsight. Tous droits réservés.</p>
-  </div>
-</footer>
-  <script src="script.js"></script>
+    <section class="expertise-section">
+        <div class="container">
+            <div class="expertise-grid">
+                <div>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 25px;">Ma stack technique à votre service</h2>
+                    <p style="margin-bottom: 25px;">Chaque projet est unique. Que vous ayez besoin d'un script spécifique ou d'une refonte complète, je maîtrise les technologies qui font le web d'aujourd'hui :</p>
+                    
+                    <div class="tech-tags">
+                        <span class="tag">HTML5 / CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">WordPress</span>
+                        <span class="tag">Prestashop</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+
+                    <p style="margin-top: 30px;"><strong>Pourquoi c'est important ?</strong> Maîtriser le code (PHP, Python) me permet d'aller là où les plugins s'arrêtent, en créant des fonctionnalités sur-mesure pour votre business à Lille.</p>
+                </div>
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h4 style="margin-bottom: 20px; color: var(--accent); font-size: 1.3rem;">SEO-Friendly dès la conception</h4>
+                    <p>Contrairement à beaucoup de créateurs de sites, j'intègre l'optimisation pour les moteurs de recherche (SEO) dès la première ligne de code. Votre site est prêt à monter sur Google le jour même de sa mise en ligne.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.2rem;">FAQ : Création de Site</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="faq-item">
+                    <h4>Serais-je propriétaire de mon site web ?</h4>
+                    <p>Oui, à 100%. Une fois le projet finalisé et réglé, vous êtes propriétaire du nom de domaine, de l'hébergement et de l'intégralité du code ou des accès CMS.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Pouvez-vous intervenir sur un site Prestashop existant ?</h4>
+                    <p>Absolument. Je vous aide pour l'installation, la configuration ou le développement de modules spécifiques afin d'améliorer les fonctionnalités de votre boutique en ligne.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Pourquoi choisir du sur-mesure (Python/PHP) plutôt qu'un CMS ?</h4>
+                    <p>Le sur-mesure offre des performances supérieures, une sécurité accrue et une flexibilité totale pour des fonctionnalités métier complexes que les CMS ne peuvent pas toujours gérer nativement.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Mon site sera-t-il adapté aux mobiles ?</h4>
+                    <p>C'est une priorité absolue. Tous mes sites sont développés en "Responsive Design", garantissant une expérience de navigation parfaite sur smartphones, tablettes et ordinateurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <h2>Prêt à donner vie à votre projet digital ?</h2>
+            <p style="font-size: 1.2rem; margin-top: 15px; opacity: 0.9;">Parlons de votre futur site web et de vos objectifs de croissance.</p>
+            <a href="contact.html" class="btn-white">Demander un devis gratuit</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>FlackoInsight</strong> - Olivier Kabongo | Développeur & Expert Data à Lille</p>
+            <p style="opacity: 0.6; margin-top: 15px; font-size: 0.9rem;">&copy; 2026 Tous droits réservés.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
